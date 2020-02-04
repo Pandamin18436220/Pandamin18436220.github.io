@@ -116,8 +116,9 @@
         var data = res.list[j].arr;
         var liTmpl = "";
         for (var i = 0, len = data.link.length; i < len; i++) {
-          var minSrc = 'https://github.com/Pandamin18436220/Pandamin18436220.github.io/master/blog_hexo/min_photos/' + data.link[i] + '.min.jpg';
-          var src = 'https://github.com/Pandamin18436220/Pandamin18436220.github.io/master/blog_hexo/photos/' + data.link[i];
+			2020-2-04_疫情高峰期.jpg
+          var minSrc = 'https://raw.githubusercontent.com/Pandamin18436220/HBlog_imgs/master/min_photos/' + data.link[i] + '.min.jpg';
+          var src = 'https://raw.githubusercontent.com/Pandamin18436220/HBlog_imgs/master/photos/' + data.link[i];
           var type = data.type[i];
           var target = src + (type === 'video' ? '.mp4' : '.jpg');
           src += '.jpg';

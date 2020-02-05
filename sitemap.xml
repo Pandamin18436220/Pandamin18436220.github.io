@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/</loc>
+    
+    <lastmod>2020-02-05T07:38:15.137Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/photos/data.json</loc>
+    
+    <lastmod>2020-02-05T07:20:03.398Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2020-02-05T06:24:22.000Z</lastmod>
@@ -33,13 +47,6 @@
     <loc>http://yoursite.com/photos/videos.html</loc>
     
     <lastmod>2020-02-04T10:14:30.948Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/photos/data.json</loc>
-    
-    <lastmod>2020-02-04T09:41:30.868Z</lastmod>
     
   </url>
   

@@ -6,35 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>photos | 潘晟凯的博客</title>
+  <title>OpenCv基本函数 | 潘晟凯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="潘晟凯,软件工程专业,一名大二学生,吃苦耐劳,低调踏实">
-<meta property="og:type" content="website">
-<meta property="og:title" content="photos">
-<meta property="og:url" content="http://yoursite.com/photos/index.html">
+  <meta name="description" content="导入库1234567-*- coding: utf-8 -*-import cv2                      #opencv2库import numpy as np              #numpy库import matplotlib.pyplot as plt #类似于matlab工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenCv基本函数">
+<meta property="og:url" content="http://yoursite.com/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="潘晟凯的博客">
-<meta property="og:description" content="潘晟凯,软件工程专业,一名大二学生,吃苦耐劳,低调踏实">
+<meta property="og:description" content="导入库1234567-*- coding: utf-8 -*-import cv2                      #opencv2库import numpy as np              #numpy库import matplotlib.pyplot as plt #类似于matlab工具">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-04T07:58:25.000Z">
-<meta property="article:modified_time" content="2020-02-04T07:58:25.000Z">
+<meta property="article:published_time" content="2020-02-05T07:38:15.137Z">
+<meta property="article:modified_time" content="2020-02-05T07:38:15.137Z">
 <meta property="article:author" content="潘晟凯">
-<meta property="article:tag" content="数据结构与算法">
-<meta property="article:tag" content="操作系统">
-<meta property="article:tag" content="软考">
-<meta property="article:tag" content="Nao">
 <meta property="article:tag" content="python">
-<meta property="article:tag" content="C语言">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="极客">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="C++">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="css">
-<meta property="article:tag" content="设计模式">
+<meta property="article:tag" content="OpenCv">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="潘晟凯的博客" type="application/atom+xml">
@@ -220,20 +205,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-opencv基本函数" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      photos
+      OpenCv基本函数
     </h1>
   
 
         
-        <a href="/photos/index.html" class="archive-article-date">
-  	<time datetime="2020-02-04T07:58:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-04</time>
+        <a href="/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/" class="archive-article-date">
+  	<time datetime="2020-02-05T07:38:15.137Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-05</time>
 </a>
         
 		 
@@ -242,7 +227,7 @@ var _hmt = _hmt || [];
       </header>
 	 
 
-	<div align="center" class="post-count">字数：0字 | 预计阅读时长：1分钟</div>
+	<div align="center" class="post-count">字数：3,045字 | 预计阅读时长：12分钟</div>
 	
 
 
@@ -261,7 +246,187 @@ var _hmt = _hmt || [];
       
 
 	
-		
+		<h2 id="导入库"><a href="#导入库" class="headerlink" title="导入库"></a>导入库</h2><pre><code><figure class="highlight capnproto"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-*- coding: utf-<span class="number">8</span> -*-</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cv2                      <span class="comment">#opencv2库</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np              <span class="comment">#numpy库</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt <span class="comment">#类似于matlab工具</span></span><br></pre></td></tr></table></figure></code></pre><a id="more"></a>
+
+<h2 id="读入图像"><a href="#读入图像" class="headerlink" title="读入图像"></a>读入图像</h2><pre><code>函数为：cv2.imread(文件名[,显示控制参数])
+返回值：一个图像
+功能：读取图像
+当显示控制参数为
+0/cv2.IMREAD_UNCHANGED   不改变
+-1/cv2.IMREAD_GRAYSCALE  图像灰度
+1/cv2.IMREAD_COLOR       图像菜度
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">o=cv2.imread('C:<span class="symbol">\\</span>Users<span class="symbol">\\</span>Pandamin<span class="symbol">\\</span>Desktop<span class="symbol">\\</span>image<span class="symbol">\\</span>1.jpg',0)</span><br></pre></td></tr></table></figure></code></pre><h2 id="保存图像"><a href="#保存图像" class="headerlink" title="保存图像"></a>保存图像</h2><pre><code>函数为：cv2.imwrite(文件地址，文件名)
+返回值：无
+功能：保存图像</code></pre><h2 id="访问像素"><a href="#访问像素" class="headerlink" title="访问像素"></a>访问像素</h2><pre><code>函数为：img[位置[,通道数]]
+返回值：该位置的像素
+功能：得到该位置的图像，也可以更改其值</code></pre><h2 id="使用numpy访问像素"><a href="#使用numpy访问像素" class="headerlink" title="使用numpy访问像素"></a>使用numpy访问像素</h2><pre><code>函数为：img.itemset((位置[,通道数]),设置像素值)
+返回值：该位置的像素
+功能：得到该位置的图像，也可以更改其值</code></pre><h2 id="获取图像属性"><a href="#获取图像属性" class="headerlink" title="获取图像属性"></a>获取图像属性</h2><pre><code>函数为：cv2.shape
+返回值：返回行数，列数[,通道数]
+功能：略</code></pre><h2 id="函数为：cv2-size"><a href="#函数为：cv2-size" class="headerlink" title="函数为：cv2.size"></a>函数为：cv2.size</h2><pre><code>返回值：返回行数*列数[*通道数]
+功能：略</code></pre><h2 id="函数为：cv2-dtype"><a href="#函数为：cv2-dtype" class="headerlink" title="函数为：cv2.dtype"></a>函数为：cv2.dtype</h2><pre><code>返回值：返回图像的数据类型(unit8)
+功能：略</code></pre><h2 id="感兴趣区域-截取图像img中200-400到200-400的像素"><a href="#感兴趣区域-截取图像img中200-400到200-400的像素" class="headerlink" title="感兴趣区域(截取图像img中200:400到200:400的像素)"></a>感兴趣区域(截取图像img中200:400到200:400的像素)</h2><pre><code>函数为：face=img[200:400,200:400]
+返回值：截取后的图像
+功能：略</code></pre><h2 id="通道拆分和合并"><a href="#通道拆分和合并" class="headerlink" title="通道拆分和合并"></a>通道拆分和合并</h2><pre><code>函数为：b,g,r=cv2.split(图像名)
+返回值：该图像b,g,r三个通道值
+功能：获取三个通道的值</code></pre><h2 id="函数为：m-cv2-merge-b-g-r"><a href="#函数为：m-cv2-merge-b-g-r" class="headerlink" title="函数为：m=cv2.merge([b,g,r])"></a>函数为：m=cv2.merge([b,g,r])</h2><pre><code>返回值：三个通道合成后的图像
+功能：略</code></pre><h2 id="图像加法"><a href="#图像加法" class="headerlink" title="图像加法"></a>图像加法</h2><pre><code>函数为：cv2.add(a,b)
+返回值：是将a,b图像的对应像素点%255得到加法之后的图像
+功能：略</code></pre><h2 id="图像融合"><a href="#图像融合" class="headerlink" title="图像融合"></a>图像融合</h2><pre><code>函数为：cv2.addWeighted(图像1，图像1的系数，图像2，图像2的系数，亮度调节值)
+返回值：融合后的图像
+功能：可以将将两个残缺图像(且残缺的位置不同),融合为一个完整图像</code></pre><h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><pre><code>函数为：cv2.cvtColor(图像名,cv2.COLOR_BGR2RGB)
+返回值：由BGR通道转化到RGB通道的图像
+功能：略
+函数为：cv2.cvtColor(图像名,cv2.COLOR_GRAY2BGR)
+返回值：由灰度类型转化到BGR通道的图像</code></pre><h2 id="图像缩放"><a href="#图像缩放" class="headerlink" title="图像缩放"></a>图像缩放</h2><pre><code>函数为：cv2.resize(src[,dsize=None],fx,fy)
+返回值：缩放后的图像
+参数：dsize缩放大小(列，行)，如果dsize=None,则可以通过fx(水平),fy(垂直)去缩放
+功能：略</code></pre><h2 id="图像旋转"><a href="#图像旋转" class="headerlink" title="图像旋转"></a>图像旋转</h2><pre><code>函数为：cv2.flip(src,flipCode)
+返回值：旋转后的图像
+flipCode&gt;0    返回以Y轴为对称旋转
+flipCode=0    返回以x轴为对称旋转
+flipCode&lt;0    返回以x,y轴同时翻转</code></pre><h2 id="阈值分割"><a href="#阈值分割" class="headerlink" title="阈值分割"></a>阈值分割</h2><pre><code>二进制阈值化
+函数为：threshold(src,阈值,二值阈值化的最大值,cv2.THRESH_BINARY)
+返回值：有两个，一个是阈值,一个是处理之后的结果。
+功能：把图像中亮的处理为白色，暗的处理为黑色。</code></pre><h2 id="反二进制阈值化"><a href="#反二进制阈值化" class="headerlink" title="反二进制阈值化"></a>反二进制阈值化</h2><pre><code>函数为：threshold(src,阈值,二值阈值化的最大值,cv2.THRESH_BINARY_INV)
+返回值：有两个，一个是阈值,一个是处理之后的结果。
+功能：把图像中亮的处理为黑色，暗的处理为白色。</code></pre><h2 id="截断阈值化"><a href="#截断阈值化" class="headerlink" title="截断阈值化"></a>截断阈值化</h2><pre><code>函数为：threshold(src,阈值,二值阈值化的最大值,cv2.THRESH_TRUNC)
+返回值：有两个，一个是阈值,一个是处理之后的结果。
+功能：把图像中亮的处理为阈值，暗的处理为不变。</code></pre><h2 id="反阈值化为0"><a href="#反阈值化为0" class="headerlink" title="反阈值化为0"></a>反阈值化为0</h2><pre><code>函数为：threshold(src,阈值,二值阈值化的最大值,cv2.THRESH_TOZERO_INV)
+返回值：有两个，一个是阈值,一个是处理之后的结果。
+功能：把图像中亮的处理为黑色0，暗的处理为不变。</code></pre><h2 id="阈值化为0"><a href="#阈值化为0" class="headerlink" title="阈值化为0"></a>阈值化为0</h2><pre><code>函数为：threshold(src,阈值,二值阈值化的最大值,cv2.THRESH_TOZERO)
+返回值：有两个，一个是阈值,一个是处理之后的结果。
+功能：把图像中亮的处理为不变，暗的处理为黑色。</code></pre><h2 id="均值滤波"><a href="#均值滤波" class="headerlink" title="均值滤波"></a>均值滤波</h2><pre><code>函数为：cv2.blur(src,核大小)
+返回值：返回均值化后的图像(图像更加平滑)
+参数：核大小是以宽度＆高度形式表示的元组
+功能：使图像更加平滑</code></pre><h2 id="方框滤波"><a href="#方框滤波" class="headerlink" title="方框滤波"></a>方框滤波</h2><pre><code>函数为：cv2.boxFilter(src,目标图像深度,核大小[,normalize属性=1])
+返回值：处理后的图像
+参数：
+目标图像深度为int类型的目标图像深度，通常使用“-1”表示与原始图像一致
+核大小：（n,n）表示有n列n行
+normalize=true时，进行归一化处理,与均值滤波相同
+normalize=false时，很容易溢出,像素值易大于255,得到白色的图像</code></pre><h2 id="高斯滤波"><a href="#高斯滤波" class="headerlink" title="高斯滤波"></a>高斯滤波</h2><pre><code>函数为：GaussianBlur(src,ksize,sigmaX)
+返回值：略
+参数：
+ksize：为核大小(n,n),必须为奇数
+sigmaX：X方向方差，控制权重，一般sigmaX=0,其会自动算一个方差</code></pre><h2 id="中值滤波"><a href="#中值滤波" class="headerlink" title="中值滤波"></a>中值滤波</h2><pre><code>函数为：cv2.medianBlur(src,ksize)
+参数：
+ksize：必须为比1大的奇数且只要写一个数值n，不要写(n,n)</code></pre><h2 id="图像腐蚀"><a href="#图像腐蚀" class="headerlink" title="图像腐蚀"></a>图像腐蚀</h2><pre><code>函数为：cv2.erode(src,kernel[,iterations=1])
+参数：
+kernel为卷积核,np.ones((n,n),np.unit8),
+通过numpy的ones函数生成n*n的数值，其类型为unit8的卷积核
+iterations为迭代次数</code></pre><h2 id="图像膨胀"><a href="#图像膨胀" class="headerlink" title="图像膨胀"></a>图像膨胀</h2><pre><code>函数为：cv2.dilate(src,kernel[,iterations=1])
+参数：
+kernel为卷积核,np.ones((n,n),np.unit8),
+通过numpy的ones函数生成n*n的数值，其类型为unit8的卷积核
+iterations为迭代次数</code></pre><h2 id="开运算：先进行腐蚀操作-膨胀操作，其作用去除噪声并保持原有的形状"><a href="#开运算：先进行腐蚀操作-膨胀操作，其作用去除噪声并保持原有的形状" class="headerlink" title="开运算：先进行腐蚀操作+膨胀操作，其作用去除噪声并保持原有的形状"></a>开运算：先进行腐蚀操作+膨胀操作，其作用去除噪声并保持原有的形状</h2><pre><code>函数为：cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)
+参数：
+cv2.MORPH_OPEN 开运算
+kernel 卷积核</code></pre><h2 id="闭运算：先进行膨胀-腐蚀操作，其作用去掉物体内的小黑点"><a href="#闭运算：先进行膨胀-腐蚀操作，其作用去掉物体内的小黑点" class="headerlink" title="闭运算：先进行膨胀+腐蚀操作，其作用去掉物体内的小黑点"></a>闭运算：先进行膨胀+腐蚀操作，其作用去掉物体内的小黑点</h2><pre><code>函数为：cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)
+morphologyEx是形态学的一组函数，根据参数不同实现不同操作
+参数：
+cv2.MORPH_CLOSE 闭运算
+kernel 卷积核</code></pre><h2 id="梯度运算：将一个图像分别进行膨胀，腐蚀操作并将其相减，得到轮廓信息"><a href="#梯度运算：将一个图像分别进行膨胀，腐蚀操作并将其相减，得到轮廓信息" class="headerlink" title="梯度运算：将一个图像分别进行膨胀，腐蚀操作并将其相减，得到轮廓信息"></a>梯度运算：将一个图像分别进行膨胀，腐蚀操作并将其相减，得到轮廓信息</h2><pre><code>函数为：cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)
+morphologyEx是形态学的一组函数，根据参数不同实现不同操作
+参数：
+cv2.MORPH_GRADIENT 梯度运算
+kernel 卷积核</code></pre><h2 id="礼帽-顶帽-运算：礼帽图像-原图像-开运算图像-去除噪声-，得到噪声图像"><a href="#礼帽-顶帽-运算：礼帽图像-原图像-开运算图像-去除噪声-，得到噪声图像" class="headerlink" title="礼帽(顶帽)运算：礼帽图像=原图像-开运算图像(去除噪声)，得到噪声图像"></a>礼帽(顶帽)运算：礼帽图像=原图像-开运算图像(去除噪声)，得到噪声图像</h2><pre><code>函数为：cv2.morphologyEx(img,cv2.MORPH_TOPHAT,kernel)
+morphologyEx是形态学的一组函数，根据参数不同实现不同操作
+参数：
+cv2.MORPH_TOPHAT 礼帽运算
+kernel 卷积核</code></pre><h2 id="黑帽图像处理：黑帽图像-闭运算图像-元素图像，得到图像内部的小黑点"><a href="#黑帽图像处理：黑帽图像-闭运算图像-元素图像，得到图像内部的小黑点" class="headerlink" title="黑帽图像处理：黑帽图像=闭运算图像-元素图像，得到图像内部的小黑点"></a>黑帽图像处理：黑帽图像=闭运算图像-元素图像，得到图像内部的小黑点</h2><pre><code>函数为：cv2.morphologyEx(img,cv2.MORPH_BLACKHAT,kernel)
+morphologyEx是形态学的一组函数，根据参数不同实现不同操作
+参数：
+cv2.MORPH_BLACKHAT 黑帽运算
+kernel 卷积核</code></pre><h2 id="计算图像梯度-寻找边界-左右像素值差-0不是边界，-0为边界，对其结果取绝对值"><a href="#计算图像梯度-寻找边界-左右像素值差-0不是边界，-0为边界，对其结果取绝对值" class="headerlink" title="计算图像梯度,寻找边界(左右像素值差=0不是边界，!=0为边界，对其结果取绝对值)"></a>计算图像梯度,寻找边界(左右像素值差=0不是边界，!=0为边界，对其结果取绝对值)</h2><pre><code>sobel算子：|左-右|+|下-上|
+函数为：cv2.Sobel(src,dddpth,dx,dy,[ksize])
+参数：
+dddpth：处理结果图像深度，通常情况下，可以设置为-1，表示与原图像的深度一致。
+    但是在计算的时候可能会出现负值，会发生信息丢失，所以需要更高的数据类型
+    即dddpth取cv2.CV_64F,取绝对值后，再转换为np.unit8类型
+    取绝对值通过cv2.convertScaleAbs(scr[,alpha[,beta]])
+    其作用是将原始图像转化为256色位图
+dx:计算x方向的边界[dx=1,dy=0]
+dy:计算y方向的边界[dx=0,dy=1]
+    通过函数cv2.addWeighted(sobel_dx，图像1的系数，sobel_dy，图像2的系数，亮度调节值)
+ksize=-1时，等价于Scharr算子
+
+scharr算子：|左-右|+|下-上|
+函数为：cv2.Scharr(src,cv2.CV_64F,dx,dy)
+dx:计算x方向的边界dx=Scharrx(src,ddpeth,dx=1,dy=0)
+dy:计算y方向的边界dy=Scharry(src,ddpeth,dx=0,dy=1)
+    通过函数cv2.addWeighted(dx，图像1的系数，dy，图像2的系数，亮度调节值)
+    ##且要满足dx&gt;=0&amp;&amp;dy&gt;=0&amp;&amp;&amp;dx+dy==1
+参数值：略
+
+拉普拉斯算子：|左-右|+|左-右|+|下-上|+|下-上|
+函数为：cv2.Laplacian(src,dddpth)
+    即dddpth取cv2.CV_64F,取绝对值后，再转换为np.unit8类型
+    取绝对值通过cv2.convertScaleAbs(scr[,alpha[,beta]])
+    其作用是将原始图像转化为256色位图
+参数值：略</code></pre><h2 id="canny边缘检测"><a href="#canny边缘检测" class="headerlink" title="canny边缘检测"></a>canny边缘检测</h2><pre><code>函数为：cv2.Canny(src,阈值1,阈值2)
+参数值：阈值1minVal,阈值2maxVal,两个阈值是来控制边界信息的丰富程度的，
+   阈值越小得到图像的边界越丰富，越细致</code></pre><h2 id="图像金字塔"><a href="#图像金字塔" class="headerlink" title="图像金字塔"></a>图像金字塔</h2><pre><code>pyrDown(图像向下取样，变成原来的1/4)，pyrUp(图像向下取样，变成原来4倍)
+函数为：cv2.pyrDown(src)   cv2.pyrUp(src)
+参数值：略
+取样可逆性研究：经过放到缩小图像是否不变？不一样，图像的清晰度变差</code></pre><h2 id="拉普拉斯金字塔"><a href="#拉普拉斯金字塔" class="headerlink" title="拉普拉斯金字塔"></a>拉普拉斯金字塔</h2><pre><code>函数为：Li=Gi-PyrUp(PyrDown(Gi))
+参数值：Gi原始图像，Li拉普拉斯图像
+例如：  od=cv2.pyrDown(o)
+        odu=cv2.pyrUp(od)
+        lapPyr=o-odu      拉普拉斯金字塔图像第0层
+        o1=od
+        o1d=cv2.pyrDown(o1)
+        o1du=cv2.pyrUp(o1d)
+        lapPyr1=o1-o1du   拉普拉斯金字塔图像第1层
+
+即拉普拉斯图像+向下取样图像=原始图像</code></pre><h2 id="图像轮廓：边界与轮廓的区别，轮廓是指连续的边界"><a href="#图像轮廓：边界与轮廓的区别，轮廓是指连续的边界" class="headerlink" title="图像轮廓：边界与轮廓的区别，轮廓是指连续的边界"></a>图像轮廓：边界与轮廓的区别，轮廓是指连续的边界</h2><pre><code>函数为:cv2.drawContours(src,contours,contourldx,color[,thickness])
+参数值：
+contours：需要绘制的边缘数组
+contourldx:需要绘制的边缘索引，如果全部绘制为-1
+color:绘制的颜色，为BGR格式的Scalar
+thinckness:绘制的密度，即轮廓画笔的粗细</code></pre><h2 id="绘制直方图"><a href="#绘制直方图" class="headerlink" title="绘制直方图"></a>绘制直方图</h2><pre><code>函数为：plt.hist(src.ravel(),256)
+参数值：将src转化为一维数组  像素级一般为256,为八位的图像的灰度级：[0,255]</code></pre><h2 id="使用Opencv统计直方图"><a href="#使用Opencv统计直方图" class="headerlink" title="使用Opencv统计直方图"></a>使用Opencv统计直方图</h2><pre><code>函数为：hist=cv2.calcHist(images,channels,mask,histSize,ranges[,accumulate])
+  通过函数plt.plot(hist，color=&apos;g/b/r&apos;)绘制出来
+参数值：
+images:原始图像
+channels：指定通道
+mask：掩码图像，统计整幅图像的直方图为None
+histSize：BINS的数量,一般为[256]--灰度图像
+ranges：像素值范围RANGE，一般为[0,255]
+accumulate:累计标识
+返回值：返回一个直方图hist</code></pre><h2 id="使用掩码直方图：先通过zeros生成全黑图像，在截取相应区域为白色"><a href="#使用掩码直方图：先通过zeros生成全黑图像，在截取相应区域为白色" class="headerlink" title="使用掩码直方图：先通过zeros生成全黑图像，在截取相应区域为白色"></a>使用掩码直方图：先通过zeros生成全黑图像，在截取相应区域为白色</h2><pre><code>函数为：mask=np.zeros(src.shape,np.unit8)
+   mask[200:400,200:400]=255
+参数值：src.shape元素图像的大小，np.unit8为八位的位图
+返回值：略</code></pre><h2 id="直方图均值化原理：色彩的细节更加丰富"><a href="#直方图均值化原理：色彩的细节更加丰富" class="headerlink" title="直方图均值化原理：色彩的细节更加丰富"></a>直方图均值化原理：色彩的细节更加丰富</h2><pre><code>函数为：equ=cv2.qualizeHist(src)
+参数值：略
+返回值：略</code></pre><h2 id="subplot函数：一个窗口显示多个图像"><a href="#subplot函数：一个窗口显示多个图像" class="headerlink" title="subplot函数：一个窗口显示多个图像"></a>subplot函数：一个窗口显示多个图像</h2><pre><code>函数为：plt.subplot(n行,n列,窗口序列)
+例如：plt.subplot(121),plt.hist(img.ravel(),256)
+     plt.subplot(122),plt.hist(img.ravel(),256)
+
+函数为：imshow(x,cmap=None)
+参数值：x为需要绘制的图像
+        cmap为颜色图谱，默认为RGB(A)颜色空间
+        若要显示灰度图像：cmap=plt.cm,gray
+        若雅显示彩色图像:如果是通过python读进来的，则不需要处理RGB
+        如果是通过opencv读进来的，则其默认BGR,要调整色彩空间
+使用默认值，显示彩色图像
+
+plt.subplot(221)
+plt.imshow(scr_color),plt.axis(&apos;off&apos;)</code></pre><h2 id="使用gray参数，显示彩色图像"><a href="#使用gray参数，显示彩色图像" class="headerlink" title="使用gray参数，显示彩色图像"></a>使用gray参数，显示彩色图像</h2><pre><code>plt.subplot(222)
+plt.imshow(src_color,cmap=plt.cm.gray),plt.axis(&apos;off&apos;)</code></pre><h2 id="使用默认值，显示彩色度图像"><a href="#使用默认值，显示彩色度图像" class="headerlink" title="使用默认值，显示彩色度图像"></a>使用默认值，显示彩色度图像</h2><pre><code>plt.subplot(223)
+plt.imshow(src_gray),plt.axis(&apos;off&apos;)</code></pre><h2 id="使用gray参数，显示灰度图像【灰度图像-灰度类型才可以显示灰度图像】"><a href="#使用gray参数，显示灰度图像【灰度图像-灰度类型才可以显示灰度图像】" class="headerlink" title="使用gray参数，显示灰度图像【灰度图像+灰度类型才可以显示灰度图像】"></a>使用gray参数，显示灰度图像【灰度图像+灰度类型才可以显示灰度图像】</h2><pre><code>plt.subplot(224)
+plt.imshow(src_gray,cmap=plt.cm.gray),plt.axis(&apos;off&apos;)#设置直方图没有坐标</code></pre><h2 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h2><pre><code>函数为：f=np.fft.fft2(src)
+返回值：返回一个复数的数组</code></pre><h2 id="移动到中心位置：将零频率分量移动到频谱中心"><a href="#移动到中心位置：将零频率分量移动到频谱中心" class="headerlink" title="移动到中心位置：将零频率分量移动到频谱中心"></a>移动到中心位置：将零频率分量移动到频谱中心</h2><pre><code>函数为：fshift=np.fft.fftshift(f)
+   将复数数组转化为灰度图像--&gt;20*np.log(np.abs(fshift))设置频谱的范围</code></pre><h2 id="逆傅里叶变换"><a href="#逆傅里叶变换" class="headerlink" title="逆傅里叶变换"></a>逆傅里叶变换</h2><pre><code>函数为：ifshift=np.fft.ifftshift(f)
+   iimg=np.fft.ifft2(ishift)
+   iimg=np.abs(iimg)</code></pre><h2 id="显示图像，删除所有窗口"><a href="#显示图像，删除所有窗口" class="headerlink" title="显示图像，删除所有窗口"></a>显示图像，删除所有窗口</h2><pre><code>函数为：cv2.imshow(窗口名，图像名)
+  cv2.waitKey([,delay])
+  cv2.destroyAllWindows()
+参数值：
+delay:
+delay&gt;0    等待delay毫秒
+delay&lt;0    等待键盘单击
+delay=0    无限等待</code></pre>
 	
 
 	  
@@ -295,7 +460,7 @@ var _hmt = _hmt || [];
 				
 				<br>
 				<strong>本文链接：</strong>
-				http://yoursite.com/photos/
+				http://yoursite.com/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/
 				<br>
 				<strong>版权声明：</strong>
 				本作品采用
@@ -320,6 +485,21 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">OpenCv</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -370,7 +550,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/photos/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -382,6 +562,16 @@ var _hmt = _hmt || [];
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/04/Markdowm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Markdowm的基本使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -403,7 +593,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#导入库"><span class="toc-number">1.</span> <span class="toc-text">导入库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#读入图像"><span class="toc-number">2.</span> <span class="toc-text">读入图像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#保存图像"><span class="toc-number">3.</span> <span class="toc-text">保存图像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问像素"><span class="toc-number">4.</span> <span class="toc-text">访问像素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用numpy访问像素"><span class="toc-number">5.</span> <span class="toc-text">使用numpy访问像素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取图像属性"><span class="toc-number">6.</span> <span class="toc-text">获取图像属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数为：cv2-size"><span class="toc-number">7.</span> <span class="toc-text">函数为：cv2.size</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数为：cv2-dtype"><span class="toc-number">8.</span> <span class="toc-text">函数为：cv2.dtype</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#感兴趣区域-截取图像img中200-400到200-400的像素"><span class="toc-number">9.</span> <span class="toc-text">感兴趣区域(截取图像img中200:400到200:400的像素)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通道拆分和合并"><span class="toc-number">10.</span> <span class="toc-text">通道拆分和合并</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数为：m-cv2-merge-b-g-r"><span class="toc-number">11.</span> <span class="toc-text">函数为：m&#x3D;cv2.merge([b,g,r])</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图像加法"><span class="toc-number">12.</span> <span class="toc-text">图像加法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图像融合"><span class="toc-number">13.</span> <span class="toc-text">图像融合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类型转换"><span class="toc-number">14.</span> <span class="toc-text">类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图像缩放"><span class="toc-number">15.</span> <span class="toc-text">图像缩放</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图像旋转"><span class="toc-number">16.</span> <span class="toc-text">图像旋转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阈值分割"><span class="toc-number">17.</span> <span class="toc-text">阈值分割</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#反二进制阈值化"><span class="toc-number">18.</span> <span class="toc-text">反二进制阈值化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#截断阈值化"><span class="toc-number">19.</span> <span class="toc-text">截断阈值化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#反阈值化为0"><span class="toc-number">20.</span> <span class="toc-text">反阈值化为0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阈值化为0"><span class="toc-number">21.</span> <span class="toc-text">阈值化为0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#均值滤波"><span class="toc-number">22.</span> <span class="toc-text">均值滤波</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方框滤波"><span class="toc-number">23.</span> <span class="toc-text">方框滤波</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯滤波"><span class="toc-number">24.</span> <span class="toc-text">高斯滤波</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#中值滤波"><span class="toc-number">25.</span> <span class="toc-text">中值滤波</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图像腐蚀"><span class="toc-number">26.</span> <span class="toc-text">图像腐蚀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图像膨胀"><span class="toc-number">27.</span> <span class="toc-text">图像膨胀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开运算：先进行腐蚀操作-膨胀操作，其作用去除噪声并保持原有的形状"><span class="toc-number">28.</span> <span class="toc-text">开运算：先进行腐蚀操作+膨胀操作，其作用去除噪声并保持原有的形状</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#闭运算：先进行膨胀-腐蚀操作，其作用去掉物体内的小黑点"><span class="toc-number">29.</span> <span class="toc-text">闭运算：先进行膨胀+腐蚀操作，其作用去掉物体内的小黑点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#梯度运算：将一个图像分别进行膨胀，腐蚀操作并将其相减，得到轮廓信息"><span class="toc-number">30.</span> <span class="toc-text">梯度运算：将一个图像分别进行膨胀，腐蚀操作并将其相减，得到轮廓信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#礼帽-顶帽-运算：礼帽图像-原图像-开运算图像-去除噪声-，得到噪声图像"><span class="toc-number">31.</span> <span class="toc-text">礼帽(顶帽)运算：礼帽图像&#x3D;原图像-开运算图像(去除噪声)，得到噪声图像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#黑帽图像处理：黑帽图像-闭运算图像-元素图像，得到图像内部的小黑点"><span class="toc-number">32.</span> <span class="toc-text">黑帽图像处理：黑帽图像&#x3D;闭运算图像-元素图像，得到图像内部的小黑点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算图像梯度-寻找边界-左右像素值差-0不是边界，-0为边界，对其结果取绝对值"><span class="toc-number">33.</span> <span class="toc-text">计算图像梯度,寻找边界(左右像素值差&#x3D;0不是边界，!&#x3D;0为边界，对其结果取绝对值)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#canny边缘检测"><span class="toc-number">34.</span> <span class="toc-text">canny边缘检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图像金字塔"><span class="toc-number">35.</span> <span class="toc-text">图像金字塔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拉普拉斯金字塔"><span class="toc-number">36.</span> <span class="toc-text">拉普拉斯金字塔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图像轮廓：边界与轮廓的区别，轮廓是指连续的边界"><span class="toc-number">37.</span> <span class="toc-text">图像轮廓：边界与轮廓的区别，轮廓是指连续的边界</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绘制直方图"><span class="toc-number">38.</span> <span class="toc-text">绘制直方图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Opencv统计直方图"><span class="toc-number">39.</span> <span class="toc-text">使用Opencv统计直方图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用掩码直方图：先通过zeros生成全黑图像，在截取相应区域为白色"><span class="toc-number">40.</span> <span class="toc-text">使用掩码直方图：先通过zeros生成全黑图像，在截取相应区域为白色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#直方图均值化原理：色彩的细节更加丰富"><span class="toc-number">41.</span> <span class="toc-text">直方图均值化原理：色彩的细节更加丰富</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#subplot函数：一个窗口显示多个图像"><span class="toc-number">42.</span> <span class="toc-text">subplot函数：一个窗口显示多个图像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用gray参数，显示彩色图像"><span class="toc-number">43.</span> <span class="toc-text">使用gray参数，显示彩色图像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用默认值，显示彩色度图像"><span class="toc-number">44.</span> <span class="toc-text">使用默认值，显示彩色度图像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用gray参数，显示灰度图像【灰度图像-灰度类型才可以显示灰度图像】"><span class="toc-number">45.</span> <span class="toc-text">使用gray参数，显示灰度图像【灰度图像+灰度类型才可以显示灰度图像】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#傅里叶变换"><span class="toc-number">46.</span> <span class="toc-text">傅里叶变换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动到中心位置：将零频率分量移动到频谱中心"><span class="toc-number">47.</span> <span class="toc-text">移动到中心位置：将零频率分量移动到频谱中心</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#逆傅里叶变换"><span class="toc-number">48.</span> <span class="toc-text">逆傅里叶变换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#显示图像，删除所有窗口"><span class="toc-number">49.</span> <span class="toc-text">显示图像，删除所有窗口</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -445,7 +635,7 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

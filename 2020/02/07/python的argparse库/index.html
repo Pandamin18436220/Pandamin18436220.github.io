@@ -6,34 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>潘晟凯的博客</title>
+  <title>Argparse | 潘晟凯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="潘晟凯,软件工程专业,一名大二学生,吃苦耐劳,低调踏实">
-<meta property="og:type" content="website">
-<meta property="og:title" content="潘晟凯的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Argparse的作用python中argparse库是一个命令行参数的解析工具，利用这个库可以在命令行运行脚本时，设置参数，从而灵活的设置脚本中需要的参数。下面总结一下argparse库的使用方法。简而言之: 学会了该库的基本使用，就不必再代码里修改参数！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Argparse">
+<meta property="og:url" content="http://yoursite.com/2020/02/07/python%E7%9A%84argparse%E5%BA%93/index.html">
 <meta property="og:site_name" content="潘晟凯的博客">
-<meta property="og:description" content="潘晟凯,软件工程专业,一名大二学生,吃苦耐劳,低调踏实">
+<meta property="og:description" content="Argparse的作用python中argparse库是一个命令行参数的解析工具，利用这个库可以在命令行运行脚本时，设置参数，从而灵活的设置脚本中需要的参数。下面总结一下argparse库的使用方法。简而言之: 学会了该库的基本使用，就不必再代码里修改参数！">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/02/07/assets/text_img/Parser%E5%BA%93/a.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/07/assets/text_img/Parser%E5%BA%93/b.png">
+<meta property="article:published_time" content="2020-02-07T06:23:41.010Z">
+<meta property="article:modified_time" content="2020-02-07T06:23:41.010Z">
 <meta property="article:author" content="潘晟凯">
-<meta property="article:tag" content="数据结构与算法">
-<meta property="article:tag" content="操作系统">
-<meta property="article:tag" content="软考">
-<meta property="article:tag" content="Nao">
 <meta property="article:tag" content="python">
-<meta property="article:tag" content="C语言">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="极客">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="C++">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="css">
-<meta property="article:tag" content="设计模式">
+<meta property="article:tag" content="Nao">
+<meta property="article:tag" content="Argparse">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/07/assets/text_img/Parser%E5%BA%93/a.png">
   
     <link rel="alternative" href="/atom.xml" title="潘晟凯的博客" type="application/atom+xml">
   
@@ -212,16 +203,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-python的argparse库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-python的argparse库" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/07/python%E7%9A%84argparse%E5%BA%93/">Argparse</a>
+    <h1 class="article-title" itemprop="name">
+      Argparse
     </h1>
   
 
@@ -231,6 +220,8 @@ var _hmt = _hmt || [];
 </a>
         
 		 
+		<span class="archive-article-date">阅读量 <span id="busuanzi_value_page_pv"></span></span>
+	
       </header>
 	 
 
@@ -247,7 +238,73 @@ var _hmt = _hmt || [];
 	
       
 
-			<h2 id="Argparse的作用"><a href="#Argparse的作用" class="headerlink" title="Argparse的作用"></a>Argparse的作用</h2><pre><code>python中argparse库是一个命令行参数的解析工具，利用这个库可以在命令行运行脚本时，设置参数，从而灵活的设置脚本中需要的参数。下面总结一下argparse库的使用方法。</code></pre><p><strong>简而言之</strong>: <em>学会了该库的基本使用，就不必再代码里修改参数！</em></p>
+	
+		<h2 id="Argparse的作用"><a href="#Argparse的作用" class="headerlink" title="Argparse的作用"></a>Argparse的作用</h2><pre><code>python中argparse库是一个命令行参数的解析工具，利用这个库可以在命令行运行脚本时，设置参数，从而灵活的设置脚本中需要的参数。下面总结一下argparse库的使用方法。</code></pre><p><strong>简而言之</strong>: <em>学会了该库的基本使用，就不必再代码里修改参数！</em></p>
+<a id="more"></a>
+<h2 id="Argparse的基本使用"><a href="#Argparse的基本使用" class="headerlink" title="Argparse的基本使用"></a>Argparse的基本使用</h2><pre><code>下面演示Argparse三个基本函数</code></pre><blockquote>
+<p>创建parse对象（函数一）</p>
+</blockquote>
+<pre><code>#导入argparse库
+import argparse    
+#创建对象 这里使用description参数，我们可以输入想要的提示信息。                
+parser = argparse.ArgumentParser(description=&apos;add some useful information here....&apos;)
+
+ArgumentParser对象保存了所有必要的信息，用于将命令行参数解析为相应的python数据类型。</code></pre><blockquote>
+<p>添加参数信息（函数二）</p>
+</blockquote>
+<pre><code>创建了ArgumentParser对象之后，就可以使用add_argument()方法来添加参数,其输入参数如下，其中[]中的参数为可选参数，作用为设置参数的一些属性。
+带 - 的为可选参数(optional parameter)
+不带 - 的为必选参数(positional parametrer)
+
+ArgumentParser.add_argument(name or flags…[, action][, nargs][, const][, default]</code></pre><p>[, type][, choices][, required][, help][, metavar][, dest])</p>
+<blockquote>
+<blockquote>
+<p>下面总结一下，add_argument()方法中常用的一些属性<br>| 属性值 | 作用 |<br>| :—-: | :—-: |<br>| type | 指定参数存储时的类型，可为int、float、str等 |<br>| action | 参数的处理方法，在命令行遇到此参数时要采取的基本操作类型 |<br>| nargs | 参数的数量，应该使用的命令行参数的数量 |<br>| const | 参数的常量值，某些动作和选择所需的常量值 |<br>| default | 参数的默认值，如果命令行中不存在的参数，则生成的值 |<br>| choices | 参数的取值范围，参数允许值的范围 |<br>| action | 参数的处理方法，在命令行遇到此参数时要采取的基本操作类型 |<br>|requires| 参数是否可以忽略不写，进队可选参数有效|<br>| help | 参数的说明信息，简单描述参数的作用|<br>| metavar | 参数在说明信息usage(用法)中的名称，用法消息中的名称|<br>| dest | 对象的属性名，要添加到返回值的对象的属性的名称|</p>
+</blockquote>
+</blockquote>
+<pre><code>案例一:   
+    import argparse
+    # 创建解析对象, description是对其描述
+    parser = argparse.ArgumentParser(description=&quot;测试使用 argparse 库&quot;)
+    # 向parser对象添加你要关注的命令行参数和选项, 这里的两个参数，一个为长参数：--parm1，一个为短参数:-p1
+    parser.add_argument(&quot;--param1&quot;, &quot;-p1&quot;, type=str)
+    # 对命令行参数进行解析
+    args = parser.parse_args()
+    print(args)
+    # 输出具体的参数值
+    print(args.param1)</code></pre><p><img src="../assets/text_img/Parser%E5%BA%93/a.png" alt="a"></p>
+<pre><code>案例二:
+    import argparse
+    # 创建解析对象, description是对其描述
+    parser = argparse.ArgumentParser(description=&quot;测试使用 argparse 库&quot;)
+    # 向parser对象添加你要关注的命令行参数和选项, 这里的两个参数，一个为长参数：--parm1，一个为短参数:-p1
+    parser.add_argument(&quot;--param1&quot;, &quot;-p1&quot;, type=str)
+    parser.add_argument(&quot;--param2&quot;, &quot;-p2&quot;, type=int, help=&quot;参数2需要输入0~20整数&quot;, choices=range(21))
+    # 参数值为int型，传入多个值时，返回的是一个列表
+    parser.add_argument(&quot;--param3&quot;, &quot;-p3&quot;, type=int, nargs=&quot;+&quot;, help=&quot;list类型，可以接收1~n个值&quot;)
+    # 对命令行参数进行解析
+    args = parser.parse_args()
+    print(args)
+    # 输出具体的参数值
+    print(args.param1,&quot;\n&quot;, args.param2,&quot;\n&quot;, args.param3)</code></pre><p><img src="../assets/text_img/Parser%E5%BA%93/b.png" alt="b"></p>
+<pre><code>我们可以通过 --param1 来指定参数1， 也可以使用短参 -p1来指定参数1
+
+add_argument的部分参数介绍如下：
+type: 指定类型
+required: 参数是否必填，如果为True则必须要传入对应的值
+help: python test.py -h 会出现对应help的内容
+nargs:  指定这个参数后面的值有多少个，默认为1, 也可以写正则表达式符号：+(一个或者多个) , *(没有或者多个), 数字
+choices:  设置参数的范围</code></pre><blockquote>
+<p>解析参数(函数三)<br>    添加完参数后，最后调用parse_args()方法，将会返回一个命名空间(namespace)，之后我们就可以调用各个设置好的参数啦</p>
+</blockquote>
+<pre><code>def parse_arg():
+    parser = argparse.ArgumentParser(description=&apos;描述内容&apos;)
+    parser.add_argument(&apos;--param1&apos;, type=int,help=&apos;add some helpful message here.&apos;)
+    parser.add_argument(&apos;--param2&apos;, type=int)
+    parser.add_argument(&apos;--param3&apos;, type=float)
+    args = parser.parse_args()   #命名空间namespace
+    return args</code></pre><p><a href="https://docs.python.org/zh-cn/3.7/library/argparse.html" target="_blank" rel="noopener">官方文档链接</a></p>
+
 	
 
 	  
@@ -260,8 +317,42 @@ var _hmt = _hmt || [];
 
 		
 		
-		
-		  <div hidden="hidden"></div>
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+		  <div>
+			<blockquote>
+				<strong>本文作者：</strong>
+				
+				  潘晟凯
+				
+				<br>
+				<strong>本文链接：</strong>
+				http://yoursite.com/2020/02/07/python%E7%9A%84argparse%E5%BA%93/
+				<br>
+				<strong>版权声明：</strong>
+				本作品采用
+				<a rel="license" href=""></a>
+				进行许可。转载请注明出处！
+				
+			</blockquote>
+			
+			
+			<hr>
+				<center><strong>感谢有你，伴我成长。</strong></center>
+			<hr>
+		  </div>
+		  
 		
 		
 		
@@ -294,16 +385,75 @@ var _hmt = _hmt || [];
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/07/python%E7%9A%84argparse%E5%BA%93/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2020/02/07/python%E7%9A%84argparse%E5%BA%93/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">OpenCv基本函数</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -318,225 +468,19 @@ var _hmt = _hmt || [];
         </div>
         
         
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-opencv基本函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/">OpenCv基本函数</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-02-05T07:38:15.137Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-05</time>
-</a>
-        
-		 
-      </header>
-	 
-
-	<div align="center" class="post-count">字数：3,037字 | 预计阅读时长：12分钟</div>
-	
-
-
-    
-	<!-- 目录内容 -->
-		
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-	
-	
-      
-
-			<h2 id="导入库"><a href="#导入库" class="headerlink" title="导入库"></a>导入库</h2><pre><code>-*- coding: utf-8 -*-
-
-import cv2                      #opencv2库
-
-import numpy as np              #numpy库
-
-import matplotlib.pyplot as plt #类似于matlab工具</code></pre>
-	
-
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-
-		
-		
-		
-		  <div hidden="hidden"></div>
-		
-		
-		
-		
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">OpenCv</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Nao</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Argparse的作用"><span class="toc-number">1.</span> <span class="toc-text">Argparse的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Argparse的基本使用"><span class="toc-number">2.</span> <span class="toc-text">Argparse的基本使用</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-Markdowm的基本使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/04/Markdowm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">Markdown的基本使用</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/04/Markdowm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-02-04T05:53:24.883Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-04</time>
-</a>
-        
-		 
-      </header>
-	 
-
-	<div align="center" class="post-count">字数：69字 | 预计阅读时长：1分钟</div>
-	
-
-
-    
-	<!-- 目录内容 -->
-		
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-	
-	
-      
-
-			<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>  <strong>粗体文本</strong><br>  <em>斜体文本</em></p>
-<p> <strong><em>粗斜体文本</em></strong><br>    * 无序列表</p>
-	
-
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-
-		
-		
-		
-		  <div hidden="hidden"></div>
-		
-		
-		
-		
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Markdowm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/04/Markdowm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
     </div>
 </aside>
 
@@ -544,7 +488,11 @@ import matplotlib.pyplot as plt #类似于matlab工具</code></pre>
 
   
   
+  
 
+  
+
+  
 
           </div>
         </div>
@@ -568,8 +516,8 @@ import matplotlib.pyplot as plt #类似于matlab工具</code></pre>
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

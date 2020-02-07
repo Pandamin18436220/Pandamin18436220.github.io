@@ -8,18 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>OpenCv基本函数 | 潘晟凯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="导入库1234567-*- coding: utf-8 -*-import cv2                      #opencv2库import numpy as np              #numpy库import matplotlib.pyplot as plt #类似于matlab工具">
+  <meta name="description" content="导入库-*- coding: utf-8 -*-  import cv2                      #opencv2库  import numpy as np              #numpy库  import matplotlib.pyplot as plt #类似于matlab工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OpenCv基本函数">
 <meta property="og:url" content="http://yoursite.com/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="潘晟凯的博客">
-<meta property="og:description" content="导入库1234567-*- coding: utf-8 -*-import cv2                      #opencv2库import numpy as np              #numpy库import matplotlib.pyplot as plt #类似于matlab工具">
+<meta property="og:description" content="导入库-*- coding: utf-8 -*-  import cv2                      #opencv2库  import numpy as np              #numpy库  import matplotlib.pyplot as plt #类似于matlab工具">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-02-05T07:38:15.137Z">
 <meta property="article:modified_time" content="2020-02-05T07:38:15.137Z">
 <meta property="article:author" content="潘晟凯">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="OpenCv">
+<meta property="article:tag" content="Nao">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="潘晟凯的博客" type="application/atom+xml">
@@ -82,7 +83,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		
-        <nav>总文章数: 3 </nav>总字数: <span class="post-count">3.2k</span>
+        <nav>总文章数: 3 </nav>总字数: <span class="post-count">4.1k</span>
 		
 		<nav class="header-smart-menu">
     		
@@ -221,7 +222,7 @@ var _hmt = _hmt || [];
       </header>
 	 
 
-	<div align="center" class="post-count">字数：3,045字 | 预计阅读时长：12分钟</div>
+	<div align="center" class="post-count">字数：3,037字 | 预计阅读时长：12分钟</div>
 	
 
 
@@ -235,8 +236,13 @@ var _hmt = _hmt || [];
       
 
 	
-		<h2 id="导入库"><a href="#导入库" class="headerlink" title="导入库"></a>导入库</h2><pre><code><figure class="highlight capnproto"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-*- coding: utf-<span class="number">8</span> -*-</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cv2                      <span class="comment">#opencv2库</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np              <span class="comment">#numpy库</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt <span class="comment">#类似于matlab工具</span></span><br></pre></td></tr></table></figure></code></pre><a id="more"></a>
+		<h2 id="导入库"><a href="#导入库" class="headerlink" title="导入库"></a>导入库</h2><pre><code>-*- coding: utf-8 -*-
 
+import cv2                      #opencv2库
+
+import numpy as np              #numpy库
+
+import matplotlib.pyplot as plt #类似于matlab工具</code></pre><a id="more"></a>
 <h2 id="读入图像"><a href="#读入图像" class="headerlink" title="读入图像"></a>读入图像</h2><pre><code>函数为：cv2.imread(文件名[,显示控制参数])
 返回值：一个图像
 功能：读取图像
@@ -244,7 +250,8 @@ var _hmt = _hmt || [];
 0/cv2.IMREAD_UNCHANGED   不改变
 -1/cv2.IMREAD_GRAYSCALE  图像灰度
 1/cv2.IMREAD_COLOR       图像菜度
-<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">o=cv2.imread('C:<span class="symbol">\\</span>Users<span class="symbol">\\</span>Pandamin<span class="symbol">\\</span>Desktop<span class="symbol">\\</span>image<span class="symbol">\\</span>1.jpg',0)</span><br></pre></td></tr></table></figure></code></pre><h2 id="保存图像"><a href="#保存图像" class="headerlink" title="保存图像"></a>保存图像</h2><pre><code>函数为：cv2.imwrite(文件地址，文件名)
+```
+o=cv2.imread(&apos;C:\\Users\\Pandamin\\Desktop\\image\\1.jpg&apos;,0)</code></pre><h2 id="保存图像"><a href="#保存图像" class="headerlink" title="保存图像"></a>保存图像</h2><pre><code>函数为：cv2.imwrite(文件地址，文件名)
 返回值：无
 功能：保存图像</code></pre><h2 id="访问像素"><a href="#访问像素" class="headerlink" title="访问像素"></a>访问像素</h2><pre><code>函数为：img[位置[,通道数]]
 返回值：该位置的像素
@@ -485,6 +492,10 @@ delay=0    无限等待</code></pre>
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">OpenCv</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Nao</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -553,9 +564,18 @@ delay=0    无限等待</code></pre>
   
 <nav id="article-nav">
   
+    <a href="/2020/02/07/python%E7%9A%84argparse%E5%BA%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Argparse
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/02/04/Markdowm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Markdowm的基本使用</div>
+      <div class="article-nav-title">Markdown的基本使用</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -696,6 +716,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">OpenCv</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Nao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Argparse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdowm</a>
               </li>
             
             <div class="clearfix"></div>

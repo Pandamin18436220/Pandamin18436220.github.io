@@ -225,7 +225,7 @@ var _hmt = _hmt || [];
       </header>
 	 
 
-	<div align="center" class="post-count">字数：1,026字 | 预计阅读时长：4分钟</div>
+	<div align="center" class="post-count">字数：1,024字 | 预计阅读时长：4分钟</div>
 	
 
 
@@ -256,12 +256,63 @@ ArgumentParser对象保存了所有必要的信息，用于将命令行参数解
 带 - 的为可选参数(optional parameter)
 不带 - 的为必选参数(positional parametrer)
 
-ArgumentParser.add_argument(name or flags…[, action][, nargs][, const][, default]</code></pre><p>[, type][, choices][, required][, help][, metavar][, dest])</p>
+ArgumentParser.add_argument(name or flags…[, action][, nargs][, const][, default][, type][, choices][, required][, help][, metavar][, dest])</code></pre><blockquote>
 <blockquote>
-<blockquote>
-<p>下面总结一下，add_argument()方法中常用的一些属性<br>| 属性值 | 作用 |<br>| :—-: | :—-: |<br>| type | 指定参数存储时的类型，可为int、float、str等 |<br>| action | 参数的处理方法，在命令行遇到此参数时要采取的基本操作类型 |<br>| nargs | 参数的数量，应该使用的命令行参数的数量 |<br>| const | 参数的常量值，某些动作和选择所需的常量值 |<br>| default | 参数的默认值，如果命令行中不存在的参数，则生成的值 |<br>| choices | 参数的取值范围，参数允许值的范围 |<br>| action | 参数的处理方法，在命令行遇到此参数时要采取的基本操作类型 |<br>|requires| 参数是否可以忽略不写，进队可选参数有效|<br>| help | 参数的说明信息，简单描述参数的作用|<br>| metavar | 参数在说明信息usage(用法)中的名称，用法消息中的名称|<br>| dest | 对象的属性名，要添加到返回值的对象的属性的名称|</p>
+<p>下面总结一下，add_argument()方法中常用的一些属性</p>
 </blockquote>
 </blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">属性值</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">type</td>
+<td align="center">指定参数存储时的类型，可为int、float、str等</td>
+</tr>
+<tr>
+<td align="center">action</td>
+<td align="center">参数的处理方法，在命令行遇到此参数时要采取的基本操作类型</td>
+</tr>
+<tr>
+<td align="center">nargs</td>
+<td align="center">参数的数量，应该使用的命令行参数的数量</td>
+</tr>
+<tr>
+<td align="center">const</td>
+<td align="center">参数的常量值，某些动作和选择所需的常量值</td>
+</tr>
+<tr>
+<td align="center">default</td>
+<td align="center">参数的默认值，如果命令行中不存在的参数，则生成的值</td>
+</tr>
+<tr>
+<td align="center">choices</td>
+<td align="center">参数的取值范围，参数允许值的范围</td>
+</tr>
+<tr>
+<td align="center">action</td>
+<td align="center">参数的处理方法，在命令行遇到此参数时要采取的基本操作类型</td>
+</tr>
+<tr>
+<td align="center">requires</td>
+<td align="center">参数是否可以忽略不写，进队可选参数有效</td>
+</tr>
+<tr>
+<td align="center">help</td>
+<td align="center">参数的说明信息，简单描述参数的作用</td>
+</tr>
+<tr>
+<td align="center">metavar</td>
+<td align="center">参数在说明信息usage(用法)中的名称，用法消息中的名称</td>
+</tr>
+<tr>
+<td align="center">dest</td>
+<td align="center">对象的属性名，要添加到返回值的对象的属性的名称</td>
+</tr>
+</tbody></table>
 <pre><code>案例一:   
     import argparse
     # 创建解析对象, description是对其描述

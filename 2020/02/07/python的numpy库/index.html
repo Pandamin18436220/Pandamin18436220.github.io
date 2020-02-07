@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://pandamin18436220.github.io">
-  <title>Numpy | 潘晟凯的博客</title>
+  <title>Numpy库 | 潘晟凯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Numpy的作用Numpy(Numerical Python) 是 Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Numpy">
+<meta property="og:title" content="Numpy库">
 <meta property="og:url" content="https://pandamin18436220.github.io/2020/02/07/python%E7%9A%84numpy%E5%BA%93/index.html">
 <meta property="og:site_name" content="潘晟凯的博客">
 <meta property="og:description" content="Numpy的作用Numpy(Numerical Python) 是 Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。">
@@ -19,7 +19,6 @@
 <meta property="article:modified_time" content="2020-02-07T08:33:20.147Z">
 <meta property="article:author" content="潘晟凯">
 <meta property="article:tag" content="python">
-<meta property="article:tag" content="Nao">
 <meta property="article:tag" content="numpy">
 <meta name="twitter:card" content="summary">
   
@@ -83,7 +82,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		
-        <nav>总文章数: 4 </nav>总字数: <span class="post-count">6.1k</span>
+        <nav>总文章数: 6 </nav>总字数: <span class="post-count">7.4k</span>
 		
 		<nav class="header-smart-menu">
     		
@@ -207,7 +206,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      Numpy
+      Numpy库
     </h1>
   
 
@@ -222,7 +221,7 @@ var _hmt = _hmt || [];
       </header>
 	 
 
-	<div align="center" class="post-count">字数：1,992字 | 预计阅读时长：9分钟</div>
+	<div align="center" class="post-count">字数：2,276字 | 预计阅读时长：11分钟</div>
 	
 
 
@@ -240,325 +239,86 @@ var _hmt = _hmt || [];
 <h3 id="Numpy库与数组的区别"><a href="#Numpy库与数组的区别" class="headerlink" title="Numpy库与数组的区别"></a>Numpy库与数组的区别</h3><pre><code>python中可以使用列表保存一组值，可将列表当数组使用。另外，python中有array模块，但它不支持多维数组。所以无论是列表还是array模块都没有科学运算函数，不适合做矩阵等科学计算。
 numpy没有使用python本身的数组机制，而是提供了ndarray对象，该对象不仅能方便地存取数组，而且拥有丰富的数组计算函数。</code></pre><h2 id="Numpy的基本使用"><a href="#Numpy的基本使用" class="headerlink" title="Numpy的基本使用"></a>Numpy的基本使用</h2><pre><code>下面介绍Numpy的基础知识与相关函数</code></pre><blockquote>
 <h3 id="创建数组及使用"><a href="#创建数组及使用" class="headerlink" title="创建数组及使用"></a>创建数组及使用</h3></blockquote>
-<pre><code>#定义了一个二维数组，大小为（2，3）
-&gt;&gt;&gt; x=np.array([
-            [1.0,0.0,0.0],
-            [0.,1.,2.]
-            ]) 
-&gt;&gt;&gt; x
-array([[1., 0., 0.],
-      [0., 1., 2.]])
-
-#数组维度数
-&gt;&gt;&gt; x.ndim   
-2
-#数组的维数，返回的格式(n,m),其中n为行数，m为列数
-&gt;&gt;&gt; x.shape    
-(2, 3)
-#数组元素的总数
-&gt;&gt;&gt; x.size    
-6
-#数组元素类型
-&gt;&gt;&gt; x.dtype   
-#64位浮点型
-dtype(&apos;float64&apos;)
-#每个元素占有的字节大小  
-&gt;&gt;&gt; x.itemsize  
-8
-#数组元素的缓冲区
-&gt;&gt;&gt; x.data    
-&lt;memory at 0x00000205227DAC18&gt;</code></pre><p>知识点扩展:<br>    创建序列数组的函数arrange和linspace。（range函数类似）</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义了一个二维数组，大小为（2，3）</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; x=np.array([</span><br><span class="line">            [<span class="number">1.0</span>,<span class="number">0</span>.<span class="number">0</span>,<span class="number">0</span>.<span class="number">0</span>],</span><br><span class="line">            [<span class="number">0</span>.,<span class="number">1</span>.,<span class="number">2</span>.]</span><br><span class="line">            ])</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; x</span><br><span class="line">array([[<span class="number">1</span>., <span class="number">0</span>., <span class="number">0</span>.],</span><br><span class="line">      [<span class="number">0</span>., <span class="number">1</span>., <span class="number">2</span>.]])</span><br><span class="line"></span><br><span class="line"><span class="comment">#数组维度数</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; x.ndim</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="comment">#数组的维数，返回的格式(n,m),其中n为行数，m为列数</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; x.shape</span><br><span class="line">(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">#数组元素的总数</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; x.size</span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="comment">#数组元素类型</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; x.dtype</span><br><span class="line"><span class="comment">#64位浮点型</span></span><br><span class="line">dtype(<span class="string">'float64'</span>)</span><br><span class="line"><span class="comment">#每个元素占有的字节大小  </span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; x.itemsize  </span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="comment">#数组元素的缓冲区</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; x.data</span><br><span class="line">&lt;memory at <span class="number">0x00000205227DAC18</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>知识点扩展:<br>    创建序列数组的函数arrange和linspace。（range函数类似）</p>
 <ul>
-<li><p>arange(a,b,c)<br>  参数表示(开始值，结束值，步长)</p>
-</li>
-<li><p>linspace(a,b,c)<br>  参数表示(开始值，结束值，元素数量)</p>
-</li>
-<li><p>调用reshape()可以指定形状</p>
-<pre><code>&gt;&gt;&gt; arange(6).reshape(2,3)
-array([
-       [ 0,  1,  2],
-       [ 3,  4,  5],
-       [10, 11, 12]
-       ])
-
-&gt;&gt;&gt; arange(1,5,2)
-    array([1, 3, 5])
-&gt;&gt;&gt; arange(0,1,0.5)
-    array([0. , 0.5, 1])
-&gt;&gt;&gt; linspace(0,2,9)
-    array([0.  , 0.25, 0.5 , 0.75, 1.  , 1.25, 1.5 , 1.75, 2.  ])</code></pre></li>
+<li>arange(a,b,c)<br>  参数表示(开始值，结束值，步长)</li>
+<li>linspace(a,b,c)<br>  参数表示(开始值，结束值，元素数量)</li>
+<li>调用reshape()可以指定形状</li>
 </ul>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; arange(<span class="number">6</span>).reshape(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">array</span>([</span><br><span class="line">           [ <span class="number">0</span>,  <span class="number">1</span>,  <span class="number">2</span>],</span><br><span class="line">           [ <span class="number">3</span>,  <span class="number">4</span>,  <span class="number">5</span>],</span><br><span class="line">           [<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>]</span><br><span class="line">        ])</span><br><span class="line">&gt;&gt;&gt; arange(<span class="number">1</span>,<span class="number">5</span>,<span class="number">2</span>)</span><br><span class="line">    <span class="built_in">array</span>([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>])</span><br><span class="line">&gt;&gt;&gt; arange(<span class="number">0</span>,<span class="number">1</span>,<span class="number">0.5</span>)</span><br><span class="line">    <span class="built_in">array</span>([<span class="number">0.</span> , <span class="number">0.5</span>, <span class="number">1</span>])</span><br><span class="line">&gt;&gt;&gt; linspace(<span class="number">0</span>,<span class="number">2</span>,<span class="number">9</span>)</span><br><span class="line">    <span class="built_in">array</span>([<span class="number">0.</span>  , <span class="number">0.25</span>, <span class="number">0.5</span> , <span class="number">0.75</span>, <span class="number">1.</span>  , <span class="number">1.25</span>, <span class="number">1.5</span> , <span class="number">1.75</span>, <span class="number">2.</span>  ])</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <h3 id="特殊数组"><a href="#特殊数组" class="headerlink" title="特殊数组"></a>特殊数组</h3></blockquote>
 <ul>
 <li>zeros数组：全零数组，元素全为零。</li>
 <li>ones数组：全1数组，元素全为1。</li>
-<li>empty数组：空数组，元素全近似为0。<pre><code>&gt;&gt;&gt; zeros((3,4))
-    array([
-          [0., 0., 0., 0.],
-          [0., 0., 0., 0.],
-          [0., 0., 0., 0.]
-          ])
-&gt;&gt;&gt; ones((2,3,4),dtype=int16)
-    array([
-        [
-          [1, 1, 1, 1],
-          [1, 1, 1, 1],
-          [1, 1, 1, 1]
-        ],
-        [ [1, 1, 1, 1],
-          [1, 1, 1, 1],
-          [1, 1, 1, 1]
-        ]
-        ], dtype=int16)
-&gt;&gt;&gt; empty((5,3))
-    array([
-        [6.23042070e-307, 1.42417221e-306, 1.37961641e-306],
-        [1.11261027e-306, 1.11261502e-306, 1.42410839e-306],
-        [7.56597770e-307, 6.23059726e-307, 1.42419530e-306],
-        [7.56599128e-307, 1.11260144e-306, 6.89812281e-307],
-        [2.22522596e-306, 2.22522596e-306, 2.56761491e-312]
-        ])</code></pre></li>
+<li>empty数组：空数组，元素全近似为0。</li>
 </ul>
-<blockquote>
-<h3 id="数组索引"><a href="#数组索引" class="headerlink" title="数组索引"></a>数组索引</h3><pre><code>Numpy数组通过索引访问</code></pre><blockquote>
-<blockquote>
-<p>c=arange(24).reshape(2,3,4)<br>print(c)<br>        [<br>            [<br>                [ 0  1  2  3]<br>                [ 4  5  6  7]<br>                [ 8  9 10 11]<br>            ]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<pre><code>        [
-            [12 13 14 15]
-            [16 17 18 19]
-            [20 21 22 23]
-        ]
-    ]
-&gt;&gt;&gt; print(c[1,2,:])
-    [20 21 22 23]
-&gt;&gt;&gt; print(c[0,1,2])
-    6</code></pre><blockquote>
-<h3 id="数组运算"><a href="#数组运算" class="headerlink" title="数组运算"></a>数组运算</h3></blockquote>
-<pre><code>数组的加减乘除以及乘方运算方式为:相应位置的元素分别进行运算。
-&gt;&gt;&gt; a=array([20,30,40,50])
-&gt;&gt;&gt; aa=arange(1,5)
-&gt;&gt;&gt; a/aa
-    array([20.        , 15.        , 13.33333333, 12.5       ])
-&gt;&gt;&gt; b=arange(4)
-&gt;&gt;&gt; b
-    array([0, 1, 2, 3])
-&gt;&gt;&gt; c=a-b
-&gt;&gt;&gt; c
-    array([20, 29, 38, 47])
-&gt;&gt;&gt; b**2
-    array([0, 1, 4, 9], dtype=int32)
-&gt;&gt;&gt; A=array([
-            [1,1],
-            [0,1]
-            ])
-&gt;&gt;&gt; B=array([
-            [2,0],
-            [3,4]
-            ])
-&gt;&gt;&gt; A*B
-    array([
-            [2, 0],
-            [0, 4]
-         ])
-&gt;&gt;&gt; A.sum()
-    3
-&gt;&gt;&gt; A.min()
-    0
-&gt;&gt;&gt; A.max()
-    1</code></pre><blockquote>
-<h3 id="数组的拷贝"><a href="#数组的拷贝" class="headerlink" title="数组的拷贝"></a>数组的拷贝</h3><pre><code>拷贝有浅拷贝和深拷贝两种;
-浅拷贝通过数组变量的赋值完成,浅拷贝只拷贝数组的引用，如果对拷贝进行修改，源数组也将修改;
-深拷贝使用数组对象的copy方法，会复制一份和源数组一样的数组，新数组与源数组会存放在不同内存位置，因此对新数组的修改不会影响源数组。</code></pre></blockquote>
-<pre><code>案例一(浅拷贝)
-&gt;&gt;&gt; a=ones((2,3))
-&gt;&gt;&gt; a
-    array([
-             [1., 1., 1.],
-             [1., 1., 1.]
-         ])
-&gt;&gt;&gt; b=a
-&gt;&gt;&gt; b[1,2]=2
-&gt;&gt;&gt; a
-    array([
-             [1., 1., 1.],
-             [1., 1., 2.]
-         ])
-&gt;&gt;&gt; b
-    array([
-             [1., 1., 1.],
-             [1., 1., 2.]
-         ])
-案例二(深拷贝)
-&gt;&gt;&gt; a=ones((2,3))
-&gt;&gt;&gt; b=a.copy()
-&gt;&gt;&gt; b[1,2]=2
-&gt;&gt;&gt; a
-    array([
-             [1., 1., 1.],
-             [1., 1., 1.]
-         ])
-&gt;&gt;&gt; b
-    array([
-             [1., 1., 1.],
-             [1., 1., 2.]
-         ])</code></pre><blockquote>
-<h3 id="创建矩阵"><a href="#创建矩阵" class="headerlink" title="创建矩阵"></a>创建矩阵</h3></blockquote>
-<h3 id="矩阵与数组的区别"><a href="#矩阵与数组的区别" class="headerlink" title="矩阵与数组的区别"></a>矩阵与数组的区别</h3><pre><code>Numpy的矩阵对象与数组对象相似。其不同之处在于，矩阵对象的计算遵循矩阵数学运算律。矩阵使用matrix函数创建。
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; zeros((<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line">    <span class="built_in">array</span>([</span><br><span class="line">          [<span class="number">0.</span>, <span class="number">0.</span>, <span class="number">0.</span>, <span class="number">0.</span>],</span><br><span class="line">          [<span class="number">0.</span>, <span class="number">0.</span>, <span class="number">0.</span>, <span class="number">0.</span>],</span><br><span class="line">          [<span class="number">0.</span>, <span class="number">0.</span>, <span class="number">0.</span>, <span class="number">0.</span>]</span><br><span class="line">          ])</span><br><span class="line">&gt;&gt;&gt; ones((<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>),dtype=<span class="built_in">int</span>16)</span><br><span class="line">    <span class="built_in">array</span>([</span><br><span class="line">        [</span><br><span class="line">          [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">          [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">          [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line">        ],</span><br><span class="line">        [ [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">          [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">          [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line">        ]</span><br><span class="line">        ], dtype=<span class="built_in">int</span>16)</span><br><span class="line">&gt;&gt;&gt; empty((<span class="number">5</span>,<span class="number">3</span>))</span><br><span class="line">    <span class="built_in">array</span>([</span><br><span class="line">        [<span class="number">6.23042070e-307</span>, <span class="number">1.42417221e-306</span>, <span class="number">1.37961641e-306</span>],</span><br><span class="line">        [<span class="number">1.11261027e-306</span>, <span class="number">1.11261502e-306</span>, <span class="number">1.42410839e-306</span>],</span><br><span class="line">        [<span class="number">7.56597770e-307</span>, <span class="number">6.23059726e-307</span>, <span class="number">1.42419530e-306</span>],</span><br><span class="line">        [<span class="number">7.56599128e-307</span>, <span class="number">1.11260144e-306</span>, <span class="number">6.89812281e-307</span>],</span><br><span class="line">        [<span class="number">2.22522596e-306</span>, <span class="number">2.22522596e-306</span>, <span class="number">2.56761491e-312</span>]</span><br><span class="line">        ])</span><br></pre></td></tr></table></figure>
 
-&gt;&gt;&gt; A=matrix(&apos;1.0 2.0;3.0 4.0&apos;)
-&gt;&gt;&gt; A
-    matrix([
-            [1., 2.],
-            [3., 4.]
-           ])
-&gt;&gt;&gt; B=matrix([
-                 [1.0,2.0],
-                 [3.0,4.0]
-           ])
-&gt;&gt;&gt; B
-    matrix([
-                 [1., 2.],
-                 [3., 4.]
-           ])
-&gt;&gt;&gt; type(A)
-    &lt;class &apos;numpy.matrixlib.defmatrix.matrix&apos;&gt;</code></pre><blockquote>
+<blockquote>
+<h3 id="数组索引"><a href="#数组索引" class="headerlink" title="数组索引"></a>数组索引</h3></blockquote>
+<pre><code>Numpy数组通过索引访问</code></pre><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; c=arange(<span class="number">24</span>).reshape(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">&gt;&gt;&gt; print(c)</span><br><span class="line">[</span><br><span class="line">    [</span><br><span class="line">        [ <span class="number">0</span>  <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span>]</span><br><span class="line">        [ <span class="number">4</span>  <span class="number">5</span>  <span class="number">6</span>  <span class="number">7</span>]</span><br><span class="line">        [ <span class="number">8</span>  <span class="number">9</span> <span class="number">10</span> <span class="number">11</span>]</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    [</span><br><span class="line">        [<span class="number">12</span> <span class="number">13</span> <span class="number">14</span> <span class="number">15</span>]</span><br><span class="line">        [<span class="number">16</span> <span class="number">17</span> <span class="number">18</span> <span class="number">19</span>]</span><br><span class="line">        [<span class="number">20</span> <span class="number">21</span> <span class="number">22</span> <span class="number">23</span>]</span><br><span class="line">    ]</span><br><span class="line">]</span><br><span class="line">&gt;&gt;&gt; print(c[<span class="number">1</span>,<span class="number">2</span>,:])</span><br><span class="line">    [<span class="number">20</span> <span class="number">21</span> <span class="number">22</span> <span class="number">23</span>]</span><br><span class="line">&gt;&gt;&gt; print(c[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>])</span><br><span class="line">    <span class="number">6</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="数组运算"><a href="#数组运算" class="headerlink" title="数组运算"></a>数组运算</h3></blockquote>
+<pre><code>数组的加减乘除以及乘方运算方式为:相应位置的元素分别进行运算。</code></pre><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a=<span class="built_in">array</span>([<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>,<span class="number">50</span>])</span><br><span class="line">&gt;&gt;&gt; aa=arange(<span class="number">1</span>,<span class="number">5</span>)</span><br><span class="line">&gt;&gt;&gt; a/aa</span><br><span class="line">    <span class="built_in">array</span>([<span class="number">20.</span>        , <span class="number">15.</span>        , <span class="number">13.33333333</span>, <span class="number">12.5</span>       ])</span><br><span class="line">&gt;&gt;&gt; b=arange(<span class="number">4</span>)</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">    <span class="built_in">array</span>([<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">&gt;&gt;&gt; c=a-b</span><br><span class="line">&gt;&gt;&gt; c</span><br><span class="line">    <span class="built_in">array</span>([<span class="number">20</span>, <span class="number">29</span>, <span class="number">38</span>, <span class="number">47</span>])</span><br><span class="line">&gt;&gt;&gt; b**<span class="number">2</span></span><br><span class="line">    <span class="built_in">array</span>([<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>], dtype=<span class="built_in">int</span>32)</span><br><span class="line">&gt;&gt;&gt; A=<span class="built_in">array</span>([</span><br><span class="line">            [<span class="number">1</span>,<span class="number">1</span>],</span><br><span class="line">            [<span class="number">0</span>,<span class="number">1</span>]</span><br><span class="line">            ])</span><br><span class="line">&gt;&gt;&gt; B=<span class="built_in">array</span>([</span><br><span class="line">            [<span class="number">2</span>,<span class="number">0</span>],</span><br><span class="line">            [<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">            ])</span><br><span class="line">&gt;&gt;&gt; A*B</span><br><span class="line">    <span class="built_in">array</span>([</span><br><span class="line">            [<span class="number">2</span>, <span class="number">0</span>],</span><br><span class="line">            [<span class="number">0</span>, <span class="number">4</span>]</span><br><span class="line">         ])</span><br><span class="line">&gt;&gt;&gt; A.sum()</span><br><span class="line">    <span class="number">3</span></span><br><span class="line">&gt;&gt;&gt; A.min()</span><br><span class="line">    <span class="number">0</span></span><br><span class="line">&gt;&gt;&gt; A.max()</span><br><span class="line">    <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="数组的拷贝"><a href="#数组的拷贝" class="headerlink" title="数组的拷贝"></a>数组的拷贝</h3></blockquote>
+<pre><code>拷贝有浅拷贝和深拷贝两种;
+浅拷贝通过数组变量的赋值完成,浅拷贝只拷贝数组的引用，如果对拷贝进行修改，源数组也将修改;
+深拷贝使用数组对象的copy方法，会复制一份和源数组一样的数组，新数组与源数组会存放在不同内存位置，因此对新数组的修改不会影响源数组。
+
+案例一(浅拷贝)</code></pre><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a=ones((<span class="number">2</span>,<span class="number">3</span>))</span><br><span class="line">&gt;&gt;&gt; a</span><br><span class="line">    <span class="built_in">array</span>([</span><br><span class="line">             [<span class="number">1.</span>, <span class="number">1.</span>, <span class="number">1.</span>],</span><br><span class="line">             [<span class="number">1.</span>, <span class="number">1.</span>, <span class="number">1.</span>]</span><br><span class="line">         ])</span><br><span class="line">&gt;&gt;&gt; b=a</span><br><span class="line">&gt;&gt;&gt; b[<span class="number">1</span>,<span class="number">2</span>]=<span class="number">2</span></span><br><span class="line">&gt;&gt;&gt; a</span><br><span class="line">    <span class="built_in">array</span>([</span><br><span class="line">             [<span class="number">1.</span>, <span class="number">1.</span>, <span class="number">1.</span>],</span><br><span class="line">             [<span class="number">1.</span>, <span class="number">1.</span>, <span class="number">2.</span>]</span><br><span class="line">         ])</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">    <span class="built_in">array</span>([</span><br><span class="line">             [<span class="number">1.</span>, <span class="number">1.</span>, <span class="number">1.</span>],</span><br><span class="line">             [<span class="number">1.</span>, <span class="number">1.</span>, <span class="number">2.</span>]</span><br><span class="line">         ])</span><br><span class="line">案例二(深拷贝)</span><br><span class="line">&gt;&gt;&gt; a=ones((<span class="number">2</span>,<span class="number">3</span>))</span><br><span class="line">&gt;&gt;&gt; b=a.copy()</span><br><span class="line">&gt;&gt;&gt; b[<span class="number">1</span>,<span class="number">2</span>]=<span class="number">2</span></span><br><span class="line">&gt;&gt;&gt; a</span><br><span class="line">    <span class="built_in">array</span>([</span><br><span class="line">             [<span class="number">1.</span>, <span class="number">1.</span>, <span class="number">1.</span>],</span><br><span class="line">             [<span class="number">1.</span>, <span class="number">1.</span>, <span class="number">1.</span>]</span><br><span class="line">         ])</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">    <span class="built_in">array</span>([</span><br><span class="line">             [<span class="number">1.</span>, <span class="number">1.</span>, <span class="number">1.</span>],</span><br><span class="line">             [<span class="number">1.</span>, <span class="number">1.</span>, <span class="number">2.</span>]</span><br><span class="line">         ])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="创建矩阵"><a href="#创建矩阵" class="headerlink" title="创建矩阵"></a>创建矩阵</h3></blockquote>
+<h3 id="矩阵与数组的区别"><a href="#矩阵与数组的区别" class="headerlink" title="矩阵与数组的区别"></a>矩阵与数组的区别</h3><pre><code>Numpy的矩阵对象与数组对象相似。其不同之处在于，矩阵对象的计算遵循矩阵数学运算律。矩阵使用matrix函数创建。</code></pre><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; A=matrix('<span class="number">1.0</span> <span class="number">2.0</span>;<span class="number">3.0</span> <span class="number">4.0</span>')</span><br><span class="line">&gt;&gt;&gt; A</span><br><span class="line">    matrix([</span><br><span class="line">            [<span class="number">1.</span>, <span class="number">2.</span>],</span><br><span class="line">            [<span class="number">3.</span>, <span class="number">4.</span>]</span><br><span class="line">           ])</span><br><span class="line">&gt;&gt;&gt; B=matrix([</span><br><span class="line">                 [<span class="number">1.0</span>,<span class="number">2.0</span>],</span><br><span class="line">                 [<span class="number">3.0</span>,<span class="number">4.0</span>]</span><br><span class="line">           ])</span><br><span class="line">&gt;&gt;&gt; B</span><br><span class="line">    matrix([</span><br><span class="line">                 [<span class="number">1.</span>, <span class="number">2.</span>],</span><br><span class="line">                 [<span class="number">3.</span>, <span class="number">4.</span>]</span><br><span class="line">           ])</span><br><span class="line">&gt;&gt;&gt; type(A)</span><br><span class="line">    &lt;class 'numpy.matrixlib.defmatrix.matrix'&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
 <h3 id="矩阵运算"><a href="#矩阵运算" class="headerlink" title="矩阵运算"></a>矩阵运算</h3></blockquote>
-<pre><code>&gt;&gt;&gt; A.T      #转置
-    matrix([
-            [1., 3.],
-            [2., 4.]
-          ])
-&gt;&gt;&gt; x=matrix(&apos;5.0 7.0&apos;)
-&gt;&gt;&gt; y=x.T
-&gt;&gt;&gt; y
-    matrix([
-            [5.],
-            [7.]
-           ])
-&gt;&gt;&gt; print(A*y)   #矩阵乘法
-        [[26.]
-         [38.]]
-&gt;&gt;&gt; print(A.I)   #逆矩阵
-    [[-2.   1. ]
-     [ 1.5 -0.5]]</code></pre><blockquote>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; A.T      <span class="comment">#转置</span></span><br><span class="line">    matrix([</span><br><span class="line">            [<span class="number">1</span>., <span class="number">3</span>.],</span><br><span class="line">            [<span class="number">2</span>., <span class="number">4</span>.]</span><br><span class="line">          ])</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; x=matrix(<span class="string">'5.0 7.0'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; y=x.T</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; y</span><br><span class="line">    matrix([</span><br><span class="line">            [<span class="number">5</span>.],</span><br><span class="line">            [<span class="number">7</span>.]</span><br><span class="line">           ])</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; print(A*y)   <span class="comment">#矩阵乘法</span></span><br><span class="line">        [[<span class="number">26</span>.]</span><br><span class="line">         [<span class="number">38</span>.]]</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; print(A.I)   <span class="comment">#逆矩阵</span></span><br><span class="line">    [[-<span class="number">2</span>.   <span class="number">1</span>. ]</span><br><span class="line">     [ <span class="number">1.5</span> -<span class="number">0</span>.<span class="number">5</span>]]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
 <h3 id="Numpy线性代数相关函数"><a href="#Numpy线性代数相关函数" class="headerlink" title="Numpy线性代数相关函数"></a>Numpy线性代数相关函数</h3></blockquote>
 <ul>
-<li><p>numpy.dot()<br>  此函数返回两个数组的点积。 对于二维向量，其等效于矩阵乘法。 对于一维数组，它是向量的内积。 对于 N 维数组，它是a的最后一个轴上的和与b的倒数第二个轴的乘积。</p>
-<pre><code>&gt;&gt;&gt; a=np.array([[1,2],[3,4]])
-&gt;&gt;&gt; b=np.array([[11,12],[13,14]])
-&gt;&gt;&gt; np.dot(a,b)
-    array([[37, 40],     #[[1*11+2*13, 1*12+2*14],[3*11+4*13, 3*12+4*14]]
-           [85, 92]])</code></pre></li>
-<li><p>numpy.vdot()<br>  此函数返回两个向量的点积。 如果第一个参数是复数，那么它的共轭复数会用于计算。 如果参数id是多维数组，它会被展开。</p>
-<pre><code>&gt;&gt;&gt; np.vdot(a,b)
-    130    #1*11+2*12+3*13+4*14=130</code></pre></li>
-<li><p>numpy.inner()<br>  此函数返回一维数组的向量内积。 对于更高的维度，它返回最后一个轴上的和的乘积。</p>
-<pre><code>&gt;&gt;&gt; x=np.array([1,2,3])
-&gt;&gt;&gt; y=np.array([0,1,0])
-&gt;&gt;&gt; print(np.inner(x,y))
-    2      # 等价于 1*0+2*1+3*0</code></pre></li>
-<li><p>numpy.matmul()<br>  函数返回两个数组的矩阵乘积。 虽然它返回二维数组的正常乘积，但如果任一参数的维数大于2，则将其视为存在于最后两个索引的矩阵的栈，并进行相应广播。<br>  另一方面，如果任一参数是一维数组，则通过在其维度上附加 1 来将其提升为矩阵，并在乘法之后被去除。</p>
-<pre><code>#对二维数组（列表），就相当于矩阵乘法
-&gt;&gt;&gt; a=[[1,0],[0,1]]
-&gt;&gt;&gt; b=[[4,1],[2,2]]
-&gt;&gt;&gt; print(np.matmul(a,b))
-[[4 1]
-[2 2]]
-#二维和一维运算
-&gt;&gt;&gt; a=[[1,0],[0,1]]
-&gt;&gt;&gt; b=[1,2]
-&gt;&gt;&gt; print(np.matmul(a,b))
-    [1 2]
-&gt;&gt;&gt; print(np.matmul(b,a))
-    [1 2]
-#维度大于2的
-&gt;&gt;&gt; a=np.arange(8).reshape(2,2,2)
-&gt;&gt;&gt; b=np.arange(4).reshape(2,2)
-&gt;&gt;&gt; print(np.matmul(a,b))
-    [[[ 2  3]
-    [ 6 11]]
-
-    [[10 19]
-    [14 27]]]</code></pre></li>
-<li><p>numpy.linalg.det()<br>  行列式在线性代数中是非常有用的值。 它从方阵的对角元素计算。 对于 2×2 矩阵，它是左上和右下元素的乘积与其他两个的乘积的差。<br>  换句话说，对于矩阵[[a，b]，[c，d]]，行列式计算为ad-bc。 较大的方阵被认为是 2×2 矩阵的组合。<br>  numpy.linalg.det()函数计算输入矩阵的行列式。</p>
-<pre><code>&gt;&gt;&gt; a=np.array([[1,2],[3,4]])
-&gt;&gt;&gt; print(np.linalg.det(a))
-    -2.0000000000000004
-&gt;&gt;&gt; b=np.array([[6,1,1],[4,-2,5],[2,8,7]])
-&gt;&gt;&gt; print(b)
-    [[ 6  1  1]
-     [ 4 -2  5]
-     [ 2  8  7]]
-&gt;&gt;&gt; print(np.linalg.det(b))
-    -306.0
-&gt;&gt;&gt; print(6*(-2*7-5*8)-1*(4*7-5*2)+(4*8- -2*2))
-    -306</code></pre></li>
-<li><p>numpy.linalg.solve()<br>  该函数给出了矩阵形式的线性方程的解。</p>
-<pre><code>&gt;&gt;&gt; x=np.array([[1,2],[3,4]])
-&gt;&gt;&gt; y=np.linalg.inv(x)
-&gt;&gt;&gt; x
-    array([[1, 2],
-           [3, 4]])
-&gt;&gt;&gt; y
-    array([[-2. ,  1. ],
-           [ 1.5, -0.5]])
-&gt;&gt;&gt; np.dot(x,y)
-    array([[1.0000000e+00, 0.0000000e+00],
-           [8.8817842e-16, 1.0000000e+00]])
-    a=np.array([[1,1,1],[0,2,5],[2,5,-1]])
-    print(&apos;数组a:&apos;)
-    print(a)
-    ainv=np.linalg.inv(a)
-    print(&apos;a的逆矩阵&apos;)
-    print(ainv)
-    print(&apos;矩阵b:&apos;)
-    b=np.array([[6],[-4],[27]])
-    print(b)
-    print(&apos;计算：A^(-1)B:&apos;)
-    x=np.linalg.solve(a,b)
-    print(x)</code></pre></li>
+<li>numpy.dot()<br>  此函数返回两个数组的点积。 对于二维向量，其等效于矩阵乘法。 对于一维数组，它是向量的内积。 对于 N 维数组，它是a的最后一个轴上的和与b的倒数第二个轴的乘积。</li>
 </ul>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a=np.<span class="built_in">array</span>([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line">&gt;&gt;&gt; b=np.<span class="built_in">array</span>([[<span class="number">11</span>,<span class="number">12</span>],[<span class="number">13</span>,<span class="number">14</span>]])</span><br><span class="line">&gt;&gt;&gt; np.dot(a,b)</span><br><span class="line">    <span class="built_in">array</span>([[<span class="number">37</span>, <span class="number">40</span>],     #[[<span class="number">1</span>*<span class="number">11</span>+<span class="number">2</span>*<span class="number">13</span>, <span class="number">1</span>*<span class="number">12</span>+<span class="number">2</span>*<span class="number">14</span>],[<span class="number">3</span>*<span class="number">11</span>+<span class="number">4</span>*<span class="number">13</span>, <span class="number">3</span>*<span class="number">12</span>+<span class="number">4</span>*<span class="number">14</span>]]</span><br><span class="line">           [<span class="number">85</span>, <span class="number">92</span>]])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>numpy.vdot()<br>  此函数返回两个向量的点积。 如果第一个参数是复数，那么它的共轭复数会用于计算。 如果参数id是多维数组，它会被展开。</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; np.vdot(a,b)</span><br><span class="line">    <span class="number">130</span>    #<span class="number">1</span>*<span class="number">11</span>+<span class="number">2</span>*<span class="number">12</span>+<span class="number">3</span>*<span class="number">13</span>+<span class="number">4</span>*<span class="number">14</span>=<span class="number">130</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>numpy.inner()<br>  此函数返回一维数组的向量内积。 对于更高的维度，它返回最后一个轴上的和的乘积。</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; x=np.<span class="built_in">array</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">&gt;&gt;&gt; y=np.<span class="built_in">array</span>([<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>])</span><br><span class="line">&gt;&gt;&gt; print(np.inner(x,y))</span><br><span class="line">    <span class="number">2</span>      # 等价于 <span class="number">1</span>*<span class="number">0</span>+<span class="number">2</span>*<span class="number">1</span>+<span class="number">3</span>*<span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>numpy.matmul()<br>  函数返回两个数组的矩阵乘积。 虽然它返回二维数组的正常乘积，但如果任一参数的维数大于2，则将其视为存在于最后两个索引的矩阵的栈，并进行相应广播。<br>  另一方面，如果任一参数是一维数组，则通过在其维度上附加 1 来将其提升为矩阵，并在乘法之后被去除。</p>
+<pre><code>#对二维数组（列表），就相当于矩阵乘法</code></pre></li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a=[[<span class="number">1</span>,<span class="number">0</span>],[<span class="number">0</span>,<span class="number">1</span>]]</span><br><span class="line">&gt;&gt;&gt; b=[[<span class="number">4</span>,<span class="number">1</span>],[<span class="number">2</span>,<span class="number">2</span>]]</span><br><span class="line">&gt;&gt;&gt; print(np.matmul(a,b))</span><br><span class="line">[[<span class="number">4</span> <span class="number">1</span>]</span><br><span class="line">[<span class="number">2</span> <span class="number">2</span>]]</span><br><span class="line">#二维和一维运算</span><br><span class="line">&gt;&gt;&gt; a=[[<span class="number">1</span>,<span class="number">0</span>],[<span class="number">0</span>,<span class="number">1</span>]]</span><br><span class="line">&gt;&gt;&gt; b=[<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">&gt;&gt;&gt; print(np.matmul(a,b))</span><br><span class="line">    [<span class="number">1</span> <span class="number">2</span>]</span><br><span class="line">&gt;&gt;&gt; print(np.matmul(b,a))</span><br><span class="line">    [<span class="number">1</span> <span class="number">2</span>]</span><br><span class="line">#维度大于<span class="number">2</span>的</span><br><span class="line">&gt;&gt;&gt; a=np.arange(<span class="number">8</span>).reshape(<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line">&gt;&gt;&gt; b=np.arange(<span class="number">4</span>).reshape(<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line">&gt;&gt;&gt; print(np.matmul(a,b))</span><br><span class="line">    [[[ <span class="number">2</span>  <span class="number">3</span>]</span><br><span class="line">    [ <span class="number">6</span> <span class="number">11</span>]]</span><br><span class="line"></span><br><span class="line">    [[<span class="number">10</span> <span class="number">19</span>]</span><br><span class="line">    [<span class="number">14</span> <span class="number">27</span>]]]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>numpy.linalg.det()<br>  行列式在线性代数中是非常有用的值。 它从方阵的对角元素计算。 对于 2×2 矩阵，它是左上和右下元素的乘积与其他两个的乘积的差。<br>  换句话说，对于矩阵[[a，b]，[c，d]]，行列式计算为ad-bc。 较大的方阵被认为是 2×2 矩阵的组合。<br>  numpy.linalg.det()函数计算输入矩阵的行列式。</li>
+</ul>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a=np.<span class="built_in">array</span>([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line">&gt;&gt;&gt; print(np.linalg.det(a))</span><br><span class="line">    <span class="number">-2.0000000000000004</span></span><br><span class="line">&gt;&gt;&gt; b=np.<span class="built_in">array</span>([[<span class="number">6</span>,<span class="number">1</span>,<span class="number">1</span>],[<span class="number">4</span>,<span class="number">-2</span>,<span class="number">5</span>],[<span class="number">2</span>,<span class="number">8</span>,<span class="number">7</span>]])</span><br><span class="line">&gt;&gt;&gt; print(b)</span><br><span class="line">    [[ <span class="number">6</span>  <span class="number">1</span>  <span class="number">1</span>]</span><br><span class="line">     [ <span class="number">4</span> <span class="number">-2</span>  <span class="number">5</span>]</span><br><span class="line">     [ <span class="number">2</span>  <span class="number">8</span>  <span class="number">7</span>]]</span><br><span class="line">&gt;&gt;&gt; print(np.linalg.det(b))</span><br><span class="line">    <span class="number">-306.0</span></span><br><span class="line">&gt;&gt;&gt; print(<span class="number">6</span>*(<span class="number">-2</span>*<span class="number">7</span><span class="number">-5</span>*<span class="number">8</span>)<span class="number">-1</span>*(<span class="number">4</span>*<span class="number">7</span><span class="number">-5</span>*<span class="number">2</span>)+(<span class="number">4</span>*<span class="number">8</span>- <span class="number">-2</span>*<span class="number">2</span>))</span><br><span class="line">    <span class="number">-306</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>numpy.linalg.solve()<br>  该函数给出了矩阵形式的线性方程的解。</li>
+</ul>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; x=np.array(<span class="string">[[1,2],[3,4]]</span>)</span><br><span class="line">&gt;&gt;&gt; y=np.linalg.inv(x)</span><br><span class="line">&gt;&gt;&gt; x</span><br><span class="line">    array(<span class="string">[[1, 2],</span></span><br><span class="line"><span class="string">           [3, 4]]</span>)</span><br><span class="line">&gt;&gt;&gt; y</span><br><span class="line">    array(<span class="string">[[-2. ,  1. ],</span></span><br><span class="line"><span class="string">           [ 1.5, -0.5]]</span>)</span><br><span class="line">&gt;&gt;&gt; np.dot(x,y)</span><br><span class="line">    array(<span class="string">[[1.0000000e+00, 0.0000000e+00],</span></span><br><span class="line"><span class="string">           [8.8817842e-16, 1.0000000e+00]]</span>)</span><br><span class="line">    a=np.array(<span class="string">[[1,1,1],[0,2,5],[2,5,-1]]</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'数组a:'</span>)</span><br><span class="line">    <span class="built_in">print</span>(a)</span><br><span class="line">    ainv=np.linalg.inv(a)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'a的逆矩阵'</span>)</span><br><span class="line">    <span class="built_in">print</span>(ainv)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'矩阵b:'</span>)</span><br><span class="line">    b=np.array(<span class="string">[[6],[-4],[27]]</span>)</span><br><span class="line">    <span class="built_in">print</span>(b)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'计算：A^(-1)B:'</span>)</span><br><span class="line">    x=np.linalg.solve(a,b)</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <h3 id="数组分割"><a href="#数组分割" class="headerlink" title="数组分割"></a>数组分割</h3></blockquote>
-<pre><code>使用hsplit你能将数组沿着它的Y轴分割，或者指定返回相同形状数组的个数，或者指定在哪些列后发生分割。vsplit沿着X轴分割。
-    &gt;&gt;&gt; a = floor(10*random.random((2,12)))
-    &gt;&gt;&gt; a
-        array([
-                [ 8.,  8.,  3.,  9.,  0.,  4.,  3.,  0.,  0.,  6.,  4.,  4.],
-                [ 0.,  3.,  2.,  9.,  6.,  0.,  4.,  5.,  7.,  5.,  1.,  4.]
-            ])
-    &gt;&gt;&gt; hsplit(a,3)   # Split a into 3
-        [array([
-                [ 8.,  8.,  3.,  9.],
-                [ 0.,  3.,  2.,  9.]
-            ]), 
-        array([
-                [ 0.,  4.,  3.,  0.],
-                [ 6.,  0.,  4.,  5.]
-            ]), 
-        array([
-                [ 0.,  6.,  4.,  4.],
-                [ 7.,  5.,  1.,  4.]]
-            )]
-    &gt;&gt;&gt; hsplit(a,(3,4))   # Split a after the third and the fourth column
-        [
-            array([
-                [ 8.,  8.,  3.],
-                [ 0.,  3.,  2.]
-                ]), 
-            array([
-                [ 9.],
-                [ 9.]
-                ]),
-            array([
-                [ 0.,  4.,  3.,  0.,  0.,  6.,  4.,  4.],
-                [ 6.,  0.,  4.,  5.,  7.,  5.,  1.,  4.]
-                ])
-        ]</code></pre><p><a href="https://yiyibooks.cn/xx/NumPy_v111/user/quickstart.html" target="_blank" rel="noopener">官方文档链接</a></p>
+<pre><code>使用hsplit你能将数组沿着它的Y轴分割，或者指定返回相同形状数组的个数，或者指定在哪些列后发生分割。vsplit沿着X轴分割。</code></pre><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a = floor(<span class="number">10</span>*random.random((<span class="number">2</span>,<span class="number">12</span>)))</span><br><span class="line">&gt;&gt;&gt; a</span><br><span class="line">    <span class="built_in">array</span>([</span><br><span class="line">            [ <span class="number">8.</span>,  <span class="number">8.</span>,  <span class="number">3.</span>,  <span class="number">9.</span>,  <span class="number">0.</span>,  <span class="number">4.</span>,  <span class="number">3.</span>,  <span class="number">0.</span>,  <span class="number">0.</span>,  <span class="number">6.</span>,  <span class="number">4.</span>,  <span class="number">4.</span>],</span><br><span class="line">            [ <span class="number">0.</span>,  <span class="number">3.</span>,  <span class="number">2.</span>,  <span class="number">9.</span>,  <span class="number">6.</span>,  <span class="number">0.</span>,  <span class="number">4.</span>,  <span class="number">5.</span>,  <span class="number">7.</span>,  <span class="number">5.</span>,  <span class="number">1.</span>,  <span class="number">4.</span>]</span><br><span class="line">        ])</span><br><span class="line">&gt;&gt;&gt; hsplit(a,<span class="number">3</span>)   # Split a <span class="built_in">int</span>o <span class="number">3</span></span><br><span class="line">    [<span class="built_in">array</span>([</span><br><span class="line">            [ <span class="number">8.</span>,  <span class="number">8.</span>,  <span class="number">3.</span>,  <span class="number">9.</span>],</span><br><span class="line">            [ <span class="number">0.</span>,  <span class="number">3.</span>,  <span class="number">2.</span>,  <span class="number">9.</span>]</span><br><span class="line">        ]), </span><br><span class="line">    <span class="built_in">array</span>([</span><br><span class="line">            [ <span class="number">0.</span>,  <span class="number">4.</span>,  <span class="number">3.</span>,  <span class="number">0.</span>],</span><br><span class="line">            [ <span class="number">6.</span>,  <span class="number">0.</span>,  <span class="number">4.</span>,  <span class="number">5.</span>]</span><br><span class="line">        ]), </span><br><span class="line">    <span class="built_in">array</span>([</span><br><span class="line">            [ <span class="number">0.</span>,  <span class="number">6.</span>,  <span class="number">4.</span>,  <span class="number">4.</span>],</span><br><span class="line">            [ <span class="number">7.</span>,  <span class="number">5.</span>,  <span class="number">1.</span>,  <span class="number">4.</span>]]</span><br><span class="line">        )]</span><br><span class="line">&gt;&gt;&gt; hsplit(a,(<span class="number">3</span>,<span class="number">4</span>))   # Split a after the third <span class="keyword">and</span> the fourth column</span><br><span class="line">    [</span><br><span class="line">        <span class="built_in">array</span>([</span><br><span class="line">            [ <span class="number">8.</span>,  <span class="number">8.</span>,  <span class="number">3.</span>],</span><br><span class="line">            [ <span class="number">0.</span>,  <span class="number">3.</span>,  <span class="number">2.</span>]</span><br><span class="line">            ]), </span><br><span class="line">        <span class="built_in">array</span>([</span><br><span class="line">            [ <span class="number">9.</span>],</span><br><span class="line">            [ <span class="number">9.</span>]</span><br><span class="line">            ]),</span><br><span class="line">        <span class="built_in">array</span>([</span><br><span class="line">            [ <span class="number">0.</span>,  <span class="number">4.</span>,  <span class="number">3.</span>,  <span class="number">0.</span>,  <span class="number">0.</span>,  <span class="number">6.</span>,  <span class="number">4.</span>,  <span class="number">4.</span>],</span><br><span class="line">            [ <span class="number">6.</span>,  <span class="number">0.</span>,  <span class="number">4.</span>,  <span class="number">5.</span>,  <span class="number">7.</span>,  <span class="number">5.</span>,  <span class="number">1.</span>,  <span class="number">4.</span>]</span><br><span class="line">            ])</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://yiyibooks.cn/xx/NumPy_v111/user/quickstart.html" target="_blank" rel="noopener">官方文档链接</a></p>
 
 	
 
@@ -624,10 +384,6 @@ array([
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Nao</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -701,9 +457,18 @@ array([
   
 <nav id="article-nav">
   
+    <a href="/2020/02/07/python%E7%9A%84os%E5%BA%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          OS库
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/02/07/python%E7%9A%84argparse%E5%BA%93/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Argparse</div>
+      <div class="article-nav-title">Argparse库</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -847,10 +612,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Nao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Argparse</a>
               </li>
              
@@ -860,6 +621,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">numpy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sys</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">OS</a>
               </li>
             
             <div class="clearfix"></div>

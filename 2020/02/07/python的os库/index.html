@@ -6,35 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://pandamin18436220.github.io">
-  <title>分类 | 潘晟凯的博客</title>
+  <title>OS库 | 潘晟凯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="潘晟凯,软件工程专业,一名大二学生,吃苦耐劳,低调踏实">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="https://pandamin18436220.github.io/categories/index.html">
+  <meta name="description" content="OS的作用OS模块提供了一些方便使用操作系统相关功能的函数。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OS库">
+<meta property="og:url" content="https://pandamin18436220.github.io/2020/02/07/python%E7%9A%84os%E5%BA%93/index.html">
 <meta property="og:site_name" content="潘晟凯的博客">
-<meta property="og:description" content="潘晟凯,软件工程专业,一名大二学生,吃苦耐劳,低调踏实">
+<meta property="og:description" content="OS的作用OS模块提供了一些方便使用操作系统相关功能的函数。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-05T06:24:10.000Z">
-<meta property="article:modified_time" content="2020-02-05T06:24:10.000Z">
+<meta property="article:published_time" content="2020-02-07T11:36:01.637Z">
+<meta property="article:modified_time" content="2020-02-07T11:36:01.637Z">
 <meta property="article:author" content="潘晟凯">
-<meta property="article:tag" content="数据结构与算法">
-<meta property="article:tag" content="操作系统">
-<meta property="article:tag" content="软考">
-<meta property="article:tag" content="Nao">
 <meta property="article:tag" content="python">
-<meta property="article:tag" content="C语言">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="极客">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="C++">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="css">
-<meta property="article:tag" content="设计模式">
+<meta property="article:tag" content="OS">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="潘晟凯的博客" type="application/atom+xml">
@@ -214,20 +199,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-python的os库" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      分类
+      OS库
     </h1>
   
 
         
-        <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2020-02-05T06:24:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-05</time>
+        <a href="/2020/02/07/python%E7%9A%84os%E5%BA%93/" class="archive-article-date">
+  	<time datetime="2020-02-07T11:36:01.637Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
 </a>
         
 		 
@@ -236,7 +221,7 @@ var _hmt = _hmt || [];
       </header>
 	 
 
-	<div align="center" class="post-count">字数：0字 | 预计阅读时长：1分钟</div>
+	<div align="center" class="post-count">字数：549字 | 预计阅读时长：2分钟</div>
 	
 
 
@@ -250,7 +235,149 @@ var _hmt = _hmt || [];
       
 
 	
-		
+		<h2 id="OS的作用"><a href="#OS的作用" class="headerlink" title="OS的作用"></a>OS的作用</h2><pre><code>OS模块提供了一些方便使用操作系统相关功能的函数。</code></pre><a id="more"></a>
+<table>
+<thead>
+<tr>
+<th align="center">OS函数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">os.sep</td>
+<td align="center">取代操作系统特定的路径分隔符</td>
+</tr>
+<tr>
+<td align="center">os.name</td>
+<td align="center">指示你正在使用的工作平台。比如对于Windows，它是’nt’，而对于Linux/Unix用户，它是’posix’。</td>
+</tr>
+<tr>
+<td align="center">os.getcwd</td>
+<td align="center">得到当前工作目录，即当前python脚本工作的目录路径。</td>
+</tr>
+<tr>
+<td align="center">os.getenv()和os.putenv()</td>
+<td align="center">分别用来读取和设置环境变量</td>
+</tr>
+<tr>
+<td align="center">os.listdir()</td>
+<td align="center">返回指定目录下的所有文件和目录名</td>
+</tr>
+<tr>
+<td align="center">os.remove(file)</td>
+<td align="center">删除一个文件</td>
+</tr>
+<tr>
+<td align="center">os.stat（file）</td>
+<td align="center">获得文件属性</td>
+</tr>
+<tr>
+<td align="center">os.chmod(file)</td>
+<td align="center">修改文件权限和时间戳</td>
+</tr>
+<tr>
+<td align="center">os.mkdir(name)</td>
+<td align="center">创建目录</td>
+</tr>
+<tr>
+<td align="center">os.rmdir(name)</td>
+<td align="center">删除目录</td>
+</tr>
+<tr>
+<td align="center">os.removedirs（r“c：\python”）</td>
+<td align="center">删除多个目录</td>
+</tr>
+<tr>
+<td align="center">os.system()</td>
+<td align="center">运行shell命令</td>
+</tr>
+<tr>
+<td align="center">os.exit()</td>
+<td align="center">终止当前进程</td>
+</tr>
+<tr>
+<td align="center">os.linesep</td>
+<td align="center">给出当前平台的行终止符。例如，Windows使用’\r\n’，Linux使用’\n’而Mac使用’\r’</td>
+</tr>
+<tr>
+<td align="center">os.path.split()</td>
+<td align="center">返回一个路径的目录名和文件名</td>
+</tr>
+<tr>
+<td align="center">os.path.isfile()和os.path.isdir()</td>
+<td align="center">分别检验给出的路径是一个目录还是文件</td>
+</tr>
+<tr>
+<td align="center">os.path.existe()</td>
+<td align="center">检验给出的路径是否真的存在</td>
+</tr>
+<tr>
+<td align="center">os.listdir(dirname)</td>
+<td align="center">列出dirname下的目录和文件</td>
+</tr>
+<tr>
+<td align="center">os.getcwd()</td>
+<td align="center">获得当前工作目录</td>
+</tr>
+<tr>
+<td align="center">os.curdir</td>
+<td align="center">返回当前目录（’.’）</td>
+</tr>
+<tr>
+<td align="center">os.chdir(dirname)</td>
+<td align="center">改变工作目录到dirname</td>
+</tr>
+<tr>
+<td align="center">os.path.isdir(name):</td>
+<td align="center">判断name是不是目录，不是目录就返回false</td>
+</tr>
+<tr>
+<td align="center">os.path.isfile(name)</td>
+<td align="center">判断name这个文件是否存在，不存在返回false</td>
+</tr>
+<tr>
+<td align="center">os.path.exists(name)</td>
+<td align="center">判断是否存在文件或目录name</td>
+</tr>
+<tr>
+<td align="center">os.path.getsize(name)</td>
+<td align="center">或得文件大小，如果name是目录返回0L</td>
+</tr>
+<tr>
+<td align="center">os.path.abspath(name)</td>
+<td align="center">获得绝对路径</td>
+</tr>
+<tr>
+<td align="center">os.path.isabs()</td>
+<td align="center">判断是否为绝对路径</td>
+</tr>
+<tr>
+<td align="center">os.path.normpath(path)</td>
+<td align="center">规范path字符串形式</td>
+</tr>
+<tr>
+<td align="center">os.path.split(name)</td>
+<td align="center">分割文件名与目录（事实上，如果你完全使用目录，它也会将最后一个目录作为文件名而分离，同时它不会判断文件或目录是否存在）</td>
+</tr>
+<tr>
+<td align="center">os.path.splitext()</td>
+<td align="center">分离文件名和扩展名</td>
+</tr>
+<tr>
+<td align="center">os.path.join(path,name)</td>
+<td align="center">连接目录与文件名或目录</td>
+</tr>
+<tr>
+<td align="center">os.path.basename(path)</td>
+<td align="center">返回文件名</td>
+</tr>
+<tr>
+<td align="center">os.path.dirname(path)</td>
+<td align="center">返回文件路径</td>
+</tr>
+</tbody></table>
+<p><a href="https://docs.python.org/zh-cn/3.7/library/os.html" target="_blank" rel="noopener">官方文档链接</a></p>
+
 	
 
 	  
@@ -284,7 +411,7 @@ var _hmt = _hmt || [];
 				
 				<br>
 				<strong>本文链接：</strong>
-				https://pandamin18436220.github.io/categories/
+				https://pandamin18436220.github.io/2020/02/07/python%E7%9A%84os%E5%BA%93/
 				<br>
 				<strong>版权声明：</strong>
 				本作品采用
@@ -309,6 +436,21 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -359,7 +501,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://pandamin18436220.github.io/categories/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://pandamin18436220.github.io/2020/02/07/python%E7%9A%84os%E5%BA%93/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -371,6 +513,25 @@ var _hmt = _hmt || [];
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2020/02/07/python%E7%9A%84sys%E5%BA%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          sys库
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/07/python%E7%9A%84numpy%E5%BA%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Numpy库</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -392,7 +553,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#OS的作用"><span class="toc-number">1.</span> <span class="toc-text">OS的作用</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -434,7 +595,7 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

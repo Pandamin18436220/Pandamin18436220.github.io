@@ -5,18 +5,18 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
+  <link rel="dns-prefetch" href="https://pandamin18436220.github.io">
   <title>Argparse | 潘晟凯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Argparse的作用python中argparse库是一个命令行参数的解析工具，利用这个库可以在命令行运行脚本时，设置参数，从而灵活的设置脚本中需要的参数。下面总结一下argparse库的使用方法。简而言之: 学会了该库的基本使用，就不必再代码里修改参数！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Argparse">
-<meta property="og:url" content="http://yoursite.com/2020/02/07/python%E7%9A%84argparse%E5%BA%93/index.html">
+<meta property="og:url" content="https://pandamin18436220.github.io/2020/02/07/python%E7%9A%84argparse%E5%BA%93/index.html">
 <meta property="og:site_name" content="潘晟凯的博客">
 <meta property="og:description" content="Argparse的作用python中argparse库是一个命令行参数的解析工具，利用这个库可以在命令行运行脚本时，设置参数，从而灵活的设置脚本中需要的参数。下面总结一下argparse库的使用方法。简而言之: 学会了该库的基本使用，就不必再代码里修改参数！">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/02/07/assets/text_img/Parser%E5%BA%93/a.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/07/assets/text_img/Parser%E5%BA%93/b.png">
+<meta property="og:image" content="https://pandamin18436220.github.io/2020/02/07/assets/text_img/Parser%E5%BA%93/a.png">
+<meta property="og:image" content="https://pandamin18436220.github.io/2020/02/07/assets/text_img/Parser%E5%BA%93/b.png">
 <meta property="article:published_time" content="2020-02-07T06:23:41.010Z">
 <meta property="article:modified_time" content="2020-02-07T06:23:41.010Z">
 <meta property="article:author" content="潘晟凯">
@@ -24,7 +24,7 @@
 <meta property="article:tag" content="Nao">
 <meta property="article:tag" content="Argparse">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/02/07/assets/text_img/Parser%E5%BA%93/a.png">
+<meta name="twitter:image" content="https://pandamin18436220.github.io/2020/02/07/assets/text_img/Parser%E5%BA%93/a.png">
   
     <link rel="alternative" href="/atom.xml" title="潘晟凯的博客" type="application/atom+xml">
   
@@ -86,7 +86,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		
-        <nav>总文章数: 3 </nav>总字数: <span class="post-count">4.1k</span>
+        <nav>总文章数: 4 </nav>总字数: <span class="post-count">6.1k</span>
 		
 		<nav class="header-smart-menu">
     		
@@ -242,16 +242,14 @@ var _hmt = _hmt || [];
 		<h2 id="Argparse的作用"><a href="#Argparse的作用" class="headerlink" title="Argparse的作用"></a>Argparse的作用</h2><pre><code>python中argparse库是一个命令行参数的解析工具，利用这个库可以在命令行运行脚本时，设置参数，从而灵活的设置脚本中需要的参数。下面总结一下argparse库的使用方法。</code></pre><p><strong>简而言之</strong>: <em>学会了该库的基本使用，就不必再代码里修改参数！</em></p>
 <a id="more"></a>
 <h2 id="Argparse的基本使用"><a href="#Argparse的基本使用" class="headerlink" title="Argparse的基本使用"></a>Argparse的基本使用</h2><pre><code>下面演示Argparse三个基本函数</code></pre><blockquote>
-<p>创建parse对象（函数一）</p>
-</blockquote>
+<h3 id="创建parse对象（函数一）"><a href="#创建parse对象（函数一）" class="headerlink" title="创建parse对象（函数一）"></a>创建parse对象（函数一）</h3></blockquote>
 <pre><code>#导入argparse库
 import argparse    
 #创建对象 这里使用description参数，我们可以输入想要的提示信息。                
 parser = argparse.ArgumentParser(description=&apos;add some useful information here....&apos;)
 
 ArgumentParser对象保存了所有必要的信息，用于将命令行参数解析为相应的python数据类型。</code></pre><blockquote>
-<p>添加参数信息（函数二）</p>
-</blockquote>
+<h3 id="添加参数信息（函数二）"><a href="#添加参数信息（函数二）" class="headerlink" title="添加参数信息（函数二）"></a>添加参数信息（函数二）</h3></blockquote>
 <pre><code>创建了ArgumentParser对象之后，就可以使用add_argument()方法来添加参数,其输入参数如下，其中[]中的参数为可选参数，作用为设置参数的一些属性。
 带 - 的为可选参数(optional parameter)
 不带 - 的为必选参数(positional parametrer)
@@ -346,8 +344,7 @@ required: 参数是否必填，如果为True则必须要传入对应的值
 help: python test.py -h 会出现对应help的内容
 nargs:  指定这个参数后面的值有多少个，默认为1, 也可以写正则表达式符号：+(一个或者多个) , *(没有或者多个), 数字
 choices:  设置参数的范围</code></pre><blockquote>
-<p>解析参数(函数三)<br>    添加完参数后，最后调用parse_args()方法，将会返回一个命名空间(namespace)，之后我们就可以调用各个设置好的参数啦</p>
-</blockquote>
+<h3 id="解析参数-函数三"><a href="#解析参数-函数三" class="headerlink" title="解析参数(函数三)"></a>解析参数(函数三)</h3><pre><code>添加完参数后，最后调用parse_args()方法，将会返回一个命名空间(namespace)，之后我们就可以调用各个设置好的参数啦</code></pre></blockquote>
 <pre><code>def parse_arg():
     parser = argparse.ArgumentParser(description=&apos;描述内容&apos;)
     parser.add_argument(&apos;--param1&apos;, type=int,help=&apos;add some helpful message here.&apos;)
@@ -389,7 +386,7 @@ choices:  设置参数的范围</code></pre><blockquote>
 				
 				<br>
 				<strong>本文链接：</strong>
-				http://yoursite.com/2020/02/07/python%E7%9A%84argparse%E5%BA%93/
+				https://pandamin18436220.github.io/2020/02/07/python%E7%9A%84argparse%E5%BA%93/
 				<br>
 				<strong>版权声明：</strong>
 				本作品采用
@@ -483,7 +480,7 @@ choices:  设置参数的范围</code></pre><blockquote>
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2020/02/07/python%E7%9A%84argparse%E5%BA%93/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://pandamin18436220.github.io/2020/02/07/python%E7%9A%84argparse%E5%BA%93/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -496,6 +493,15 @@ choices:  设置参数的范围</code></pre><blockquote>
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/02/07/python%E7%9A%84numpy%E5%BA%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Numpy
+        
+      </div>
+    </a>
   
   
     <a href="/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
@@ -526,7 +532,7 @@ choices:  设置参数的范围</code></pre><blockquote>
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Argparse的作用"><span class="toc-number">1.</span> <span class="toc-text">Argparse的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Argparse的基本使用"><span class="toc-number">2.</span> <span class="toc-text">Argparse的基本使用</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Argparse的作用"><span class="toc-number">1.</span> <span class="toc-text">Argparse的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Argparse的基本使用"><span class="toc-number">2.</span> <span class="toc-text">Argparse的基本使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建parse对象（函数一）"><span class="toc-number">2.1.</span> <span class="toc-text">创建parse对象（函数一）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加参数信息（函数二）"><span class="toc-number">2.2.</span> <span class="toc-text">添加参数信息（函数二）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解析参数-函数三"><span class="toc-number">2.3.</span> <span class="toc-text">解析参数(函数三)</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -652,6 +658,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdowm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">numpy</a>
               </li>
             
             <div class="clearfix"></div>

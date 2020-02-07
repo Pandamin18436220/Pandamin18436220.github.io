@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yoursite.com/2020/02/07/python%E7%9A%84argparse%E5%BA%93/</loc>
+    <loc>https://pandamin18436220.github.io/2020/02/07/python%E7%9A%84numpy%E5%BA%93/</loc>
     <lastmod>2020-02-07</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/</loc>
+    <loc>https://pandamin18436220.github.io/2020/02/07/python%E7%9A%84argparse%E5%BA%93/</loc>
+    <lastmod>2020-02-07</lastmod>
+  </url>  <url>
+    <loc>https://pandamin18436220.github.io/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2020-02-05</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2020/02/04/Markdowm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://pandamin18436220.github.io/2020/02/04/Markdowm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2020-02-04</lastmod>
   </url>
 </urlset>

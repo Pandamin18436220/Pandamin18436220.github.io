@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="https://pandamin18436220.github.io">
   <title>PIL库 | 潘晟凯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="PIL的作用sys模块主要是针对与Python解释器相关的变量和方法，不是主机操作系统。">
+  <meta name="description" content="PIL的作用对于图像识别，大量的工作在于图像的处理，处理效果好，那么才能很好地识别，因此，良好的图像处理是识别的基础。在Python中，有一个优秀的图像处理框架，就是PIL库。但本篇文章主要来介绍PIL中的Image模块的相关函数，如果你还想了解更多，可以点击官方文档链接进行学习。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PIL库">
 <meta property="og:url" content="https://pandamin18436220.github.io/2020/02/07/python%E7%9A%84PIL%E5%BA%93/index.html">
 <meta property="og:site_name" content="潘晟凯的博客">
-<meta property="og:description" content="PIL的作用sys模块主要是针对与Python解释器相关的变量和方法，不是主机操作系统。">
+<meta property="og:description" content="PIL的作用对于图像识别，大量的工作在于图像的处理，处理效果好，那么才能很好地识别，因此，良好的图像处理是识别的基础。在Python中，有一个优秀的图像处理框架，就是PIL库。但本篇文章主要来介绍PIL中的Image模块的相关函数，如果你还想了解更多，可以点击官方文档链接进行学习。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-02-07T12:41:48.226Z">
 <meta property="article:modified_time" content="2020-02-07T12:41:48.226Z">
@@ -82,7 +82,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		
-        <nav>总文章数: 8 </nav>总字数: <span class="post-count">9.4k</span>
+        <nav>总文章数: 13 </nav>总字数: <span class="post-count">13.3k</span>
 		
 		<nav class="header-smart-menu">
     		
@@ -221,7 +221,7 @@ var _hmt = _hmt || [];
       </header>
 	 
 
-	<div align="center" class="post-count">字数：443字 | 预计阅读时长：2分钟</div>
+	<div align="center" class="post-count">字数：493字 | 预计阅读时长：2分钟</div>
 	
 
 
@@ -235,122 +235,80 @@ var _hmt = _hmt || [];
       
 
 	
-		<h2 id="PIL的作用"><a href="#PIL的作用" class="headerlink" title="PIL的作用"></a>PIL的作用</h2><pre><code>sys模块主要是针对与Python解释器相关的变量和方法，不是主机操作系统。</code></pre><a id="more"></a>
+		<h2 id="PIL的作用"><a href="#PIL的作用" class="headerlink" title="PIL的作用"></a>PIL的作用</h2><p>对于图像识别，大量的工作在于图像的处理，处理效果好，那么才能很好地识别，因此，良好的图像处理是识别的基础。在Python中，有一个优秀的图像处理框架，就是PIL库。但本篇文章主要来介绍PIL中的Image模块的相关函数，如果你还想了解更多，可以点击官方文档链接进行学习。</p>
+<a id="more"></a>
+<h4 id="相信提到图像的处理工作，很多小伙伴们会提到OpenCv库不也有这个功能吗？"><a href="#相信提到图像的处理工作，很多小伙伴们会提到OpenCv库不也有这个功能吗？" class="headerlink" title="相信提到图像的处理工作，很多小伙伴们会提到OpenCv库不也有这个功能吗？"></a>相信提到图像的处理工作，很多小伙伴们会提到OpenCv库不也有这个功能吗？</h4><p>那我们首先来比较一下他们的区别</p>
 <table>
 <thead>
 <tr>
-<th align="center">sys函数</th>
+<th align="center">模块名称</th>
+<th align="center">函数</th>
 <th align="center">作用</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">sys.argv</td>
-<td align="center">获取命令行参数列表，第一个元素是程序本身</td>
+<td align="center">OpenCv</td>
+<td align="center">cv2.imshow()</td>
+<td align="center">采用BGR模式，通过cv2.imread()读取</td>
 </tr>
 <tr>
-<td align="center">sys.exit(n)</td>
-<td align="center">退出Python程序，exit(0)表示正常退出。当参数非0时，会引发一个SystemExit异常，可以在程序中捕获该异常</td>
+<td align="center">matplotlib.pyplot</td>
+<td align="center">plt.imshow()</td>
+<td align="center">采用RGB模式, 通过plt.imread()读取</td>
 </tr>
 <tr>
-<td align="center">sys.version</td>
-<td align="center">获取Python解释程器的版本信息</td>
-</tr>
-<tr>
-<td align="center">sys.maxsize</td>
-<td align="center">最大的Int值，64位平台是2**63 - 1</td>
-</tr>
-<tr>
-<td align="center">sys.path</td>
-<td align="center">返回模块的搜索路径，初始化时使用PYTHONPATH环境变量的值</td>
-</tr>
-<tr>
-<td align="center">sys.platform</td>
-<td align="center">返回操作系统平台名称</td>
-</tr>
-<tr>
-<td align="center">sys.stdin</td>
-<td align="center">输入相关</td>
-</tr>
-<tr>
-<td align="center">sys.stdout</td>
-<td align="center">输出相关</td>
-</tr>
-<tr>
-<td align="center">sys.stderr</td>
-<td align="center">错误相关</td>
-</tr>
-<tr>
-<td align="center">sys.exc_info()</td>
-<td align="center">返回异常信息三元元组</td>
-</tr>
-<tr>
-<td align="center">sys.getdefaultencoding()</td>
-<td align="center">获取系统当前编码，默认为utf-8</td>
-</tr>
-<tr>
-<td align="center">sys.setdefaultencoding()</td>
-<td align="center">设置系统的默认编码</td>
-</tr>
-<tr>
-<td align="center">sys.getfilesystemencoding()</td>
-<td align="center">获取文件系统使用编码方式，默认是utf-8</td>
-</tr>
-<tr>
-<td align="center">sys.modules</td>
-<td align="center">以字典的形式返回所有当前Python环境中已经导入的模块</td>
-</tr>
-<tr>
-<td align="center">sys.builtin_module_names</td>
-<td align="center">返回一个列表，包含所有已经编译到Python解释器里的模块的名字</td>
-</tr>
-<tr>
-<td align="center">sys.copyright</td>
-<td align="center">当前Python的版权信息</td>
-</tr>
-<tr>
-<td align="center">sys.flags</td>
-<td align="center">命令行标识状态信息列表。只读。</td>
-</tr>
-<tr>
-<td align="center">sys.getrefcount(object)</td>
-<td align="center">返回对象的引用数量</td>
-</tr>
-<tr>
-<td align="center">sys.getrecursionlimit()</td>
-<td align="center">返回Python最大递归深度，默认1000</td>
-</tr>
-<tr>
-<td align="center">sys.getsizeof(object[, default])</td>
-<td align="center">返回对象的大小</td>
-</tr>
-<tr>
-<td align="center">sys.getswitchinterval()</td>
-<td align="center">返回线程切换时间间隔，默认0.005秒</td>
-</tr>
-<tr>
-<td align="center">sys.setswitchinterval(interval)</td>
-<td align="center">设置线程切换的时间间隔，单位秒</td>
-</tr>
-<tr>
-<td align="center">sys.getwindowsversion()</td>
-<td align="center">返回当前windwos系统的版本信息</td>
-</tr>
-<tr>
-<td align="center">sys.hash_info</td>
-<td align="center">返回Python默认的哈希方法的参数</td>
-</tr>
-<tr>
-<td align="center">sys.implementation</td>
-<td align="center">当前正在运行的Python解释器的具体实现，比如CPython</td>
-</tr>
-<tr>
-<td align="center">sys.thread_info</td>
-<td align="center">当前线程信息</td>
+<td align="center">PIL.Image</td>
+<td align="center">img.show()</td>
+<td align="center">采用RGB模式, 通过Image.open()读取</td>
 </tr>
 </tbody></table>
-<p><a href="https://blog.csdn.net/qq_39938666/article/details/87980832" target="_blank" rel="noopener">官方文档链接</a></p>
-<p><a href="https://blog.csdn.net/zhangziju/article/details/79123275" target="_blank" rel="noopener">https://blog.csdn.net/zhangziju/article/details/79123275</a></p>
-<p><a href="https://blog.csdn.net/on_theway10/article/details/91814197" target="_blank" rel="noopener">https://blog.csdn.net/on_theway10/article/details/91814197</a></p>
+<h3 id="opencv-BGR-显示图片"><a href="#opencv-BGR-显示图片" class="headerlink" title="opencv(BGR)显示图片"></a>opencv(BGR)显示图片</h3><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># img为BGR通道</span><br><span class="line">img = cv2.imread(img_path, mode)  # mode = [<span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>]依次表示彩色、灰度、彩色+alpha， 默认为<span class="number">1</span>;</span><br><span class="line">cv2.imshow(<span class="string">'test'</span>, img)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)                    # 保持图形界面，直到你在终端输入任意字符</span><br><span class="line">cv2.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+
+<h3 id="PIL-Image-RGB-显示图片"><a href="#PIL-Image-RGB-显示图片" class="headerlink" title="PIL.Image(RGB)显示图片"></a>PIL.Image(RGB)显示图片</h3><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">img = <span class="module-access"><span class="module"><span class="identifier">Image</span>.</span></span><span class="keyword">open</span>(img_path)</span><br><span class="line">img.show<span class="literal">()</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="PIL-Image转Opencv"><a href="#PIL-Image转Opencv" class="headerlink" title="PIL.Image转Opencv"></a>PIL.Image转Opencv</h3><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cv2_img = cv2.cvt<span class="constructor">Color(<span class="params">numpy</span>.<span class="params">asarray</span>(Img_img)</span>,cv2.COLOR_RGB2BGR)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Opencv转PIL-Image"><a href="#Opencv转PIL-Image" class="headerlink" title="Opencv转PIL.Image"></a>Opencv转PIL.Image</h3><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pil_img = <span class="module-access"><span class="module"><span class="identifier">Image</span>.</span></span>fromarray(cv2.cvt<span class="constructor">Color(<span class="params">cv_img</span>,<span class="params">cv2</span>.COLOR_BGR2RGB)</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="下面介绍Image模块相关函数"><a href="#下面介绍Image模块相关函数" class="headerlink" title="下面介绍Image模块相关函数"></a>下面介绍Image模块相关函数</h4><p>Image模块是在Python PIL图像处理中常见的模块，对图像进行基础操作的功能基本都包含于此模块内。如open、save、conver、show…等功能。</p>
+<table>
+<thead>
+<tr>
+<th align="center">类模块</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">open类</td>
+<td align="center">im = Image.open(“文件存在的路径”)</td>
+</tr>
+<tr>
+<td align="center">Save类</td>
+<td align="center">im.save(“文件保存路径”)</td>
+</tr>
+<tr>
+<td align="center">Size类</td>
+<td align="center">im.size 尺寸信息</td>
+</tr>
+<tr>
+<td align="center">new类</td>
+<td align="center">im= Image.new(“通道RGB”, (尺寸), “颜色”)</td>
+</tr>
+<tr>
+<td align="center">Split类</td>
+<td align="center">r,g,b = im.split()  分离“RGB”图像将产生三个新的图像，分别对应原始图像的每个通道（红，绿，蓝）</td>
+</tr>
+<tr>
+<td align="center">Merge类</td>
+<td align="center">Image.merge(“RGB”,[r,g,b])  合并三个通道</td>
+</tr>
+<tr>
+<td align="center">convert类</td>
+<td align="center">将当前图像转换为其他模式，细情请看友情链接</td>
+</tr>
+</tbody></table>
+<p><a href="https://pillow-cn.readthedocs.io/zh_CN/latest/reference/index.html" target="_blank" rel="noopener">官方文档链接</a></p>
+<p><a href="https://blog.csdn.net/zhangziju/article/details/79123275" target="_blank" rel="noopener">友情链接</a></p>
 
 	
 
@@ -527,7 +485,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PIL的作用"><span class="toc-number">1.</span> <span class="toc-text">PIL的作用</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PIL的作用"><span class="toc-number">1.</span> <span class="toc-text">PIL的作用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#相信提到图像的处理工作，很多小伙伴们会提到OpenCv库不也有这个功能吗？"><span class="toc-number">1.0.1.</span> <span class="toc-text">相信提到图像的处理工作，很多小伙伴们会提到OpenCv库不也有这个功能吗？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#opencv-BGR-显示图片"><span class="toc-number">1.1.</span> <span class="toc-text">opencv(BGR)显示图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PIL-Image-RGB-显示图片"><span class="toc-number">1.2.</span> <span class="toc-text">PIL.Image(RGB)显示图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PIL-Image转Opencv"><span class="toc-number">1.3.</span> <span class="toc-text">PIL.Image转Opencv</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Opencv转PIL-Image"><span class="toc-number">1.4.</span> <span class="toc-text">Opencv转PIL.Image</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#下面介绍Image模块相关函数"><span class="toc-number">1.4.1.</span> <span class="toc-text">下面介绍Image模块相关函数</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -644,6 +602,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Nao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Argparse</a>
               </li>
              
@@ -669,6 +631,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">PIL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Naoqi</a>
               </li>
             
             <div class="clearfix"></div>

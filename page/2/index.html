@@ -95,7 +95,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		
-        <nav>总文章数: 13 </nav>总字数: <span class="post-count">13.3k</span>
+        <nav>总文章数: 22 </nav>总字数: <span class="post-count">28.8k</span>
 		
 		<nav class="header-smart-menu">
     		
@@ -214,19 +214,989 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-python的argparse库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-nao之传感器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/07/python%E7%9A%84argparse%E5%BA%93/">Argparse库</a>
+      <a class="article-title" href="/2020/02/09/nao%E4%B9%8B%E4%BC%A0%E6%84%9F%E5%99%A8/">Nao传感器</a>
     </h1>
   
 
         
-        <a href="/2020/02/07/python%E7%9A%84argparse%E5%BA%93/" class="archive-article-date">
+        <a href="/2020/02/09/nao%E4%B9%8B%E4%BC%A0%E6%84%9F%E5%99%A8/" class="archive-article-date">
+  	<time datetime="2020-02-09T11:58:17.631Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-09</time>
+</a>
+        
+		 
+      </header>
+	 
+
+	<div align="center" class="post-count">字数：316字 | 预计阅读时长：2分钟</div>
+	
+
+
+    
+	<!-- 目录内容 -->
+		
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+	
+	
+      
+
+			<h2 id="在此先附上一串简单的代码"><a href="#在此先附上一串简单的代码" class="headerlink" title="在此先附上一串简单的代码"></a>在此先附上一串简单的代码</h2><p>此代码适于用于做对Nao机器人头顶三个传感器做相关的实验参考</p>
+	
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+		
+		
+		
+		  <div hidden="hidden"></div>
+		
+		
+		
+		
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Nao</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Naoqi</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/09/nao%E4%B9%8B%E4%BC%A0%E6%84%9F%E5%99%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-nao之单目测距" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/09/nao%E4%B9%8B%E5%8D%95%E7%9B%AE%E6%B5%8B%E8%B7%9D/">Nao单目测距</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/09/nao%E4%B9%8B%E5%8D%95%E7%9B%AE%E6%B5%8B%E8%B7%9D/" class="archive-article-date">
+  	<time datetime="2020-02-09T07:44:59.072Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-09</time>
+</a>
+        
+		 
+      </header>
+	 
+
+	<div align="center" class="post-count">字数：1,835字 | 预计阅读时长：9分钟</div>
+	
+
+
+    
+	<!-- 目录内容 -->
+		
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+	
+	
+      
+
+			<h2 id="在此先附上一串简单的机器人测距代码"><a href="#在此先附上一串简单的机器人测距代码" class="headerlink" title="在此先附上一串简单的机器人测距代码"></a>在此先附上一串简单的机器人测距代码</h2><p>此代码适于用做对Nao机器人做视觉识别和测距实验,只提供关键代码部分,尝试利用cv2去优化代码会更加简洁哟！</p>
+<p>此代码的主要功能:<br>1.初始姿态下，通过更换摄像头和转头去寻找目标<br>2.通过颜色阈值识别目标，计算目标与Nao的距离和角度<br>可以扩展功能：<br>1.在运动过程中对方向和距离进行多次测量和校正，提高准确度<br>2.找到目标后，通过对目标的测量，选择使用哪个脚去踢目标</p>
+	
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+		
+		
+		
+		  <div hidden="hidden"></div>
+		
+		
+		
+		
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Nao</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Naoqi</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/09/nao%E4%B9%8B%E5%8D%95%E7%9B%AE%E6%B5%8B%E8%B7%9D/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-naoqi库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/09/naoqi%E5%BA%93/">Naoqi库</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/09/naoqi%E5%BA%93/" class="archive-article-date">
+  	<time datetime="2020-02-09T07:00:00.660Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-09</time>
+</a>
+        
+		 
+      </header>
+	 
+
+	<div align="center" class="post-count">字数：1,049字 | 预计阅读时长：4分钟</div>
+	
+
+
+    
+	<!-- 目录内容 -->
+		
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+	
+	
+      
+
+			<h2 id="Naoqi的作用"><a href="#Naoqi的作用" class="headerlink" title="Naoqi的作用"></a>Naoqi的作用</h2><p>通过调用naoqi可以调用Nao等机器人的内置的相关端口。<br>需要重点了解的相关模块：<br>| 模块 | 作用 |<br>| :—-: | :—-: |<br>|ALMotionProxy||<br>|ALRobotPostureProxy||<br>|ALVideoDeviceProxy||<br>|ALMemoryProxy|||<br>|ALLandMarkDetection||<br>|ALTrackerProxy||<br>|ALRedBallDetection||<br>|ALFaceDetection||</p>
+	
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+		
+		
+		
+		  <div hidden="hidden"></div>
+		
+		
+		
+		
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Naoqi</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/09/naoqi%E5%BA%93/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-nao之行走" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/09/nao%E4%B9%8B%E8%A1%8C%E8%B5%B0/">Nao行走</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/09/nao%E4%B9%8B%E8%A1%8C%E8%B5%B0/" class="archive-article-date">
+  	<time datetime="2020-02-09T06:37:33.754Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-09</time>
+</a>
+        
+		 
+      </header>
+	 
+
+	<div align="center" class="post-count">字数：606字 | 预计阅读时长：3分钟</div>
+	
+
+
+    
+	<!-- 目录内容 -->
+		
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+	
+	
+      
+
+			<h2 id="在此先附上一串简单的机器人行走代码"><a href="#在此先附上一串简单的机器人行走代码" class="headerlink" title="在此先附上一串简单的机器人行走代码"></a>在此先附上一串简单的机器人行走代码</h2><p>此代码适于用做测量Nao的步态参数</p>
+	
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+		
+		
+		
+		  <div hidden="hidden"></div>
+		
+		
+		
+		
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Nao</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Naoqi</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/09/nao%E4%B9%8B%E8%A1%8C%E8%B5%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-随笔录之世界怎么了" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/07/%E9%9A%8F%E7%AC%94%E5%BD%95%E4%B9%8B%E4%B8%96%E7%95%8C%E6%80%8E%E4%B9%88%E4%BA%86/">世界怎么了</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/07/%E9%9A%8F%E7%AC%94%E5%BD%95%E4%B9%8B%E4%B8%96%E7%95%8C%E6%80%8E%E4%B9%88%E4%BA%86/" class="archive-article-date">
+  	<time datetime="2020-02-07T13:15:03.511Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
+</a>
+        
+		 
+      </header>
+	 
+
+	<div align="center" class="post-count">字数：1,537字 | 预计阅读时长：5分钟</div>
+	
+
+
+    
+	<!-- 目录内容 -->
+		
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+	
+	
+      
+
+			<p><img src="/2020/02/07/%E9%9A%8F%E7%AC%94%E5%BD%95%E4%B9%8B%E4%B8%96%E7%95%8C%E6%80%8E%E4%B9%88%E4%BA%86/..%5Cassets%5Ctext_img%5C%E7%96%AB%E6%83%85.jpg" alt="疫情"><br>大爱无疆，生死不在话下。拥有大爱和超出常人气魄胆量的人，如今都在疫情的一线用性命去和病毒搏斗，他们不是没有家人没有眼泪没有恐惧没有情绪，更不是因为他们有九条命。而是他们不仅仅只爱眼下围城里的专属物品，亲人、朋友。他们越过了所有人认知里的小世界，还爱着安全疆域之外的陌生人，所有的陌生人加起来就是祖国、是全人类，再大一点，其实可以说是动物世界。</p>
+	
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+		
+		
+		
+		  <div hidden="hidden"></div>
+		
+		
+		
+		
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">随笔录</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/07/%E9%9A%8F%E7%AC%94%E5%BD%95%E4%B9%8B%E4%B8%96%E7%95%8C%E6%80%8E%E4%B9%88%E4%BA%86/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-PIL库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/07/PIL%E5%BA%93/">PIL库</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/07/PIL%E5%BA%93/" class="archive-article-date">
+  	<time datetime="2020-02-07T12:41:48.226Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
+</a>
+        
+		 
+      </header>
+	 
+
+	<div align="center" class="post-count">字数：898字 | 预计阅读时长：6分钟</div>
+	
+
+
+    
+	<!-- 目录内容 -->
+		
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+	
+	
+      
+
+	
+		<p>��- - - <br> <br> t i t l e :   P I L �^<br> <br> d a t a :   2 0 2 0 - 0 2 - 0 7   1 7 : 4 0 : 0 0 <br> <br> t a g s :   [ p y t h o n , P I L ] <br> <br> - - - <br> <br> # #   P I L �v\O(u<br> <br> <br> <br> �[�N�V�PƋ+R�’Yϑ�v�]\O(W�N�V�P�vYt�YtHe�g}Y���HNMb���<em>}Y0WƋ+R��Vdk�o�}Y�v�V�PYt/fƋ+R�v�W@x0(WP y t h o n -N�    g N<em>NO�y�v�V�PYtFh�g�1/fP I L �^0FO,g�{�e�z;N��eg�N�~P I L -N�vI m a g e !jWW�v�vsQ�Qpe��Y�g<code>O؏�</code>�N��fY��S�N�p�Q�[�e�ech���cۏL�f[`N0<br> <br> �v�O�c0R�V�P�vYt�]\O��_Y\O4O�NO�c0RO p e n C v �^<br>N_N    gُ</em>N�R��T�<br> <br> &lt; ! - - m o r e - - &gt; <br> <br> # # # #   ��b�N��HQeg�k�� NN�N�N�v:S+R<br> <br> <br> <br> |   !jWW<br>T�y  |   �Qpe  |   \O(u| <br> <br> |   : - - - - :   |   : - - - - :   |   : - - - - :   | <br> <br> | O p e n C v | c v 2 . i m s h o w ( ) | Ǒ(uB G R !j</em>��Ǐc v 2 . i m r e a d ( ) ���S| <br> <br> | m a t p l o t l i b . p y p l o t |   p l t . i m s h o w ( ) |   Ǒ(uR G B !j<em>,   �Ǐp l t . i m r e a d ( ) ���S| <br> <br> | P I L . I m a g e | i m g . s h o w ( ) | Ǒ(uR G B !j</em>,   �ǏI m a g e . o p e n ( ) ���S| <br> <br> <br> <br> # # #   o o p e n c v ( B G R ) &gt;f:y�VGr<br> <br> <br> <br> <code> </code> <code> 
+ 
+ #   i m g :NB G R �S�
+ 
+ i m g   =   c v 2 . i m r e a d ( i m g _ p a t h ,   m o d e )     #   m o d e   =   [ 1 ,   0 ,   - 1 ] �O!kh�:yi_r�0pp�^0i_r�+ a l p h a �  ؞��:N1 ; 
+ 
+ c v 2 . i m s h o w ( &#39; t e s t &#39; ,   i m g ) 
+ 
+ c v 2 . w a i t K e y ( 0 )                                       #   �Oc�Vb_Lub���v0R</code>O(W�<del>�z��eQ�NaW[&amp;{<br> <br> c v 2 . d e s t r o y A l l W i n d o w s ( ) <br> <br> <code> </code> <code> 
+ 
+ 
+ 
+ # # #   P I L . I m a g e ( R G B ) &gt;f:y�VGr
+ 
+ 
+ 
+ </code> <code> </code> <br> <br> i m g   =   I m a g e . o p e n ( i m g _ p a t h ) <br> <br> i m g . s h o w ( ) <br> <br> <code> </code> <code> 
+ 
+ 
+ 
+ # # #   P I L . I m a g e l�O p e n c v 
+ 
+ 
+ 
+ </code> <code> </code> <br> <br> c v 2 _ i m g   =   c v 2 . c v t C o l o r ( n u m p y . a s a r r a y ( I m g _ i m g ) , c v 2 . C O L O R _ R G B 2 B G R ) <br> <br> <code> </code> <code> 
+ 
+ 
+ 
+ # # #   O p e n c v l�P I L . I m a g e 
+ 
+ 
+ 
+ </code> <code> </code> <br> <br> p i l _ i m g   =   I m a g e . f r o m a r r a y ( c v 2 . c v t C o l o r ( c v _ i m g , c v 2 . C O L O R _ B G R 2 R G B ) ) <br> <br> <code> </code> ` <br> <br> <br> <br> # # # #   Nb��N�</del>I m a g e !jWW�vsQ�Qpe<br> <br> I m a g e !jWW/f(WP y t h o n   P I L �V�PYt-N8^���v!jWW��[�V�PۏL��W@x�d\O�v�R���W,g��S+T�Ndk!jWW�Q0�Yo p e n 0s a v e 0c o n v e r 0s h o w &amp; I{�R��0<br> <br> <br> <br> |   {|!jWW? |   \O(u| <br> <br> |   : - - - - :   |   : - - - - :   | <br> <br> | o p e n {|| i m   =   I m a g e . o p e n (  �e�NX[(W�v<em> ) | <br> <br> | S a v e {|| i m . s a v e (  �e�N�OX[_ ) | <br> <br> | S i z e {|| i m . s i z e   :\�[�Oo`| <br> <br> | n e w {|| i m =   I m a g e . n e w (  �S�R G B  ,   ( :\�[) ,    ��r� ) | <br> <br> | S p l i t {|| r , g , b   =   i m . s p l i t ( )   R�y R G B  �V�P\�Nu    N<em>N�e�v�V�P�R+R�[�^�S�Y�V�P�v�k</em>N�S���~��~�݄    �| <br> <br> | M e r g e {|| I m a g e . m e r g e (  R G B  , [ r , g , b ] )   Tv^    N*N�S�| <br> <br> | c o n v e r t {|| \S_MR�V�Pl�bc:NvQ�N!j</em>��~�<code>��w�S�</code>���c| <br> <br> <br> <br> [ �[�e�ech] ( h t t p s : / / p i l l o w - c n . r e a d t h e d o c s . i o / z h _ C N / l a t e s t / r e f e r e n c e / i n d e x . h t m l ) <br> <br> <br> <br> [ �S�`���c] ( h t t p s : / / b l o g . c s d n . n e t / z h a n g z i j u / a r t i c l e / d e t a i l s / 7 9 1 2 3 2 7 5 ) <br> <br> </p>
+
+	
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+		
+		
+		
+		  <div hidden="hidden"></div>
+		
+		
+		
+		
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/07/PIL%E5%BA%93/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-sys库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/07/sys%E5%BA%93/">sys库</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/07/sys%E5%BA%93/" class="archive-article-date">
+  	<time datetime="2020-02-07T12:02:38.353Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
+</a>
+        
+		 
+      </header>
+	 
+
+	<div align="center" class="post-count">字数：427字 | 预计阅读时长：2分钟</div>
+	
+
+
+    
+	<!-- 目录内容 -->
+		
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+	
+	
+      
+
+			<h2 id="sys的作用"><a href="#sys的作用" class="headerlink" title="sys的作用"></a>sys的作用</h2><pre><code>sys模块主要是针对与Python解释器相关的变量和方法，不是主机操作系统。</code></pre>
+	
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+		
+		
+		
+		  <div hidden="hidden"></div>
+		
+		
+		
+		
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sys</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/07/sys%E5%BA%93/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-os库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/07/os%E5%BA%93/">OS库</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/07/os%E5%BA%93/" class="archive-article-date">
+  	<time datetime="2020-02-07T11:36:01.637Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
+</a>
+        
+		 
+      </header>
+	 
+
+	<div align="center" class="post-count">字数：549字 | 预计阅读时长：2分钟</div>
+	
+
+
+    
+	<!-- 目录内容 -->
+		
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+	
+	
+      
+
+			<h2 id="OS的作用"><a href="#OS的作用" class="headerlink" title="OS的作用"></a>OS的作用</h2><pre><code>OS模块提供了一些方便使用操作系统相关功能的函数。</code></pre>
+	
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+		
+		
+		
+		  <div hidden="hidden"></div>
+		
+		
+		
+		
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/07/os%E5%BA%93/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-numpy库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/07/numpy%E5%BA%93/">Numpy库</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/07/numpy%E5%BA%93/" class="archive-article-date">
+  	<time datetime="2020-02-07T08:33:20.147Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
+</a>
+        
+		 
+      </header>
+	 
+
+	<div align="center" class="post-count">字数：2,276字 | 预计阅读时长：11分钟</div>
+	
+
+
+    
+	<!-- 目录内容 -->
+		
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+	
+	
+      
+
+			<h2 id="Numpy的作用"><a href="#Numpy的作用" class="headerlink" title="Numpy的作用"></a>Numpy的作用</h2><pre><code>Numpy(Numerical Python) 是 Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。</code></pre>
+	
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+		
+		
+		
+		  <div hidden="hidden"></div>
+		
+		
+		
+		
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">numpy</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/07/numpy%E5%BA%93/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+    <article id="post-argparse库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/07/argparse%E5%BA%93/">Argparse库</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/07/argparse%E5%BA%93/" class="archive-article-date">
   	<time datetime="2020-02-07T06:23:41.010Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
 </a>
         
@@ -291,219 +1261,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/07/python%E7%9A%84argparse%E5%BA%93/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-opencv基本函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/">OpenCv基本函数</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-02-05T07:38:15.137Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-05</time>
-</a>
-        
-		 
-      </header>
-	 
-
-	<div align="center" class="post-count">字数：3,037字 | 预计阅读时长：12分钟</div>
-	
-
-
-    
-	<!-- 目录内容 -->
-		
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-	
-	
-      
-
-			<h2 id="导入库"><a href="#导入库" class="headerlink" title="导入库"></a>导入库</h2><pre><code>-*- coding: utf-8 -*-
-import cv2                      #opencv2库
-import numpy as np              #numpy库
-import matplotlib.pyplot as plt #类似于matlab工具</code></pre>
-	
-
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-
-		
-		
-		
-		  <div hidden="hidden"></div>
-		
-		
-		
-		
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">OpenCv</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/05/opencv%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-Markdowm的基本使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/04/Markdowm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">Markdown的基本使用</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/04/Markdowm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-02-04T05:53:24.883Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-04</time>
-</a>
-        
-		 
-      </header>
-	 
-
-	<div align="center" class="post-count">字数：69字 | 预计阅读时长：1分钟</div>
-	
-
-
-    
-	<!-- 目录内容 -->
-		
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-	
-	
-      
-
-			<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>  <strong>粗体文本</strong><br>  <em>斜体文本</em></p>
-<p> <strong><em>粗斜体文本</em></strong><br>    * 无序列表</p>
-	
-
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-
-		
-		
-		
-		  <div hidden="hidden"></div>
-		
-		
-		
-		
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Markdowm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/04/Markdowm%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/02/07/argparse%E5%BA%93/">展开全文 >></a>
         </p>
       
 
@@ -534,7 +1292,7 @@ import matplotlib.pyplot as plt #类似于matlab工具</code></pre>
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -665,11 +1423,43 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PIL</a>
+                <a href="javascript:void(0)" class="js-tag color1">Naoqi</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Naoqi</a>
+                <a href="javascript:void(0)" class="js-tag color4">机器学习，Anaconda</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">问题解决，机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">操作系统，网课笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">大数据概论，网课笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习，数据分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">算法与设计</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">pandas</a>
               </li>
             
             <div class="clearfix"></div>

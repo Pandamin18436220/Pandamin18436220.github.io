@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pandamin18436220.github.io/photos/data.json</loc>
+    
+    <lastmod>2020-03-12T10:16:51.661Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pandamin18436220.github.io/2020/03/12/%E8%AF%BB%E4%B9%A6%E6%8E%A8%E8%8D%90/</loc>
     
     <lastmod>2020-03-12T09:45:41.143Z</lastmod>
@@ -138,13 +145,6 @@
     <loc>https://pandamin18436220.github.io/2020/02/07/numpy%E5%BA%93/</loc>
     
     <lastmod>2020-02-07T08:33:20.147Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pandamin18436220.github.io/photos/data.json</loc>
-    
-    <lastmod>2020-02-07T08:30:40.313Z</lastmod>
     
   </url>
   

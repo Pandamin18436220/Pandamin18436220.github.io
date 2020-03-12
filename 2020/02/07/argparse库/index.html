@@ -15,15 +15,15 @@
 <meta property="og:site_name" content="潘晟凯的博客">
 <meta property="og:description" content="Argparse的作用python中argparse库是一个命令行参数的解析工具，利用这个库可以在命令行运行脚本时，设置参数，从而灵活的设置脚本中需要的参数。下面总结一下argparse库的使用方法。简而言之: 学会了该库的基本使用，就不必再代码里修改参数！">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pandamin18436220.github.io/2020/02/07/argparse%E5%BA%93/..%5Cassets%5Ctext_img%5CParser%E5%BA%93%5Ca.png">
-<meta property="og:image" content="https://pandamin18436220.github.io/2020/02/07/argparse%E5%BA%93/..%5Cassets%5Ctext_img%5CParser%E5%BA%93%5Cb.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Pandamin18436220/Pandamin18436220.github.io/master/assets/text_img/a.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Pandamin18436220/Pandamin18436220.github.io/master/assets/text_img/b.png">
 <meta property="article:published_time" content="2020-02-07T06:23:41.010Z">
 <meta property="article:modified_time" content="2020-02-07T06:23:41.010Z">
 <meta property="article:author" content="潘晟凯">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="Argparse">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pandamin18436220.github.io/2020/02/07/argparse%E5%BA%93/..%5Cassets%5Ctext_img%5CParser%E5%BA%93%5Ca.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Pandamin18436220/Pandamin18436220.github.io/master/assets/text_img/a.png">
   
     <link rel="alternative" href="/atom.xml" title="潘晟凯的博客" type="application/atom+xml">
   
@@ -85,7 +85,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		
-        <nav>总文章数: 22 </nav>总字数: <span class="post-count">28.4k</span>
+        <nav>总文章数: 23 </nav>总字数: <span class="post-count">39.0k</span>
 		
 		<nav class="header-smart-menu">
     		
@@ -311,10 +311,10 @@ ArgumentParser.add_argument(name or flags…[, action][, nargs][, const][, defau
 </tr>
 </tbody></table>
 <pre><code>案例一:   </code></pre><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import argparse</span><br><span class="line"><span class="comment"># 创建解析对象, description是对其描述</span></span><br><span class="line">parser = argparse.ArgumentParser(<span class="attribute">description</span>=<span class="string">"测试使用 argparse 库"</span>)</span><br><span class="line"><span class="comment"># 向parser对象添加你要关注的命令行参数和选项, 这里的两个参数，一个为长参数：--parm1，一个为短参数:-p1</span></span><br><span class="line">parser.add_argument(<span class="string">"--param1"</span>, <span class="string">"-p1"</span>, <span class="attribute">type</span>=str)</span><br><span class="line"><span class="comment"># 对命令行参数进行解析</span></span><br><span class="line">args = parser.parse_args()</span><br><span class="line"><span class="builtin-name">print</span>(args)</span><br><span class="line"><span class="comment"># 输出具体的参数值</span></span><br><span class="line"><span class="builtin-name">print</span>(args.param1)</span><br></pre></td></tr></table></figure>
-<p><img src="/2020/02/07/argparse%E5%BA%93/..%5Cassets%5Ctext_img%5CParser%E5%BA%93%5Ca.png" alt="a"></p>
+<p><img src="https://raw.githubusercontent.com/Pandamin18436220/Pandamin18436220.github.io/master/assets/text_img/a.png" alt="a"></p>
 <pre><code>案例二:</code></pre><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import argparse</span><br><span class="line"><span class="comment"># 创建解析对象, description是对其描述</span></span><br><span class="line">parser = argparse.ArgumentParser(<span class="attribute">description</span>=<span class="string">"测试使用 argparse 库"</span>)</span><br><span class="line"><span class="comment"># 向parser对象添加你要关注的命令行参数和选项, 这里的两个参数，一个为长参数：--parm1，一个为短参数:-p1</span></span><br><span class="line">parser.add_argument(<span class="string">"--param1"</span>, <span class="string">"-p1"</span>, <span class="attribute">type</span>=str)</span><br><span class="line">parser.add_argument(<span class="string">"--param2"</span>, <span class="string">"-p2"</span>, <span class="attribute">type</span>=int, <span class="attribute">help</span>=<span class="string">"参数2需要输入0~20整数"</span>, <span class="attribute">choices</span>=range(21))</span><br><span class="line"><span class="comment"># 参数值为int型，传入多个值时，返回的是一个列表</span></span><br><span class="line">parser.add_argument(<span class="string">"--param3"</span>, <span class="string">"-p3"</span>, <span class="attribute">type</span>=int, <span class="attribute">nargs</span>=<span class="string">"+"</span>, <span class="attribute">help</span>=<span class="string">"list类型，可以接收1~n个值"</span>)</span><br><span class="line"><span class="comment"># 对命令行参数进行解析</span></span><br><span class="line">args = parser.parse_args()</span><br><span class="line"><span class="builtin-name">print</span>(args)</span><br><span class="line"><span class="comment"># 输出具体的参数值</span></span><br><span class="line"><span class="builtin-name">print</span>(args.param1,<span class="string">"\n"</span>, args.param2,<span class="string">"\n"</span>, args.param3)</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/02/07/argparse%E5%BA%93/..%5Cassets%5Ctext_img%5CParser%E5%BA%93%5Cb.png" alt="b"></p>
+<p><img src="https://raw.githubusercontent.com/Pandamin18436220/Pandamin18436220.github.io/master/assets/text_img/b.png" alt="b"></p>
 <pre><code>我们可以通过 --param1 来指定参数1， 也可以使用短参 -p1来指定参数1
 
 add_argument的部分参数介绍如下：
@@ -693,6 +693,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">pandas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
               </li>
             
             <div class="clearfix"></div>

@@ -8,18 +8,20 @@
   <link rel="dns-prefetch" href="https://pandamin18436220.github.io">
   <title>算法与设计之基本概念 | 潘晟凯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="算法概述123456789101112131415161718算法定义的是计算过程，该过程取某个值或值的集合作为输入并产生某个值或值的集合作为输出。这样算法就是把输入转换成输出的计算步骤的一个序列。我们也可以把算法看成是用于求解良说明的计算问题的工具。一般来说，问题陈述说明了期望的输入&#x2F;输出关系。算法则描述一个特定的计算过程来实现该输入&#x2F;输出关系。若对每个输入实例算法都以正确的输出停机，则称该算法">
+  <meta name="description" content="算法概述 算法定义的是计算过程，该过程取某个值或值的集合作为输入并产生某个值或值的集合作为输出。这样算法就是把输入转换成输出的计算步骤的一个序列。我们也可以把算法看成是用于求解良说明的计算问题的工具。一般来说，问题陈述说明了期望的输入&#x2F;输出关系。算法则描述一个特定的计算过程来实现该输入&#x2F;输出关系。   若对每个输入实例算法都以正确的输出停机，则称该算法是正确的，并称正确的算法解决了给定的计算问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法与设计之基本概念">
 <meta property="og:url" content="https://pandamin18436220.github.io/2020/02/19/%E7%AE%97%E6%B3%95%E4%B8%8E%E8%AE%BE%E8%AE%A1/index.html">
 <meta property="og:site_name" content="潘晟凯的博客">
-<meta property="og:description" content="算法概述123456789101112131415161718算法定义的是计算过程，该过程取某个值或值的集合作为输入并产生某个值或值的集合作为输出。这样算法就是把输入转换成输出的计算步骤的一个序列。我们也可以把算法看成是用于求解良说明的计算问题的工具。一般来说，问题陈述说明了期望的输入&#x2F;输出关系。算法则描述一个特定的计算过程来实现该输入&#x2F;输出关系。若对每个输入实例算法都以正确的输出停机，则称该算法">
+<meta property="og:description" content="算法概述 算法定义的是计算过程，该过程取某个值或值的集合作为输入并产生某个值或值的集合作为输出。这样算法就是把输入转换成输出的计算步骤的一个序列。我们也可以把算法看成是用于求解良说明的计算问题的工具。一般来说，问题陈述说明了期望的输入&#x2F;输出关系。算法则描述一个特定的计算过程来实现该输入&#x2F;输出关系。   若对每个输入实例算法都以正确的输出停机，则称该算法是正确的，并称正确的算法解决了给定的计算问题。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/Pandamin18436220/HBlog_imgs/master/text_img/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.gif">
 <meta property="article:published_time" content="2020-02-19T10:53:41.498Z">
 <meta property="article:modified_time" content="2020-02-19T10:53:41.498Z">
 <meta property="article:author" content="潘晟凯">
 <meta property="article:tag" content="算法与设计">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Pandamin18436220/HBlog_imgs/master/text_img/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.gif">
   
     <link rel="alternative" href="/atom.xml" title="潘晟凯的博客" type="application/atom+xml">
   
@@ -81,7 +83,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		
-        <nav>总文章数: 23 </nav>总字数: <span class="post-count">39.0k</span>
+        <nav>总文章数: 32 </nav>总字数: <span class="post-count">47.7k</span>
 		
 		<nav class="header-smart-menu">
     		
@@ -220,7 +222,7 @@ var _hmt = _hmt || [];
       </header>
 	 
 
-	<div align="center" class="post-count">字数：2,877字 | 预计阅读时长：11分钟</div>
+	<div align="center" class="post-count">字数：2,863字 | 预计阅读时长：11分钟</div>
 	
 
 
@@ -234,13 +236,32 @@ var _hmt = _hmt || [];
       
 
 	
-		<h2 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">算法定义的是计算过程，该过程取某个值或值的集合作为输入并产生某个值或值的集合作为输出。这样算法就是把输入转换成输出的计算步骤的一个序列。我们也可以把算法看成是用于求解良说明的计算问题的工具。一般来说，问题陈述说明了期望的输入<span class="regexp">/输出关系。算法则描述一个特定的计算过程来实现该输入/</span>输出关系。</span><br><span class="line"></span><br><span class="line">若对每个输入实例算法都以正确的输出停机，则称该算法是正确的，并称正确的算法解决了给定的计算问题。不正确的算法对某些输入实例可能根本不停机，也可能以不正确的回答停机。与人们期望的相反，不正确的算法只要其错误率可控有时可能是有用的，但是通常我们只关心正确的算法。算法可以用自然语言说明，也可以说明成计算机程序，甚至说明成硬件设计。唯一的要求是这个说明必须精确描述所要遵循的计算过程。</span><br><span class="line">虽然算法可以解决各式各样的问题，但是算法所解决的问题有的两个共同的特征：</span><br><span class="line"></span><br><span class="line">存在许多候选解，但绝大多数候选解都没有解决手头的问题。寻找一个真正的解或一个最好的解可能是一个很大的挑战。</span><br><span class="line">存在实际应用。比如一家运输公司（如公路运输或铁路运输公司）对如何在公路或铁路网中找出最短路径，有着经济方面的利益，因为采用的路径越短，其人力和燃料的开销就越低；互联网上的一个路由结点为了快速地发送一条消息可能需要寻找通过网络的最短路径。希望从纽约开车去波士顿的人可能想从一个恰当的网站寻找开车方向，或者开车时她可能使用其GPS。</span><br><span class="line"></span><br><span class="line">假设计算机是无限快的并且计算机存储器是免费的，你还有什么理由来研究算法吗？即使只是因为你还想证明你的解法会终止并以正确的答案终止，那么回答也是肯定的。如果计算机无限快，那么用于求解某个问题的任何正确的方法都行。也许你希望你的实现在好的软件工程实践的范围内（例如，你的实现应该具有良好的设计与文档），但是你最常使用的是最容易实现的方法。</span><br><span class="line">当然，计算机也许是快的，但它们不是无限快。存储器也许是廉价的，但不是免费的。所以计算时间是一种有限资源，存储器中的空间也一样。你应该明智地使用这些资源，在时间或空间方面有效的算法将帮助你这样使用资源。</span><br><span class="line">为求解相同问题而设计的不同算法在效率方面常常具有显著的差别。这些差别可能比由于硬件和软件造成的差别要重要得多。</span><br><span class="line"></span><br><span class="line">上面的例子表明我们应该像计算机硬件一样把算法看成是一种技术。整个系统的性能不但依赖于选择快速的硬件而且还依赖于选择有效的算法。正如其他计算机技术正在快速推进一样，算法也在快速发展。</span><br><span class="line"></span><br><span class="line">你也许想知道相对其他先进的计算机技术（如：先进的计算机体系结构与制造技术、易于使用、直观的图形用户界面（GUI）、面向对象的系统、集成的万维网技术、有线与无线网络的快速组网等），算法对于当代计算机是否真的那么重要？回答是肯定的。虽然某些应用在应用层不明确需要算法内容（如某些简单的基于万维网的应用），但是许多应用确实需要算法内容。例如，考虑一种基于万维网的服务，它确定如何从一个位置旅行到另一个位置。其实现依赖于快速的硬件、一个图形用户界面、广域网，还可能依赖于面向对象技术。然而，对某些操作，如寻找路线（可能使用最短路径算法）、描绘地图、插入地址，它还是需要算法。而且，即使是那些在应用层不需要算法内容的应用也高度依赖于算法。该应用依赖于快速的硬件吗？硬件设计用到算法。该应用依赖于图形用户界面吗？任何图形用户界面的设计都依赖于算法。该应用依赖于网络吗？网络中的路由高度依赖于算法。该应用采用一种不同于机器代码的语言来书写吗？那么它被某个编译器、解释器或汇编器处理过，所有这些都广泛地使用算法。</span><br><span class="line"></span><br><span class="line">算法是当代计算机中使用的大多数技术的核心。</span><br><span class="line">进一步，随着计算机能力的不断增强，我们使用计算机来求解比以前更大的问题。正如我们在上面对插入排序与归并排序的比较中所看到的，正是在较大问题规模时，算法之间效率的差别才变得特别显著。是否具有算法知识与技术的坚实基础是区分真正熟练的程序员与初学者的一个特征。使用现代计算技术，如果你对算法懂得不多，你也可以完成一些任务，但是，如果有一个好的算法背景，那么你可以做的事情就多得多</span><br></pre></td></tr></table></figure>
-
+		<h2 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h2><blockquote>
+<p>算法定义的是计算过程，该过程取某个值或值的集合作为输入并产生某个值或值的集合作为输出。这样算法就是把输入转换成输出的计算步骤的一个序列。我们也可以把算法看成是用于求解良说明的计算问题的工具。一般来说，问题陈述说明了期望的输入/输出关系。算法则描述一个特定的计算过程来实现该输入/输出关系。</p>
+</blockquote>
+<blockquote>
+<p>若对每个输入实例算法都以正确的输出停机，则称该算法是正确的，并称正确的算法解决了给定的计算问题。不正确的算法对某些输入实例可能根本不停机，也可能以不正确的回答停机。与人们期望的相反，不正确的算法只要其错误率可控有时可能是有用的，但是通常我们只关心正确的算法。算法可以用自然语言说明，也可以说明成计算机程序，甚至说明成硬件设计。唯一的要求是这个说明必须精确描述所要遵循的计算过程。<br>虽然算法可以解决各式各样的问题，但是算法所解决的问题有的两个共同的特征：</p>
+</blockquote>
+<blockquote>
+<p>存在许多候选解，但绝大多数候选解都没有解决手头的问题。寻找一个真正的解或一个最好的解可能是一个很大的挑战。<br>存在实际应用。比如一家运输公司（如公路运输或铁路运输公司）对如何在公路或铁路网中找出最短路径，有着经济方面的利益，因为采用的路径越短，其人力和燃料的开销就越低；互联网上的一个路由结点为了快速地发送一条消息可能需要寻找通过网络的最短路径。希望从纽约开车去波士顿的人可能想从一个恰当的网站寻找开车方向，或者开车时她可能使用其GPS。</p>
+</blockquote>
+<blockquote>
+<p>假设计算机是无限快的并且计算机存储器是免费的，你还有什么理由来研究算法吗？即使只是因为你还想证明你的解法会终止并以正确的答案终止，那么回答也是肯定的。如果计算机无限快，那么用于求解某个问题的任何正确的方法都行。也许你希望你的实现在好的软件工程实践的范围内（例如，你的实现应该具有良好的设计与文档），但是你最常使用的是最容易实现的方法。<br>当然，计算机也许是快的，但它们不是无限快。存储器也许是廉价的，但不是免费的。所以计算时间是一种有限资源，存储器中的空间也一样。你应该明智地使用这些资源，在时间或空间方面有效的算法将帮助你这样使用资源。<br>为求解相同问题而设计的不同算法在效率方面常常具有显著的差别。这些差别可能比由于硬件和软件造成的差别要重要得多。</p>
+</blockquote>
+<blockquote>
+<p>上面的例子表明我们应该像计算机硬件一样把算法看成是一种技术。整个系统的性能不但依赖于选择快速的硬件而且还依赖于选择有效的算法。正如其他计算机技术正在快速推进一样，算法也在快速发展。</p>
+</blockquote>
+<blockquote>
+<p>你也许想知道相对其他先进的计算机技术（如：先进的计算机体系结构与制造技术、易于使用、直观的图形用户界面（GUI）、面向对象的系统、集成的万维网技术、有线与无线网络的快速组网等），算法对于当代计算机是否真的那么重要？回答是肯定的。虽然某些应用在应用层不明确需要算法内容（如某些简单的基于万维网的应用），但是许多应用确实需要算法内容。例如，考虑一种基于万维网的服务，它确定如何从一个位置旅行到另一个位置。其实现依赖于快速的硬件、一个图形用户界面、广域网，还可能依赖于面向对象技术。然而，对某些操作，如寻找路线（可能使用最短路径算法）、描绘地图、插入地址，它还是需要算法。而且，即使是那些在应用层不需要算法内容的应用也高度依赖于算法。该应用依赖于快速的硬件吗？硬件设计用到算法。该应用依赖于图形用户界面吗？任何图形用户界面的设计都依赖于算法。该应用依赖于网络吗？网络中的路由高度依赖于算法。该应用采用一种不同于机器代码的语言来书写吗？那么它被某个编译器、解释器或汇编器处理过，所有这些都广泛地使用算法。</p>
+</blockquote>
+<blockquote>
+<p>算法是当代计算机中使用的大多数技术的核心。<br>进一步，随着计算机能力的不断增强，我们使用计算机来求解比以前更大的问题。正如我们在上面对插入排序与归并排序的比较中所看到的，正是在较大问题规模时，算法之间效率的差别才变得特别显著。是否具有算法知识与技术的坚实基础是区分真正熟练的程序员与初学者的一个特征。使用现代计算技术，如果你对算法懂得不多，你也可以完成一些任务，但是，如果有一个好的算法背景，那么你可以做的事情就多得多</p>
+</blockquote>
 <a id="more"></a>
 <h2 id="分析算法（以插入排序作为引入"><a href="#分析算法（以插入排序作为引入" class="headerlink" title="分析算法（以插入排序作为引入)"></a>分析算法（以插入排序作为引入)</h2><blockquote>
 <p>相信大家都玩过纸牌。插入排序的工作方式就像许多人排序一手扑克牌。<br>开始时，我们的左手为空并且桌子上的牌面朝下（意味着我们不在翻开之前并不知道下一张牌是多大的）。<br>然后，我们每次从那些牌中选出一张牌，并把它插入到正确的位置（一般我们认为左边的最小），我们从左到右（或从右到左）将它与已在手中的每张牌进行比较。</p>
 </blockquote>
-<h2 id="动态演示"><a href="#动态演示" class="headerlink" title="动态演示"></a>动态演示</h2><p>！<a href="https://raw.githubusercontent.com/Pandamin18436220/Pandamin18436220.github.io/master/assets/text_img/插入排序.gif" target="_blank" rel="noopener">插入</a></p>
+<h2 id="动态演示"><a href="#动态演示" class="headerlink" title="动态演示"></a>动态演示</h2><p><img src="https://raw.githubusercontent.com/Pandamin18436220/HBlog_imgs/master/text_img/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.gif" alt="插入"></p>
 <h2 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h2><blockquote>
 <p>对于插入排序，我们将伪代码的过程命名为INSERTION-SORT<br>其中</p>
 </blockquote>
@@ -356,7 +377,7 @@ var _hmt = _hmt || [];
 <p><a href="https://blog.csdn.net/hy592070616/article/details/92102395" target="_blank" rel="noopener">https://blog.csdn.net/hy592070616/article/details/92102395</a></p>
 <p><a href="https://wenku.baidu.com/view/390d9d5cb04e852458fb770bf78a6529657d3539.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/390d9d5cb04e852458fb770bf78a6529657d3539.html</a></p>
 <p><a href="https://blog.csdn.net/weixin_44961794/article/details/90106570" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44961794/article/details/90106570</a></p>
-
+<h2 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h2><h2 id="贪心法"><a href="#贪心法" class="headerlink" title="贪心法"></a>贪心法</h2>
 	
 
 	  
@@ -528,7 +549,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#算法概述"><span class="toc-number">1.</span> <span class="toc-text">算法概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析算法（以插入排序作为引入"><span class="toc-number">2.</span> <span class="toc-text">分析算法（以插入排序作为引入)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态演示"><span class="toc-number">3.</span> <span class="toc-text">动态演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法分析"><span class="toc-number">4.</span> <span class="toc-text">算法分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#渐进记号"><span class="toc-number">5.</span> <span class="toc-text">渐进记号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#针对资源管理的角度"><span class="toc-number">5.1.</span> <span class="toc-text">针对资源管理的角度</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#算法概述"><span class="toc-number">1.</span> <span class="toc-text">算法概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析算法（以插入排序作为引入"><span class="toc-number">2.</span> <span class="toc-text">分析算法（以插入排序作为引入)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态演示"><span class="toc-number">3.</span> <span class="toc-text">动态演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法分析"><span class="toc-number">4.</span> <span class="toc-text">算法分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#渐进记号"><span class="toc-number">5.</span> <span class="toc-text">渐进记号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#针对资源管理的角度"><span class="toc-number">5.1.</span> <span class="toc-text">针对资源管理的角度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分治法"><span class="toc-number">6.</span> <span class="toc-text">分治法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#贪心法"><span class="toc-number">7.</span> <span class="toc-text">贪心法</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -693,15 +714,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">操作系统，网课笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">大数据概论，网课笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -718,6 +731,150 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">命令操作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">常用工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">大数据</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">hadoop</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HDFS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">MapReduce</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">YARN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据库，MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">存储</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">设备</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">文件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">作业</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">链表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">队列</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">树</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">查找</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">缓存中间件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">memcache</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">面试对象基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">UML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">大数据概论</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">云计算</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">进程</a>
               </li>
             
             <div class="clearfix"></div>

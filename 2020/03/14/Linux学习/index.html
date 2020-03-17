@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="https://pandamin18436220.github.io">
   <title>Linux学习 | 潘晟凯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux的七个控制台 运行级别0：系统停机状态，系统默认运行级别不能设为0，否则不能正常启动 运行级别1：单用户工作状态，root权限，用于系统维护，禁止远程登陆 运行级别2：多用户状态(没有NFS) 运行级别3：完全的多用户状态(有NFS)，登陆后进入控制台命令行模式 运行级别4：系统未使用，保留 运行级别5：X11控制台，登陆后进入图形GUI模式 运行级别6：系统正常关闭并重启，默认运行级别">
+  <meta name="description" content="Linux的七个终端 Linux系统中按ctrl+alt+f1、f2…f7可以进行图形和字符界面切换，可是在VMware下按下ctrl+alt+f1、f2…f7都没有反应，无法进行图形和字符界面切换。  1234原因是因为VM和物机系统切换是ctrl+alt,而VM中的Linux切换终端也用到了ctrl+alt 当你按组合键时，是切出VM系统。所以需要把VM切换热键改一下。更改方法:Edit-&amp;g">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux学习">
 <meta property="og:url" content="https://pandamin18436220.github.io/2020/03/14/Linux%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="潘晟凯的博客">
-<meta property="og:description" content="Linux的七个控制台 运行级别0：系统停机状态，系统默认运行级别不能设为0，否则不能正常启动 运行级别1：单用户工作状态，root权限，用于系统维护，禁止远程登陆 运行级别2：多用户状态(没有NFS) 运行级别3：完全的多用户状态(有NFS)，登陆后进入控制台命令行模式 运行级别4：系统未使用，保留 运行级别5：X11控制台，登陆后进入图形GUI模式 运行级别6：系统正常关闭并重启，默认运行级别">
+<meta property="og:description" content="Linux的七个终端 Linux系统中按ctrl+alt+f1、f2…f7可以进行图形和字符界面切换，可是在VMware下按下ctrl+alt+f1、f2…f7都没有反应，无法进行图形和字符界面切换。  1234原因是因为VM和物机系统切换是ctrl+alt,而VM中的Linux切换终端也用到了ctrl+alt 当你按组合键时，是切出VM系统。所以需要把VM切换热键改一下。更改方法:Edit-&amp;g">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-14T11:00:05.009Z">
 <meta property="article:modified_time" content="2020-03-14T11:00:05.009Z">
@@ -82,7 +82,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		
-        <nav>总文章数: 32 </nav>总字数: <span class="post-count">47.7k</span>
+        <nav>总文章数: 36 </nav>总字数: <span class="post-count">57.3k</span>
 		
 		<nav class="header-smart-menu">
     		
@@ -221,7 +221,7 @@ var _hmt = _hmt || [];
       </header>
 	 
 
-	<div align="center" class="post-count">字数：734字 | 预计阅读时长：3分钟</div>
+	<div align="center" class="post-count">字数：1,017字 | 预计阅读时长：4分钟</div>
 	
 
 
@@ -235,16 +235,13 @@ var _hmt = _hmt || [];
       
 
 	
-		<h2 id="Linux的七个控制台"><a href="#Linux的七个控制台" class="headerlink" title="Linux的七个控制台"></a>Linux的七个控制台</h2><ol>
-<li>运行级别0：系统停机状态，系统默认运行级别不能设为0，否则不能正常启动</li>
-<li>运行级别1：单用户工作状态，root权限，用于系统维护，禁止远程登陆</li>
-<li>运行级别2：多用户状态(没有NFS)</li>
-<li>运行级别3：完全的多用户状态(有NFS)，登陆后进入控制台命令行模式</li>
-<li>运行级别4：系统未使用，保留</li>
-<li>运行级别5：X11控制台，登陆后进入图形GUI模式</li>
-<li>运行级别6：系统正常关闭并重启，默认运行级别不能设为6，否则不能正常启动</li>
-</ol>
-<h2 id="Linux的命令-大小写严格区分"><a href="#Linux的命令-大小写严格区分" class="headerlink" title="Linux的命令(大小写严格区分)"></a>Linux的命令(大小写严格区分)</h2><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">[root@www~]</span># 命令 -<span class="comment">[选项...(三者之间可以有任意多个空格)]</span>参数  //命令<span class="comment">[杀]</span>  -选项<span class="comment">[温柔的]</span>   参数<span class="comment">[鸡]</span>  ----&gt;温柔的杀鸡</span><br></pre></td></tr></table></figure>
+		<h2 id="Linux的七个终端"><a href="#Linux的七个终端" class="headerlink" title="Linux的七个终端"></a>Linux的七个终端</h2><blockquote>
+<p>Linux系统中按ctrl+alt+f1、f2…f7可以进行图形和字符界面切换，可是在VMware下按下ctrl+alt+f1、f2…f7都没有反应，无法进行图形和字符界面切换。</p>
+</blockquote>
+<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">原因是因为VM和物机系统切换是ctrl+alt,而VM中的Linux切换终端也用到了ctrl+alt 当你按组合键时，是切出VM系统。所以需要把VM切换热键改一下。</span><br><span class="line"></span><br><span class="line">更改方法:</span><br><span class="line">E<span class="function"><span class="title">dit</span>-&gt;</span>P<span class="function"><span class="title">references</span>-&gt;</span>H<span class="function"><span class="title">otKeys</span>-&gt;</span>Custom中的ctrl为down,shift为down,alt为up。设置完成后,关掉VMware,在打开就可以了。</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="Linux的命令-大小写严格区分"><a href="#Linux的命令-大小写严格区分" class="headerlink" title="Linux的命令(大小写严格区分)"></a>Linux的命令(大小写严格区分)</h3><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">[root@www~]</span># 命令 -<span class="comment">[选项...(三者之间可以有任意多个空格)]</span>参数  //命令<span class="comment">[杀]</span>  -选项<span class="comment">[温柔的]</span>   参数<span class="comment">[鸡]</span>  ----&gt;温柔的杀鸡</span><br></pre></td></tr></table></figure>
+
 <table>
 <thead>
 <tr>
@@ -333,8 +330,23 @@ var _hmt = _hmt || [];
 <td align="center">介绍该命令用法(怎么做)</td>
 <td align="center"></td>
 </tr>
+<tr>
+<td align="center">man page</td>
+<td align="center">查看文档第page页的详细内容</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">man -k clock</td>
+<td align="center">列出含油clock的命令与详细内容</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">rm -rf 文件名</td>
+<td align="center">删除文件</td>
+<td align="center"></td>
+</tr>
 </tbody></table>
-<h2 id="Linux命令相关快捷键"><a href="#Linux命令相关快捷键" class="headerlink" title="Linux命令相关快捷键"></a>Linux命令相关快捷键</h2><ol>
+<h3 id="Linux命令相关快捷键"><a href="#Linux命令相关快捷键" class="headerlink" title="Linux命令相关快捷键"></a>Linux命令相关快捷键</h3><ol>
 <li>ctrl+HOME:光标移至开头</li>
 <li>ctrl+End:光标移至结尾</li>
 <li>ctrl+U:删除光标前面的所有</li>
@@ -346,10 +358,37 @@ var _hmt = _hmt || [];
 <li>ctrl+c:退出该命令</li>
 <li>ctrl+d:关闭终端</li>
 </ol>
-<h2 id="Linux的归档权限与目录配置"><a href="#Linux的归档权限与目录配置" class="headerlink" title="Linux的归档权限与目录配置"></a>Linux的归档权限与目录配置</h2><h2 id="Linux的归档与目录管理"><a href="#Linux的归档与目录管理" class="headerlink" title="Linux的归档与目录管理"></a>Linux的归档与目录管理</h2><h2 id="Linux的磁盘与文件系统管理"><a href="#Linux的磁盘与文件系统管理" class="headerlink" title="Linux的磁盘与文件系统管理"></a>Linux的磁盘与文件系统管理</h2><h2 id="归档与文件系统的压缩与打包"><a href="#归档与文件系统的压缩与打包" class="headerlink" title="归档与文件系统的压缩与打包"></a>归档与文件系统的压缩与打包</h2><h2 id="vim程序编辑器"><a href="#vim程序编辑器" class="headerlink" title="vim程序编辑器"></a>vim程序编辑器</h2><h2 id="认识与学习BASH"><a href="#认识与学习BASH" class="headerlink" title="认识与学习BASH"></a>认识与学习BASH</h2><h2 id="正规表达式与文件格式化处理"><a href="#正规表达式与文件格式化处理" class="headerlink" title="正规表达式与文件格式化处理"></a>正规表达式与文件格式化处理</h2><h2 id="学习Shell-Scripts"><a href="#学习Shell-Scripts" class="headerlink" title="学习Shell Scripts"></a>学习Shell Scripts</h2><h2 id="Linux账号管理与ACL权限设定"><a href="#Linux账号管理与ACL权限设定" class="headerlink" title="Linux账号管理与ACL权限设定"></a>Linux账号管理与ACL权限设定</h2><h2 id="磁盘配额与进阶文件系统"><a href="#磁盘配额与进阶文件系统" class="headerlink" title="磁盘配额与进阶文件系统"></a>磁盘配额与进阶文件系统</h2><h2 id="例行性工作排程"><a href="#例行性工作排程" class="headerlink" title="例行性工作排程"></a>例行性工作排程</h2><h2 id="程序管理与SELinux初探"><a href="#程序管理与SELinux初探" class="headerlink" title="程序管理与SELinux初探"></a>程序管理与SELinux初探</h2><h2 id="认识系统服务-daemons"><a href="#认识系统服务-daemons" class="headerlink" title="认识系统服务(daemons)"></a>认识系统服务(daemons)</h2><h2 id="认识与分析登录档"><a href="#认识与分析登录档" class="headerlink" title="认识与分析登录档"></a>认识与分析登录档</h2><blockquote>
-<p>在Hadoop1.x时代,MapReduce同时处理业务逻辑运算和资源的调度，耦合性较大<br>在Hadoop2.x时代，增加了Yarn。Yarn只负责资源调度，MapReduce只负责运算</p>
+<h3 id="超简单文本编辑器-nano"><a href="#超简单文本编辑器-nano" class="headerlink" title="超简单文本编辑器:nano"></a>超简单文本编辑器:nano</h3><blockquote>
+<p>gedit编辑器类似于windows的记事本</p>
 </blockquote>
-
+<p>nano 文件名—&gt;终端默认的编辑器</p>
+<h3 id="正确的关机方法"><a href="#正确的关机方法" class="headerlink" title="正确的关机方法"></a>正确的关机方法</h3><ol>
+<li>数据同步写入磁盘:sync</li>
+<li>惯用的关机命令:shutdown</li>
+<li>重启,关机: reboot [-f],poweroff [-f]   —-&gt;[-f]表示快速执行命令</li>
+<li>切换执行等级:init<ol>
+<li>运行级别0：系统停机状态，系统默认运行级别不能设为0，否则不能正常启动</li>
+<li>运行级别1：单用户工作状态，root权限，用于系统维护，禁止远程登陆</li>
+<li>运行级别2：多用户状态(没有NFS)</li>
+<li>运行级别3：完全的多用户状态(有NFS)，登陆后进入控制台命令行模式</li>
+<li>运行级别4：系统未使用，保留</li>
+<li>运行级别5：X11控制台，登陆后进入图形GUI模式</li>
+<li>运行级别6：系统正常关闭并重启，默认运行级别不能设为6，否则不能正常启动</li>
+</ol>
+</li>
+</ol>
+<h3 id="开机过程的问题排解"><a href="#开机过程的问题排解" class="headerlink" title="开机过程的问题排解"></a>开机过程的问题排解</h3><ol>
+<li>忘记root密码<ul>
+<li>进入”Use the PgUp abd PgDn keys to select ……”。按下”e”;</li>
+<li>选择”kernel /boot……/rhgb quiet”。再次按”e”;</li>
+<li>在”….=/rhgb quiet”后按下空格+”1/s”;</li>
+<li>然后在按下”b”;</li>
+<li>进入了字符界面,敲下passwd,然后设置新密码;</li>
+<li>最后exit退出。</li>
+</ul>
+</li>
+</ol>
+<h2 id="Linux的归档权限与目录配置"><a href="#Linux的归档权限与目录配置" class="headerlink" title="Linux的归档权限与目录配置"></a>Linux的归档权限与目录配置</h2><h2 id="Linux的归档与目录管理"><a href="#Linux的归档与目录管理" class="headerlink" title="Linux的归档与目录管理"></a>Linux的归档与目录管理</h2><h2 id="Linux的磁盘与文件系统管理"><a href="#Linux的磁盘与文件系统管理" class="headerlink" title="Linux的磁盘与文件系统管理"></a>Linux的磁盘与文件系统管理</h2><h2 id="归档与文件系统的压缩与打包"><a href="#归档与文件系统的压缩与打包" class="headerlink" title="归档与文件系统的压缩与打包"></a>归档与文件系统的压缩与打包</h2><h2 id="vim程序编辑器"><a href="#vim程序编辑器" class="headerlink" title="vim程序编辑器"></a>vim程序编辑器</h2><h2 id="认识与学习BASH"><a href="#认识与学习BASH" class="headerlink" title="认识与学习BASH"></a>认识与学习BASH</h2><h2 id="正规表达式与文件格式化处理"><a href="#正规表达式与文件格式化处理" class="headerlink" title="正规表达式与文件格式化处理"></a>正规表达式与文件格式化处理</h2><h2 id="学习Shell-Scripts"><a href="#学习Shell-Scripts" class="headerlink" title="学习Shell Scripts"></a>学习Shell Scripts</h2><h2 id="Linux账号管理与ACL权限设定"><a href="#Linux账号管理与ACL权限设定" class="headerlink" title="Linux账号管理与ACL权限设定"></a>Linux账号管理与ACL权限设定</h2><h2 id="磁盘配额与进阶文件系统"><a href="#磁盘配额与进阶文件系统" class="headerlink" title="磁盘配额与进阶文件系统"></a>磁盘配额与进阶文件系统</h2><h2 id="例行性工作排程"><a href="#例行性工作排程" class="headerlink" title="例行性工作排程"></a>例行性工作排程</h2><h2 id="程序管理与SELinux初探"><a href="#程序管理与SELinux初探" class="headerlink" title="程序管理与SELinux初探"></a>程序管理与SELinux初探</h2><h2 id="认识系统服务-daemons"><a href="#认识系统服务-daemons" class="headerlink" title="认识系统服务(daemons)"></a>认识系统服务(daemons)</h2><h2 id="认识与分析登录档"><a href="#认识与分析登录档" class="headerlink" title="认识与分析登录档"></a>认识与分析登录档</h2>
 	
 
 	  
@@ -525,7 +564,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux的七个控制台"><span class="toc-number">1.</span> <span class="toc-text">Linux的七个控制台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux的命令-大小写严格区分"><span class="toc-number">2.</span> <span class="toc-text">Linux的命令(大小写严格区分)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux命令相关快捷键"><span class="toc-number">3.</span> <span class="toc-text">Linux命令相关快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux的归档权限与目录配置"><span class="toc-number">4.</span> <span class="toc-text">Linux的归档权限与目录配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux的归档与目录管理"><span class="toc-number">5.</span> <span class="toc-text">Linux的归档与目录管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux的磁盘与文件系统管理"><span class="toc-number">6.</span> <span class="toc-text">Linux的磁盘与文件系统管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#归档与文件系统的压缩与打包"><span class="toc-number">7.</span> <span class="toc-text">归档与文件系统的压缩与打包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vim程序编辑器"><span class="toc-number">8.</span> <span class="toc-text">vim程序编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#认识与学习BASH"><span class="toc-number">9.</span> <span class="toc-text">认识与学习BASH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正规表达式与文件格式化处理"><span class="toc-number">10.</span> <span class="toc-text">正规表达式与文件格式化处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#学习Shell-Scripts"><span class="toc-number">11.</span> <span class="toc-text">学习Shell Scripts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux账号管理与ACL权限设定"><span class="toc-number">12.</span> <span class="toc-text">Linux账号管理与ACL权限设定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#磁盘配额与进阶文件系统"><span class="toc-number">13.</span> <span class="toc-text">磁盘配额与进阶文件系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#例行性工作排程"><span class="toc-number">14.</span> <span class="toc-text">例行性工作排程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#程序管理与SELinux初探"><span class="toc-number">15.</span> <span class="toc-text">程序管理与SELinux初探</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#认识系统服务-daemons"><span class="toc-number">16.</span> <span class="toc-text">认识系统服务(daemons)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#认识与分析登录档"><span class="toc-number">17.</span> <span class="toc-text">认识与分析登录档</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux的七个终端"><span class="toc-number">1.</span> <span class="toc-text">Linux的七个终端</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux的命令-大小写严格区分"><span class="toc-number">1.1.</span> <span class="toc-text">Linux的命令(大小写严格区分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux命令相关快捷键"><span class="toc-number">1.2.</span> <span class="toc-text">Linux命令相关快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#超简单文本编辑器-nano"><span class="toc-number">1.3.</span> <span class="toc-text">超简单文本编辑器:nano</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正确的关机方法"><span class="toc-number">1.4.</span> <span class="toc-text">正确的关机方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开机过程的问题排解"><span class="toc-number">1.5.</span> <span class="toc-text">开机过程的问题排解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux的归档权限与目录配置"><span class="toc-number">2.</span> <span class="toc-text">Linux的归档权限与目录配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux的归档与目录管理"><span class="toc-number">3.</span> <span class="toc-text">Linux的归档与目录管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux的磁盘与文件系统管理"><span class="toc-number">4.</span> <span class="toc-text">Linux的磁盘与文件系统管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#归档与文件系统的压缩与打包"><span class="toc-number">5.</span> <span class="toc-text">归档与文件系统的压缩与打包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vim程序编辑器"><span class="toc-number">6.</span> <span class="toc-text">vim程序编辑器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#认识与学习BASH"><span class="toc-number">7.</span> <span class="toc-text">认识与学习BASH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正规表达式与文件格式化处理"><span class="toc-number">8.</span> <span class="toc-text">正规表达式与文件格式化处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#学习Shell-Scripts"><span class="toc-number">9.</span> <span class="toc-text">学习Shell Scripts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux账号管理与ACL权限设定"><span class="toc-number">10.</span> <span class="toc-text">Linux账号管理与ACL权限设定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#磁盘配额与进阶文件系统"><span class="toc-number">11.</span> <span class="toc-text">磁盘配额与进阶文件系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#例行性工作排程"><span class="toc-number">12.</span> <span class="toc-text">例行性工作排程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#程序管理与SELinux初探"><span class="toc-number">13.</span> <span class="toc-text">程序管理与SELinux初探</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#认识系统服务-daemons"><span class="toc-number">14.</span> <span class="toc-text">认识系统服务(daemons)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#认识与分析登录档"><span class="toc-number">15.</span> <span class="toc-text">认识与分析登录档</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -851,6 +890,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">进程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安卓</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">英语</a>
               </li>
             
             <div class="clearfix"></div>

@@ -8,17 +8,11 @@
   <link rel="dns-prefetch" href="https://pandamin18436220.github.io">
   <title>缓存中间件 | 潘晟凯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大数据概念大数据（big data），指无法在一定时间范围内用常规软件工具进行捕捉、管理和处理的数据集合，是需要新处理模式才能具有更强的决策力、洞察发现力和流程优化能力的海量、高增长率和多样化的信息资产。">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="article">
 <meta property="og:title" content="缓存中间件">
 <meta property="og:url" content="https://pandamin18436220.github.io/2020/03/12/%E7%BC%93%E5%AD%98%E4%B8%AD%E9%97%B4%E4%BB%B6/index.html">
 <meta property="og:site_name" content="潘晟凯的博客">
-<meta property="og:description" content="大数据概念大数据（big data），指无法在一定时间范围内用常规软件工具进行捕捉、管理和处理的数据集合，是需要新处理模式才能具有更强的决策力、洞察发现力和流程优化能力的海量、高增长率和多样化的信息资产。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pandamin18436220.github.io/2020/03/12/%E7%BC%93%E5%AD%98%E4%B8%AD%E9%97%B4%E4%BB%B6/..%5Cassets%5Ctext_img%5C%E5%A4%A7%E6%95%B0%E6%8D%AE.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Pandamin18436220/HBlog_imgs/master/text_img/1.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Pandamin18436220/HBlog_imgs/master/text_img/2-1.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Pandamin18436220/HBlog_imgs/master/text_img/2-2.png">
 <meta property="article:published_time" content="2020-03-12T11:30:34.810Z">
 <meta property="article:modified_time" content="2020-03-12T11:30:34.810Z">
 <meta property="article:author" content="潘晟凯">
@@ -27,7 +21,6 @@
 <meta property="article:tag" content="MongoDB">
 <meta property="article:tag" content="memcache">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pandamin18436220.github.io/2020/03/12/%E7%BC%93%E5%AD%98%E4%B8%AD%E9%97%B4%E4%BB%B6/..%5Cassets%5Ctext_img%5C%E5%A4%A7%E6%95%B0%E6%8D%AE.png">
   
     <link rel="alternative" href="/atom.xml" title="潘晟凯的博客" type="application/atom+xml">
   
@@ -89,7 +82,7 @@ var _hmt = _hmt || [];
 			</ul>
 		</nav>
 		
-        <nav>总文章数: 38 </nav>总字数: <span class="post-count">56.3k</span>
+        <nav>总文章数: 34 </nav>总字数: <span class="post-count">49.7k</span>
 		
 		<nav class="header-smart-menu">
     		
@@ -228,7 +221,7 @@ var _hmt = _hmt || [];
       </header>
 	 
 
-	<div align="center" class="post-count">字数：3,709字 | 预计阅读时长：13分钟</div>
+	<div align="center" class="post-count">字数：0字 | 预计阅读时长：1分钟</div>
 	
 
 
@@ -242,111 +235,7 @@ var _hmt = _hmt || [];
       
 
 	
-		<h2 id="大数据概念"><a href="#大数据概念" class="headerlink" title="大数据概念"></a>大数据概念</h2><p>大数据（big data），指无法在一定时间范围内用常规软件工具进行捕捉、管理和处理的数据集合，是需要新处理模式才能具有更强的决策力、洞察发现力和流程优化能力的海量、高增长率和多样化的信息资产。</p>
-<a id="more"></a>
-
-<h2 id="大数据的特点"><a href="#大数据的特点" class="headerlink" title="大数据的特点"></a>大数据的特点</h2><ul>
-<li><p>Volume（大量）：截至2017年，人类生产的所有印刷材料的数据量是200PB，而历史上全人类总共说过的话的数据量大约是5EB。当前，典型个人计算机硬盘的容量为TB量级，而一些大企业的数据量已经接近EB量级。</p>
-</li>
-<li><p>Velocity（高速）：这是大数据区分于传统数据挖掘的最显著特征。根据IDC的“数字宇宙”的报告，预计到2020年，全球数据使用量将达到35.2ZB。在如此海量的数据面前，处理数据的效率就是企业的生命。</p>
-</li>
-<li><p>Variety（多样）：这种类型的多样性也让数据被分为结构化数据和非结构化数据。相对于以往便于存储的以数据库/文本为主的结构化数据，非结构化数据越来越多，包括网络日志、音频、视频、图片、地理位置信息等，这些多类型的数据对数据的处理能力提出了更高要求。</p>
-</li>
-<li><p>Value（低价值密度）：价值密度的高低与数据总量的大小成反比。比如，在一天监控视频中，我们只关心晚上在床上健身那一分钟，如何快速对有价值数据“提纯”成为目前大数据背景下待解决的难题。</p>
-</li>
-</ul>
-<h2 id="大数据的应用"><a href="#大数据的应用" class="headerlink" title="大数据的应用"></a>大数据的应用</h2><ul>
-<li><p>O2O：百度大数据+平台通过先进的线上线下打通技术和客流分析能力，助力商家精细化运营，提升销量。</p>
-</li>
-<li><p>零售：探索用户价值，提供个性化服务解决方案；贯穿网络与实体零售，携手创造极致体验。经典案例，子尿布+啤酒。</p>
-</li>
-<li><p>旅游：深度结合百度独有大数据能力与旅游行业需求，共建旅游产业智慧管理、智慧服务和智慧营销的未来。</p>
-</li>
-<li><p>商品广告推荐：给用户推荐访问过的商品广告类型</p>
-</li>
-<li><p>房产：大数据全面助力房地产行业，打造精准投策与营销，选出更合适的地，建造更合适的楼，卖给更合适的人。</p>
-</li>
-<li><p>保险：海量数据挖掘及风险预测，助力保险行业精准营销，提升精细化定价能力。</p>
-</li>
-<li><p>金融：多维度体现用户特征，帮助金融机构推荐优质客户，防范欺诈风险。</p>
-</li>
-<li><p>移动联通：移动联通：根据用户年龄、职业、消费情况，分析统计哪种套餐适合哪类人群。对市场人群精准定制。</p>
-</li>
-<li><p>人工智能</p>
-</li>
-</ul>
-<h2 id="云计算的概念"><a href="#云计算的概念" class="headerlink" title="云计算的概念"></a>云计算的概念</h2><blockquote>
-<p>为什么会需要“云”<br>传统的应用正在变得越来越复杂：需要支持更多的用户，需要更强的计算能力，需要更加稳定安全等等，而为了支撑这些不断增长的需求，企业不得不去购买各类硬件<br>设备（服务器，存储，带宽等等）和软件（数据库，中间件等等），另外还需要组建一个完整的运维团队来支持这些设备或软件的正常运作，这些维护工作就包括安<br>装、配置、测试、运行、升级以及保证系统的安全等。便会发现支持这些应用的开销变得非常巨大，而且它们的费用会随着你应用的数量或规模的增加而不断提高。这<br>也是为什么即使是在那些拥有很出色IT部门的大企业中，那些用户仍在不断抱怨他们所使用的系统难以满足他们的需求。而对于那些中小规模的企业，甚至个人创业者<br>来说，创造软件产品的运维成本就更加难以承受了。</p>
-</blockquote>
-<pre><code>简而言之：云计算的资源是动态扩展且虚拟化的，通过互联网提供，终端用户不需要了解云中基础设施的细节，不必具有专业的云技术知识，也无须直接进行控制，只要关注自身真正需要什么样的资源以及如何通过网络来获得相应的服务即可。</code></pre><h2 id="云计算，应运而生——更大、更快、更强"><a href="#云计算，应运而生——更大、更快、更强" class="headerlink" title="云计算，应运而生——更大、更快、更强"></a>云计算，应运而生——更大、更快、更强</h2><blockquote>
-<p>针对上述问题解决方案便是“云计算”！将应用部署到云端后，可以不必再关注那些令人头疼的硬件和软件问题，它们会由云服务提供商的专业团队去解决。使用的是共<br>享的硬件，这意味着像使用一个工具一样去利用云服务（就像插上插座，你就能使用电一样简单）。<br>只需要按照你的需要来支付相应的费用，而关于软件的更新，资源的按需扩展都能自动完成。</p>
-</blockquote>
-<h2 id="云计算的五点特点"><a href="#云计算的五点特点" class="headerlink" title="云计算的五点特点"></a>云计算的五点特点</h2><blockquote>
-<p>大规模、分布式<br>“云”一般具有相当的规模，一些知名的云供应商如Google云计算、Amazon、IBM、微软、阿里等也都拥能拥有上百万级的服务器规模。而依靠这些分布式的服务器所构建起来的“云”能够为使用者提供前所未有的计算能力。<br>虚拟化<br>云计算都会采用虚拟化技术，用户并不需要关注具体的硬件实体，只需要选择一家云服务提供商，注册一个账号，登陆到它们的云控制台，去购买和配置你需要的服务（比如 云服务器，云存储，CDN等等），再为你的应用做一些简单的配置之后，你就可以让你的应用对外服务了，这比传统的在企业的数据中心去部署一套应用要简单方便得多。而且你可以随时随地通过你的PC或移动设备来控制你的资源，这就好像是云服务商为每一个用户都提供了一个IDC(Internet Data Center)一样。<br>高可用性和扩展性<br>那些知名的云计算供应商一般都会采用数据多副本容错、计算节点同构可互换等措施来保障服务的高可靠性。基于云服务的应用可以持续对外提供服务（7*24小时），另外“云”的规模可以动态伸缩，来满足应用和用户规模增长的需要。<br>按需服务，更加经济<br>用户可以根据自己的需要来购买服务，甚至可以按使用量来进行精确计费。这能大大节省IT成本，而资源的整体利用率也将得到明显的改善。<br>安全<br>网络安全已经成为所有企业或个人创业者必须面对的问题，企业的IT团队或个人很难应对那些来自网络的恶意攻击，而使用云服务则可以借助更专业的安全团队来有效降低安全风险。</p>
-</blockquote>
-<h2 id="云计算可以分为IaaS、PaaS、SaaS、-DaaS四个-层次。-按照服务划分"><a href="#云计算可以分为IaaS、PaaS、SaaS、-DaaS四个-层次。-按照服务划分" class="headerlink" title="云计算可以分为IaaS、PaaS、SaaS、[DaaS四个]层次。(按照服务划分)"></a>云计算可以分为IaaS、PaaS、SaaS、[DaaS四个]层次。(按照服务划分)</h2><blockquote>
-<ul>
-<li>IaaS: Infrastructure-as-a-Service(基础设施即服务)<br>有了IaaS，你可以将硬件外包到别的地方去。IaaS公司会提供场外服务器，存储和网络硬件，你可以租用。节省了维护成本和办公场地，公司可以在任何时候利用这些硬件来运行其应用。<br>一些大的IaaS公司包括Amazon, Microsoft, VMWare, Rackspace和Red Hat.不过这些公司又都有自己的专长，比如Amazon和微软给你提供的不只是IaaS，他们还会将其计算能力出租给你来host你的网站。</li>
-<li>PaaS: Platform-as-a-Service(平台即服务)<br>第二层就是所谓的PaaS，某些时候也叫做中间件。你公司所有的开发都可以在这一层进行，节省了时间和资源。<br>PaaS公司在网上提供各种开发和分发应用的解决方案，比如虚拟服务器和操作系统。这节省了你在硬件上的费用，也让分散的工作室之间的合作变得更加容易。网页应用管理，应用设计，应用虚拟主机，存储，安全以及应用开发协作工具等。<br>一些大的PaaS提供者有Google App Engine,Microsoft Azure，Force.com,Heroku，Engine Yard。最近兴起的公司有AppFog,Mendix和Standing Cloud.</li>
-<li>SaaS: Software-as-a-Service(软件即服务)<br>第三层也就是所谓SaaS。这一层是和你的生活每天接触的一层，大多是通过网页浏览器来接入。任何一个远程服务器上的应用都可以通过网络来运行，就是SaaS了。<br>你消费的服务完全是从网页如Netflix,MOG,Google Apps,Box.net,Dropbox或者苹果的iCloud那里进入这些分类。尽管这些网页服务是用作商务和娱乐或者两者都有，但这也算是云技术的一部分。</li>
-<li>另外，越来越多的数据沉淀、抽象形成了新的服务——DaaS（Data as a Service，数据即服务）。</li>
-</ul>
-</blockquote>
-<p>下面画一个图来对比一下：<br>| 相关项目 | 云服务 |<br>| :—- | —-: |<br>|  | DASS | SAAS | PAAS | IAAS |<br>| 服务对象 | 开发者和企业 | 企业 | 开发者 | 开发者和企业用户 |<br>| 成熟度 |发展较晚，成熟度较低|发展早，成熟度相对最高|起步较晚，成熟度低|在应用层成熟后兴起，成熟度较高|<br>|核心能力|实现数据共享|帮助企业优化业务流程|帮助开发者的产品快速活动某种功能|帮助企业/开发者快速拥有存储，计算等资源|<br>|发展现状|潜力最大，融资集中在早期|企业级市场活跃，融资集中在C轮及以上|潜力较大，但是市场总体量较小|竞争激烈，垂直领域亦有发展空间|<br>|主要玩家|互联网公司|互联网公司,传统软件公司及创业企业|互联网公司，创业企业|电信运营商，IT厂商，互联网公司，创业企业|</p>
-<h2 id="Hadoop的概念"><a href="#Hadoop的概念" class="headerlink" title="Hadoop的概念"></a>Hadoop的概念</h2><ol>
-<li>Hadoop是一个由Apache基金会所开发的分布式系统基础架构</li>
-<li>主要解决，海量数据的存储和海量数据的分析计算问题。</li>
-<li>广义上来说，hadoop通常是指一个更广泛的概念——hadoop生态圈</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th align="center">Hadoop组成</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">MapReduce <a href="https://blog.csdn.net/lljazxx/article/details/102930403" target="_blank" rel="noopener">计算</a></td>
-</tr>
-<tr>
-<td align="center">Yarn <a href="https://blog.csdn.net/lljazxx/article/details/102922969" target="_blank" rel="noopener">资源调度</a></td>
-</tr>
-<tr>
-<td align="center">HDFS <a href="https://blog.csdn.net/lljazxx/article/details/102926054" target="_blank" rel="noopener">数据存储</a></td>
-</tr>
-<tr>
-<td align="center">Common <a href="https://blog.csdn.net/lljazxx/article/details/102929221?ops_request_misc=%7B%22request%5Fid%22%3A%22158210027219195239814172%22%2C%22scm%22%3A%2220140713.130056874..%22%7D&request_id=158210027219195239814172&biz_id=0&utm_source=distribute.pc_search_result.none-task" target="_blank" rel="noopener">辅助工具</a></td>
-</tr>
-</tbody></table>
-<h2 id="大数据技术生态系统"><a href="#大数据技术生态系统" class="headerlink" title="大数据技术生态系统"></a>大数据技术生态系统</h2><p><img src="/2020/03/12/%E7%BC%93%E5%AD%98%E4%B8%AD%E9%97%B4%E4%BB%B6/..%5Cassets%5Ctext_img%5C%E5%A4%A7%E6%95%B0%E6%8D%AE.png" alt="大数据"></p>
-<h3 id="技术名词解释"><a href="#技术名词解释" class="headerlink" title="技术名词解释"></a>技术名词解释</h3><ol>
-<li><p>Sqoop：sqoop是一款开源的工具，主要用于在Hadoop(Hive)与传统的数据库(mysql)间进行数据的传递，可以将一个关系型数据库（例如 ： MySQL ,Oracle 等）中的数据导进到Hadoop的HDFS中，也可以将HDFS的数据导进到关系型数据库中。</p>
-</li>
-<li><p>Flume：Flume是Cloudera提供的一个高可用的，高可靠的，分布式的海量日志采集、聚合和传输的系统，Flume支持在日志系统中定制各类数据发送方，用于收集数据；同时，Flume提供对数据进行简单处理，并写到各种数据接受方（可定制）的能力。</p>
-</li>
-<li><p>Kafka：Kafka是一种高吞吐量的分布式发布订阅消息系统，有如下特性：<br> （1）通过O(1)的磁盘数据结构提供消息的持久化，这种结构对于即使数以TB的消息存储也能够保持长时间的稳定性能。</p>
-<p> （2）高吞吐量：即使是非常普通的硬件Kafka也可以支持每秒数百万的消息</p>
-<p> （3）支持通过Kafka服务器和消费机集群来分区消息。</p>
-<p> （4）支持Hadoop并行数据加载。</p>
-</li>
-<li><p>Storm：Storm为分布式实时计算提供了一组通用原语，可被用于“流处理”之中，实时处理消息并更新数据库。这是管理队列及工作者集群的另一种方式。 Storm也可被用于“连续计算”（continuous computation），对数据流做连续查询，在计算时就将结果以流的形式输出给用户。</p>
-</li>
-<li><p>Spark：Spark是当前最流行的开源大数据内存计算框架。可以基于Hadoop上存储的大数据进行计算。</p>
-</li>
-<li><p>Oozie：Oozie是一个管理Hdoop作业（job）的工作流程调度管理系统。Oozie协调作业就是通过时间（频率）和有效数据触发当前的Oozie工作流程。</p>
-</li>
-<li><p>Hbase：HBase是一个分布式的、面向列的开源数据库。HBase不同于一般的关系数据库，它是一个适合于非结构化数据存储的数据库。</p>
-</li>
-<li><p>Hive：hive是基于Hadoop的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，并提供简单的sql查询功能，可以将sql语句转换为MapReduce任务进行运行。 其优点是学习成本低，可以通过类SQL语句快速实现简单的MapReduce统计，不必开发专门的MapReduce应用，十分适合数据仓库的统计分析。</p>
-</li>
-<li><p>R语言：R是用于统计分析、绘图的语言和操作环境。R是属于GNU系统的一个自由、免费、源代码开放的软件，它是一个用于统计计算和统计制图的优秀工具。</p>
-</li>
-<li><p>Mahout:<br>Apache Mahout是个可扩展的机器学习和数据挖掘库，当前Mahout支持主要的4个用例：<br>推荐挖掘：搜集用户动作并以此给用户推荐可能喜欢的事物。<br>聚集：收集文件并进行相关文件分组。<br>分类：从现有的分类文档中学习，寻找文档中的相似特征，并为无标签的文档进行正确的归类。<br>频繁项集挖掘：将一组项分组，并识别哪些个别项会经常一起出现。</p>
-</li>
-<li><p>ZooKeeper：Zookeeper是Google的Chubby一个开源的实现。它是一个针对大型分布式系统的可靠协调系统，提供的功能包括：配置维护、名字服务、 分布式同步、组服务等。ZooKeeper的目标就是封装好复杂易出错的关键服务，将简单易用的接口和性能高效、功能稳定的系统提供给用户。</p>
-</li>
-</ol>
-<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>我们在这里就不再展开了，我们不妨关注其他一些更有趣的话题。<br><a href="https://www.cnblogs.com/yangzhenlong/p/5121065.html" target="_blank" rel="noopener">分布式系统</a><br><a href="https://baijiahao.baidu.com/s?id=1621469952149297097&wfr=spider&for=pc" target="_blank" rel="noopener">阿里云介绍</a></p>
-<h2 id="课后答案"><a href="#课后答案" class="headerlink" title="课后答案"></a>课后答案</h2><p><img src="https://raw.githubusercontent.com/Pandamin18436220/HBlog_imgs/master/text_img/1.png" alt="课程初识"><br><img src="https://raw.githubusercontent.com/Pandamin18436220/HBlog_imgs/master/text_img/2-1.png" alt="第一章测试"><br><img src="https://raw.githubusercontent.com/Pandamin18436220/HBlog_imgs/master/text_img/2-2.png" alt="第一章测试"></p>
+		<a id="more"></a>
 
 	
 
@@ -531,7 +420,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#大数据概念"><span class="toc-number">1.</span> <span class="toc-text">大数据概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#大数据的特点"><span class="toc-number">2.</span> <span class="toc-text">大数据的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#大数据的应用"><span class="toc-number">3.</span> <span class="toc-text">大数据的应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云计算的概念"><span class="toc-number">4.</span> <span class="toc-text">云计算的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云计算，应运而生——更大、更快、更强"><span class="toc-number">5.</span> <span class="toc-text">云计算，应运而生——更大、更快、更强</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云计算的五点特点"><span class="toc-number">6.</span> <span class="toc-text">云计算的五点特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云计算可以分为IaaS、PaaS、SaaS、-DaaS四个-层次。-按照服务划分"><span class="toc-number">7.</span> <span class="toc-text">云计算可以分为IaaS、PaaS、SaaS、[DaaS四个]层次。(按照服务划分)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hadoop的概念"><span class="toc-number">8.</span> <span class="toc-text">Hadoop的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#大数据技术生态系统"><span class="toc-number">9.</span> <span class="toc-text">大数据技术生态系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#技术名词解释"><span class="toc-number">9.1.</span> <span class="toc-text">技术名词解释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#扩展"><span class="toc-number">10.</span> <span class="toc-text">扩展</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#课后答案"><span class="toc-number">11.</span> <span class="toc-text">课后答案</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -716,14 +605,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">命令操作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
@@ -872,7 +753,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">英语</a>
+                <a href="javascript:void(0)" class="js-tag color4">idea的web项目的部署</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
               </li>
             
             <div class="clearfix"></div>
